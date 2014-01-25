@@ -1,0 +1,100 @@
+<div class="container-fluid">
+<hr>
+  <div class="row-fluid">
+  	 <div class="span4">
+       <div class="well">
+          <div id="cont" style="height: 175px"></div>
+       </div>
+        
+       <div class="well">
+          <div id="continer" style="height: 175px"></div>
+       </div>
+     </div>
+        
+      <div class="span4">
+        <div class="well">
+           <div id="container" style="min-width: 310px; height: 175px; margin: 0 auto"></div>
+        </div>
+       <div class= "well">
+          <div id="conti" style="height: 175px"></div>
+       </div>
+    </div>
+       
+      <div class="span4">
+       	 <table>
+       		 <tr>
+       		 	<td>
+                <%= image_tag("bindi.jpg", :alt => "Sample App", :class => "round" , :width => "700") %>
+    	       </td>
+             	</tr>
+             	<tr>
+        		<td>
+              <div class = "alert alert-info">
+                  <h2><center>Sign in</center></h2>
+
+                         
+                     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                     <div class="dropdown">
+             <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>SIGN_IN_AS <span class="caret">
+             </span>
+             </a>
+              <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+              
+            
+                        
+                       <li><a tabindex="#"  ><%= link_to "Authorize person", new_authorize_session_path %></a></li>
+                         <li><a tabindex="#" > <%= link_to "Employee", new_employe_session_path %></a></li>
+
+                           <li><a tabindex="#"  ><%= link_to "General manager", new_hr_session_path %></a></li>
+              
+             
+                </ul>
+              </div>      
+                    <div>
+                      <table>
+                      <tr>
+                        <td>
+                          <h1>
+                            <i class="fa fa-envelope-o"></i>
+                          </td>
+                          <td>
+                            <%= f.email_field :email, :autofocus => true %>
+                          </h1>
+                        </td>
+                      </tr>
+                      <br/>
+                    <tr>
+                    <td>
+                      <h1>
+                        <i class="fa fa-key"></i>
+                    </td>
+                    <td> <%= f.password_field :password %>
+                    </h1>
+                  </td>
+                </tr>
+                       </div>
+                         <tr>
+                         </table>
+
+                       
+                   
+               <div><center><%= f.submit "Sign in" ,:class => "btn btn-primary btn-success" %> </i></center></div>
+               <br />
+               <br />
+        <% end %>
+      </div>
+
+      
+
+    </div>
+  </div>
+  </div>
+  </div>
+  <% if new_authorize_session_path %>
+     hey
+  <%elsif new_employe_session_path %>
+
+<%= render "devise/shared/links" %>
+<% else %>
+hi
+<%end %>

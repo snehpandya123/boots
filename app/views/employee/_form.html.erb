@@ -1,0 +1,44 @@
+<%= form_for (@replication) do |f| %>
+  <table>
+    <tr>
+      <td>
+          <%= f.label :SR_NO %>
+      </td>
+      <td>
+          <%= f.text_field :sr_no %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :Particular %>
+      </td>
+      <td>
+        <%= f.text_area :particular %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :Unit %>
+      </td>
+      <td>
+        <%= f.text_field :unit %>
+      </td>
+      </tr>
+      <tr>
+
+      <td> 
+        <%= f.label :Required_Quantity %>
+      </td>
+      <td>
+        <%= f.text_field :quantity %>
+      </td>
+   </tr>
+  <tr>
+      <td>
+  <%= f.submit "Submit Replication" , :class => "btn btn-success" %>
+      </td>
+  </tr>
+</table>
+
+  
+<% end %>

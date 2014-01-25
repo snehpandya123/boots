@@ -1,0 +1,38 @@
+
+<hr>
+<div class = "row">
+  <div class="span3">
+    <div class="well">
+       <ul class="nav nav-pills nav-stacked admin-menu">
+                     <li><a href="#" data-target-id="home"><i class="fa fa-envelope"></i>Replication</a></li>
+                     <li> <a href="#myModal" class="link" data-toggle="modal"><i class="fa fa-flag"></i>Total Of Replication</a></li>
+                     <li><a href="#" data-target-id="viewvendor"><i class="fa fa-exclamation"></i>Pending</a></li>
+                     <li><a href="#" data-target-id="addasset"><i class="fa fa-thumbs-o-up"></i>Successful</a></li>
+                     <li><a href="#" data-target-id="viewasset"><i class="fa fa-bar-chart-o"></i>Charts</a></li>
+                     <li><a href="#" data-target-id="assetpending"><i class="fa fa-shopping-cart"></i>Add Asset</a></li>
+                     <li><a href="#" data-target-id="instock"><i class="fa fa-exclamation-triangle"></i>Decline</a></li>
+                
+        </ul>
+    </div>
+  </div>
+
+
+
+    <div class = "span9">
+        <div class = "well">
+            <%= render "/employee/form" %>
+        </div>
+<hr>
+           Display all replication slip <br/>
+           <% if !@replications.blank? %>
+           <% for item in @replications %>
+           <%= item.sr_no %> <%= item.particular %> <%= item.unit %> <%= item.quantity %> <br/>
+           <% end %>
+           <% else %>
+
+           <% end %>
+    </div>
+
+    
+           </div>
+           </div> 

@@ -1,0 +1,38 @@
+<div class="span7">   
+	<%= button_to "New Asset" , new_path , :class => "btn btn-success" %>
+<div class="widget stacked widget-table action-table">
+  				
+				<div class="widget-header">
+					<i class="icon-th-list"></i>
+					<h3>assetS</h3>
+				</div> <!-- /widget-header -->
+				
+				<div class="widget-content">
+					
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>location</th>
+								<th>Cost</th>
+								<th class="td-actions"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><%= @asset.name %></td>
+								<td><%= @asset.tp %></td>
+								<td><%= @asset.location %></td>
+								<td><%= @asset.cost %></td>
+								
+							</tr>
+							
+							
+							</tbody>
+						</table>
+					
+				</div> <!-- /widget-content -->
+			
+			</div> <!-- /widget -->
+            </div>

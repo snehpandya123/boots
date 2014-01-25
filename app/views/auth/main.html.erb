@@ -1,0 +1,103 @@
+<% if authorize_signed_in? %>
+<div class="container">
+  <hr>
+
+        <div class="row">
+           <div class ="span2">
+                <div clas="well">
+                   
+                       <div class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="btn btn-primary">View Graph <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-toggle="tooltip" data-original-title="Default tooltip" >Pie Chart</a></li>
+                        <li><a href="#">Bar Chart</a></li>
+                        <li><a href="#">Area Chart</a></li>
+                        <li><a href="#">Asset Char</a></li>
+                    </ul>
+                </div><br /><br />
+                  <button class="btn btn-info"><i class="fa fa-stack-exchange"></i> 
+                        Replication 
+                  <span class="label label-primary">
+                        42
+                   </span>
+                        </li>
+                    </ul>
+                   
+                
+           </div>
+         </div>
+     
+
+
+ 
+        
+    
+         <div class="span6">
+            <div class="well">
+                <div class="col-md-9 well admin-content" id="cont">
+                     <div id="continer" style="height: 300px width: 350px"></div>
+                </div>
+                <div class="col-md-9 well admin-content" id="addvendor">
+                    Add Vendor
+                </div>
+                <div class="col-md-9 well admin-content" id="viewvendor">
+                    View Vendor
+                </div>
+                <div class="col-md-9 well admin-content" id="addasset">
+                    Add Asset
+                </div>
+                <div class="col-md-9 well admin-content" id="viewasset">
+                    View Asset
+                </div>
+                
+                <div class="col-md-9 well admin-content" id="assetpending">
+                        Asset Pending
+                </div>
+                <div class="col-md-9 well admin-content" id="instock">
+                        Instock
+                </div>
+                
+            </div>
+        </div>
+
+         <div class=" span4">
+            <div class="well">
+                <ul class="nav nav-pills nav-stacked admin-menu">
+                     <li><a href="#" data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                     <li> <a href="#myModal" class="link" data-toggle="modal"><i class="fa fa-male"></i>Add vendor</a></li>
+               
+                <li><a href="#" data-target-id="viewvendor"><i class="fa fa-eye"></i>View Vendor</a></li>
+                <li><a href="#" data-target-id="addasset"><i class="fa fa-shopping-cart"></i>Add Asset</a></li>
+                <li><a href="#" data-target-id="viewasset"><i class="fa fa-eye"></i>View Asset</a></li>
+                <li><a href="#" data-target-id="assetpending"><i class="fa fa-meh-o"></i>Asset Pending</a></li>
+                <li><a href="#" data-target-id="instock"><i class="fa fa-plus"></i>In Stock</a></li>
+                
+                </ul>
+         </div>
+     </div>
+     <div class="bs-example">
+    <!-- Button HTML (to Trigger Modal) -->
+       <!-- Modal HTML -->
+    <div id="myModal" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3>Add Vendor</h3>
+        </div>
+        <div class="modal-body">
+            <p>
+                <%= render "/vendors/form" %>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn">Close</a>
+            <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+    </div>
+</div>
+     <% else %>
+      <div class="alert alert-danger">
+      NOT ELIGIBLE...Only authorize person can sign_in 
+        <%= link_to "click here" , new_authorize_session_path  %>
+      </div>
+     <% end %>
+

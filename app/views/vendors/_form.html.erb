@@ -1,0 +1,51 @@
+ <%= form_for(@vendor) do |f| %>
+          <table width="700">
+            <tr>
+              <td>
+                <%= f.label :Full_name %>
+                <h3><i class="fa fa-user"></i>
+                  <%= f.text_field :name %>
+                </h3>
+              </td>
+               <td>
+                <%= f.label :address %><h3><i class="fa fa-align-justify"></i> 
+                <%= f.text_area :address %></h3>
+              </td>
+            </tr>
+              <tr>
+                <td>
+   
+                 <%= f.label :email %><h3><i class="fa fa-envelope"></i>
+                 <%= f.text_field :email %></h3>
+               </td>
+                 <td>
+   
+                  <%= f.label :location %><h3><i class="fa fa-map-marker"></i>
+                  <%= f.text_field :location %></h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+   
+                 <%= f.label :ph_no %><h3><i class="fa fa-phone"></i>
+                 <%= f.text_field :ph_no %></h3>
+               </td>
+                 <td>
+    
+                  <%= f.label :mobile_no %><h3><i class="fa fa-phone-square"></i>
+                  <%= f.text_field :mobile_no %></h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+      
+                  <%= f.label :asset_name %><h3><i class="fa fa-truck"></i> 
+                  <%= f.text_field :asset_name %></h3>
+                </td>
+              <td>
+                      <%= f.submit "Save", class: "btn  btn-primary btn-lg btn3d"  %>
+                      <%= f.submit "Cancel",  class: "btn btn-danger btn-lg btn3d" %>
+                    </td>
+                    </tr>
+                    </table>
+<% end %>

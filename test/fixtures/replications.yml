@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sr_no: 1
+  particular: MyString
+  unit: MyString
+  quantity: 1
+
+two:
+  sr_no: 1
+  particular: MyString
+  unit: MyString
+  quantity: 1
