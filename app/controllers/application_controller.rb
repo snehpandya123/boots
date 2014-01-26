@@ -5,11 +5,11 @@ class ApplicationController < ActionController::Base
 
 def after_sign_in_path_for(resource)
     if hr_signed_in?
-       hrs_hhome_path
+       hmain_path
     elsif authorize_signed_in?
-        auth_main_path
+        amain_path
     else
-       employee_emain_path
+       emain_path
     end
 end
 

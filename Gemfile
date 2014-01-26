@@ -7,14 +7,20 @@ gem 'rails', '4.0.0'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+
 gem 'protected_attributes'
+group :assets do
+	gem 'sass-rails', '~> 4.0.0'
+  
+   gem 'coffee-rails', '~> 4.0.0'
+   gem 'uglifier'
+end
 
 # Use Uglifier as compressor for JavaScript assets
 
 gem 'twitter-bootstrap-rails'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+
 gem "devise", "~> 3.2.2"
 gem "highcharts-rails", "~> 3.0.7"
 gem "kaminari"
