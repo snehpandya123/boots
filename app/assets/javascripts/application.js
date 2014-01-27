@@ -15,7 +15,38 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {     
+$('#btn_AddToList').click(function () {
+    var val = $('#txt_RegionName').val();
+    var val2 = $('#txt_Region').val();
+    var val3 = $('#txt_Regio').val();
+    var val4 = $('#txt_Regi').val();
+    $('#lst_Regions').append('<tr><td>' + val + '</td>' + '<td>' + val2 + '</td>' + '<td>' + val3 + '</td>' + '<td>' + val4 + '</td></tr>');
+    $('#txt_RegionName').val('').focus();
+    $('#txt_Region').val('');
+        $('#txt_Regio').val('');
+        $('#txt_Regi').val('');
+    
+})
+});
 
+!function ($) {
+    
+    // Le left-menu sign
+    /* for older jquery version
+    $('#left ul.nav li.parent > a > span.sign').click(function () {
+        $(this).find('i:first').toggleClass("icon-minus");
+    }); */
+    
+    $(document).on("click","#left ul.nav li.parent > a > span.sign", function(){          
+        $(this).find('i:first').toggleClass("icon-minus");      
+    }); 
+    
+    // Open Le current menu
+    $("#left ul.nav li.parent.active > a > span.sign").find('i:first').addClass("icon-minus");
+    $("#left ul.nav li.current").parents('ul.children').addClass("in");
+
+}(window.jQuery);
 $(document).ready(function() {        
     
     //Execute the slideShow
@@ -143,7 +174,7 @@ $(document).ready(function()
 //THIS IS FOR THE COLOMN DRILLDOWN
 
 
-$(function () {
+$(document).ready(function() {
     $('#continer').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -190,7 +221,7 @@ $(function () {
         }]
     });
 });
-  $(function () {
+  $(document).ready(function() {
     $('#container').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -235,7 +266,7 @@ $(function () {
     });
 });  
 
-$(function () {
+$(document).ready(function() {
         $('#cont').highcharts({
             chart: {
                 type: 'line'
@@ -279,7 +310,7 @@ $(function () {
         });
     });
 
-$(function () {
+$(document).ready(function() {
         $('#conti').highcharts({
             chart: {
                 type: 'area'
