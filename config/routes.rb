@@ -1,10 +1,22 @@
 Boot::Application.routes.draw do
   
-  devise_for :authorizes
-  devise_for :hrs
-  devise_for :employes
-  
+  devise_for :authorizes 
+  devise_scope :authorize  do
+  get '/alogin' => 'devise/sessions#new'
+  get '/alogout' => 'devise/sessions#destroy'
+end
 
+devise_for :hrs 
+  devise_scope :hr  do
+  get '/hlogin' => 'devise/sessions#new'
+  get '/hlogout' => 'devise/sessions#destroy'
+end
+
+devise_for :employes 
+  devise_scope :employe  do
+  get '/elogin' => 'devise/sessions#new'
+  get '/elogout' => 'devise/sessions#destroy'
+end
  
   resources :vendors
   resources :replications

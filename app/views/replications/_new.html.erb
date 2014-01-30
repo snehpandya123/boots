@@ -1,0 +1,67 @@
+<div class="container">
+<hr>
+<div class = "row">
+    <div class = "span9">
+        <div class = "well">
+          <%= form_for (@replication) do |f| %>
+  <table>
+    <tr>
+      <td>
+          <%= f.label :SR_NO %>
+      </td>
+      <td>
+          <%= f.text_field :sr_no , :id => "txt_RegionName" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :Particular %>
+      </td>
+      <td>
+        <%= f.text_area :particular , :id => "txt_Region" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :Unit %>
+      </td>
+      <td>
+        <%= f.text_field :unit ,:id => "txt_Regio" %>
+      </td>
+      </tr>
+      <tr>
+
+      <td> 
+        <%= f.label :Required_Quantity %>
+      </td>
+      <td>
+        <%= f.text_field :quantity ,:id => "txt_Regi" %>
+      </td>
+   </tr>
+   <tr>
+    <td></td>
+    <td>
+   <table>
+<tr><td>
+<input type="button"  name="add" id="btn_AddToList" value="add" class="btn btn-primary" />
+    </td><td><input type="button"  name="Done" id="btn_AddToList1" value="Done" class="btn btn-success" />
+</td></tr>
+</table>
+</td>
+</tr>
+  
+</table>
+<% end %>
+<table id="lst_Regions" style="width: 500px;" border= "2" class="table table-striped table-bordered table-condensed">
+    <tr>
+    <td>SR_NO</td>
+    <td>Item Name</td>
+    <td>Particular</td>
+    <td>Cost</td>
+  </tr>
+</table>
+<input type="button" id= "submit" value="Submit Repication"  class="btn btn-success" />
+</div>
+</div>
+</div>
+</div>

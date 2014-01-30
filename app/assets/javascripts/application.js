@@ -16,7 +16,9 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() {     
+    $('#submit').prop('disabled', true);
 $('#btn_AddToList').click(function () {
+     $('#submit').prop('disabled', true);
     var val = $('#txt_RegionName').val();
     var val2 = $('#txt_Region').val();
     var val3 = $('#txt_Regio').val();
@@ -26,8 +28,10 @@ $('#btn_AddToList').click(function () {
     $('#txt_Region').val('');
         $('#txt_Regio').val('');
         $('#txt_Regi').val('');
-    
-})
+    $('#btn_AddToList1').click(function () {
+         $('#submit').prop('disabled', false).addclass('btn btn-warning');
+    });
+      });
 });
 
 !function ($) {
