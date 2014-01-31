@@ -15,9 +15,15 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+$(function() {
+    $('#dashboard-menu').on('click', 'li', function() {
+        $('#dashboard-menu li').removeClass('active')
+        $(this).addClass('active');
+    })
+});
 $(document).ready(function() {     
     $('#submit').prop('disabled', true);
-$('#btn_AddToList').click(function () {
+     $('#btn_AddToList').click(function () {
      $('#submit').prop('disabled', true);
     var val = $('#txt_RegionName').val();
     var val2 = $('#txt_Region').val();

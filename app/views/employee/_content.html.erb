@@ -1,0 +1,91 @@
+ <div class="row-fluid">
+
+<div class="span1">
+
+                        <!-- start: Main Menu -->
+                        <div id="sidebar-nav">
+                            <ul id="dashboard-menu">
+                                <li >
+
+                                    <a href="/amain">
+                                        <i class="fa fa-home fa-fw"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>            
+                                <li class="active">
+                                    <div class="pointer">
+                                        <div class="arrow"></div>
+                                        <div class="arrow_border"></div>
+                                    </div>
+                                    <a href="charts.html">
+                                        <i class="fa fa-signal"></i>
+                                        <span>Charts</span>
+                                    </a>
+                                </li>
+                                    
+                                <li>
+                                    <a class="" href="#">
+                                    <span data-toggle="collapse" data-parent="#menu-group-1" href="#sub-item-1" class="sign">
+                                        <i class="fa fa-group"></i>Replication</span>
+                                       
+
+                                    </a>
+                                   <ul class="children nav-child unstyled small collapse" id="sub-item-1">
+                                       <li class="item-2 deeper parent active">
+                                           
+                                        <li><span data-toggle="collapse" data-parent="#menu-group-1" id = "new">
+                                          
+                                           <i class="fa fa-plus"></i>
+                                             </span>New</li>
+                                         <li><span data-toggle="collapse" data-parent="#menu-group-1" data-icon="&#x2297;">
+                                             <i class="fa fa-frown-o"></i>
+                                             </span>Pending</li>
+                                              <li><span data-toggle="collapse" data-parent="#menu-group-1">
+                                            <i class="fa fa-thumbs-down" ></i>
+                                             </span>Rejected</li>
+                                              <li><span data-toggle="collapse" data-parent="#menu-group-1">
+                                          <i class="fa fa-thumbs-up"></i>
+                                             </span>Approved</li>
+                                             
+                                </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <a class="" href="#">
+                                    <span data-toggle="collapse" data-parent="#menu-group-2" href="#sub-item-2" class="sign">
+                                       <i class="fa fa-shopping-cart"></i>Asset</span>
+                                       
+
+                                    </a>
+                                   <ul class="children nav-child unstyled small collapse" id="sub-item-2">
+                                       <li class="item-2 deeper parent active">
+                                           
+                                        <li><span data-toggle="collapse" data-parent="#menu-group-2">
+                                            <i class="fa fa-plus"></i>
+                                             </span>ADD</li>
+                                         <li><span data-toggle="collapse" data-parent="#menu-group-2">
+                                            <i class="fa fa-eye"></i> 
+                                             </span>View</li>
+                                              
+                                             
+                                </li>
+                                    </ul>
+                                </li>
+                                
+                                
+                                <li>
+                                    <a href="#" id ="table">
+                                        <i class="fa fa-th-large"></i>
+                                        <span>Tables</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+               
+  			 <div class = "span11">
+        	<div class = "well">         
+            		<%= render "/replications/new" %>
+        	</div>
+        </div>

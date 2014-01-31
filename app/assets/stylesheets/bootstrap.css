@@ -7,7 +7,9 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
-
+*.fa-plus{
+    font-size: 1px;
+}
 
 
 
@@ -23,6 +25,7 @@
 /* Glyphicons Halflings Font */
 /* Basic
 =========================================== */
+
 
 .easyPieChart{position:relative;text-align:center;}.easyPieChart canvas{position:absolute;top:0;left:0;}
 .social-box .body {
@@ -394,6 +397,36 @@ box-shadow: 0 1px 0 rgba(8, 13, 48, 0.7);
 #dashboard-menu > li i {
     font-size: 45px;
     top: 17px;
+}
+
+li {
+    list-style: none;
+}
+
+li > a {
+    color: #000099;
+    text-decoration: none;
+}
+
+li > a:hover {
+    color: red;
+}
+
+li > .pointer {
+    display: none;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-color: transparent;
+    border-left-color: green;
+}
+
+li.active > a {
+    color: green;
+}
+
+li.active > .pointer {
+    display: inline-block;
 }
 
 #dashboard-menu .pointer {

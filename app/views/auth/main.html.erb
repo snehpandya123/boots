@@ -5,13 +5,17 @@
                 <!-- start: Main Menu -->
                 <div id="sidebar-nav">
                     <ul id="dashboard-menu">
-                        <li> <a href="/amain">
+                        <li>
+
+                       
+                         <a href="#">
                                         <i class="fa fa-home fa-fw"></i>
                                         <span>Home</span>
                                     </a>
 
                         </li>
-                        <li> <a href="#">
+                        <li>
+                         <a href="#">
                                         <i class="fa fa-signal"></i>
                                         <span>Charts</span>
                                     </a>
@@ -94,10 +98,13 @@
                     </div>
                 </div>
                 <div class="span10"></div>
+                <div class = "alert alert-success">
+           Wellcome back <%= current_authorize.username %>, You have signed in <%= current_authorize.sign_in_count %> times.
+            </div> 
             </div>
         </div>
         <% else %>
             <div class="alert alert-danger">NOT ELIGIBLE...Only authorize person can sign_in
-                <%=l ink_to "click here" , new_authorize_session_path %>
+                <%=link_to "click here" , alogin_path %>
             </div>
             <% end %>

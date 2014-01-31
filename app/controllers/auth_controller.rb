@@ -5,8 +5,8 @@ class AuthController < ApplicationController
    def create
 		@vendor = Vendor.new(params[:vendor])
 			if @vendor.save
-				flash[:success] = "Vendor Added Successfully"
 				
+				flash[:success] = "Vendor Added Successfully"
 			end
   end
   
