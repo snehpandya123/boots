@@ -1,34 +1,35 @@
 <% if authorize_signed_in? %>
+ <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+           Wellcome back <%= current_authorize.username %>, You have signed in <%= current_authorize.sign_in_count %> times.
+</div>
     <div class="container-fluid">
-        <div class="row-fluid">
+       <div class="row-fluid">
             <div class="span1">
                 <!-- start: Main Menu -->
-                <div id="sidebar-nav">
-                    <ul id="dashboard-menu">
-                        <li>
-
+             <div id="sidebar-nav">
+                <ul id="dashboard-menu">
+                    <li>
+                         <a href="#">
+                            <i class="fa fa-home fa-fw"></i>
+                                <span>Home</span>
+                         </a>
+                     </li>
                        
+                     <li>
                          <a href="#">
-                                        <i class="fa fa-home fa-fw"></i>
-                                        <span>Home</span>
-                                    </a>
-
-                        </li>
-                        <li>
-                         <a href="#">
-                                        <i class="fa fa-signal"></i>
-                                        <span>Charts</span>
-                                    </a>
-
-                        </li>
-                        <li> <a class="" href="#">
-                                    <span data-toggle="collapse" data-parent="#menu-group-1" href="#sub-item-1" class="sign">
-                                        <i class="fa fa-group"></i>Asset</span>
-                                       
-
-                                    </a>
-
-                            <ul class="children nav-child unstyled small collapse" id="sub-item-1">
+                            <i class="fa fa-signal"></i>
+                                <span>Charts</span>
+                         </a>
+                    </li>
+                       
+                    <li> 
+                        <a class="" href="#">
+                             <span data-toggle="collapse" data-parent="#menu-group-1" href="#sub-item-1" class="sign">
+                                <i class="fa fa-group"></i>Asset</span>
+                        </a>
+                           
+                           <ul class="children nav-child unstyled small collapse" id="sub-item-1">
                                 <li class="item-2 deeper parent active">
                                     <li><span data-toggle="collapse" data-parent="#menu-group-1">
                                             <i class="fa fa-frown-o"></i>
@@ -44,13 +45,12 @@
                                              </span>View all</li>
                                 </li>
                             </ul>
-                        </li>
-                        <li> <a class="" href="#">
+                    </li>
+                        <li> 
+                            <a class="" href="#">
                                     <span data-toggle="collapse" data-parent="#menu-group-2" href="#sub-item-2" class="sign">
                                        <i class="fa fa-shopping-cart"></i>Vendor</span>
-                                       
-
-                                    </a>
+                            </a>
 
                             <ul class="children nav-child unstyled small collapse" id="sub-item-2">
                                 <li class="item-2 deeper parent active">
@@ -63,48 +63,36 @@
                                 </li>
                             </ul>
                         </li>
-                        <li> <a href="#" id="table">
+                        <li> 
+                            <a href="#table" >
                                         <i class="fa fa-th-large"></i>
                                         <span>Tables</span>
-                                    </a>
+                            </a>
 
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="span2">
-                    <div clas="well">
-                        <div class="dropdown"> <a href="#" data-toggle="dropdown" class="btn btn-primary">View Graph <b class="caret"></b></a>
-
-                            <ul class="dropdown-menu">
-                                <li><a href="#" data-toggle="tooltip" data-original-title="Default tooltip">Pie Chart</a>
-                                </li>
-                                <li><a href="#">Bar Chart</a>
-                                </li>
-                                <li><a href="#">Area Chart</a>
-                                </li>
-                                <li><a href="#">Asset Char</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <br />
-                        <br />
-                        <button class="btn btn-info"><i class="fa fa-stack-exchange"></i> Replication</button> <span class="label label-primary">
-                        42  %>
-                   </span>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="span10"></div>
-                <div class = "alert alert-success">
-           Wellcome back <%= current_authorize.username %>, You have signed in <%= current_authorize.sign_in_count %> times.
-            </div> 
+            <div class= "span11">
+                 <%= render "/vendors/index" %>
             </div>
+
         </div>
+        </div>
+       
+        
+   
+       
+        
+            
+        
+    
+
         <% else %>
-            <div class="alert alert-danger">NOT ELIGIBLE...Only authorize person can sign_in
+            
+
+        <div class="alert alert-danger">NOT ELIGIBLE...Only authorize person can sign_in
                 <%=link_to "click here" , alogin_path %>
-            </div>
-            <% end %>
+        </div>
+            
+        <% end %>

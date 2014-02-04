@@ -15,16 +15,10 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-$(function() {
-    $('#dashboard-menu').on('click', 'li', function() {
-        $('#dashboard-menu li').removeClass('active')
-        $(this).addClass('active');
-    })
-});
 $(document).ready(function() {     
-    $('#submit').prop('disabled', true);
+    $('#submit').prop('disabled', true).removeClass("btn btn-success").addClass("btn btn-default");
      $('#btn_AddToList').click(function () {
-     $('#submit').prop('disabled', true);
+     $('#submit').prop('disabled', true).removeClass("btn btn-warning").addClass("btn btn-default");
     var val = $('#txt_RegionName').val();
     var val2 = $('#txt_Region').val();
     var val3 = $('#txt_Regio').val();
@@ -35,28 +29,12 @@ $(document).ready(function() {
         $('#txt_Regio').val('');
         $('#txt_Regi').val('');
     $('#btn_AddToList1').click(function () {
-         $('#submit').prop('disabled', false).addclass('btn btn-warning');
+         $('#submit').prop('disabled', false).removeClass("btn btn-default").addClass('btn btn-warning');
     });
       });
 });
 
-!function ($) {
-    
-    // Le left-menu sign
-    /* for older jquery version
-    $('#left ul.nav li.parent > a > span.sign').click(function () {
-        $(this).find('i:first').toggleClass("icon-minus");
-    }); */
-    
-    $(document).on("click","#left ul.nav li.parent > a > span.sign", function(){          
-        $(this).find('i:first').toggleClass("icon-minus");      
-    }); 
-    
-    // Open Le current menu
-    $("#left ul.nav li.parent.active > a > span.sign").find('i:first').addClass("icon-minus");
-    $("#left ul.nav li.current").parents('ul.children').addClass("in");
 
-}(window.jQuery);
 $(document).ready(function() {        
     
     //Execute the slideShow
@@ -184,186 +162,7 @@ $(document).ready(function()
 //THIS IS FOR THE COLOMN DRILLDOWN
 
 
-$(document).ready(function() {
-    $('#continer').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: 0,
-            plotShadow: false
-        },
-        title: {
-            text: 'Browser<br>shares',
-            align: 'center',
-            verticalAlign: 'middle',
-            y: 50
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    enabled: true,
-                    distance: -50,
-                    style: {
-                        fontWeight: 'bold',
-                        color: 'white',
-                        textShadow: '0px 1px 2px black'
-                    }
-                },
-                startAngle: -90,
-                endAngle: 90,
-                center: ['50%', '75%']
-            }
-        },
-        series: [{
-            type: 'area',
-            name: 'Browser share',
-            innerSize: '50%',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                ['Chrome', 12.8],
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
-            ]
-        }]
-    });
-});
-  $(document).ready(function() {
-    $('#container').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false
-        },
-        title: {
-            text: 'Asset chart'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    color: '#000000',
-                    connectorColor: '#000000',
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                }
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Asset chart',
-            data: [
-                ['Mobile',   45.0],
-                ['Laptop',       26.8],
-                {
-                    name: 'Personal computer',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['RAM',    8.5],
-                ['Mouse',     6.2],
-                ['Keyboard',   0.7]
-            ]
-        }]
-    });
-});  
 
-$(document).ready(function() {
-        $('#cont').highcharts({
-            chart: {
-                type: 'line'
-            },
-            title: {
-                text: 'Monthly Average Temperature'
-            },
-            subtitle: {
-                text: 'Source: WorldClimate.com'
-            },
-            xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            },
-            yAxis: {
-                title: {
-                    text: 'Temperature (°C)'
-                }
-            },
-            tooltip: {
-                enabled: false,
-                formatter: function() {
-                    return '<b>'+ this.series.name +'</b><br/>'+
-                        this.x +': '+ this.y +'°C';
-                }
-            },
-            plotOptions: {
-                line: {
-                    dataLabels: {
-                        enabled: true
-                    },
-                    enableMouseTracking: false
-                }
-            },
-            series: [{
-                name: 'Tokyo',
-                data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-            }, {
-                name: 'London',
-                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-            }]
-        });
-    });
-
-$(document).ready(function() {
-        $('#conti').highcharts({
-            chart: {
-                type: 'area'
-            },
-            title: {
-                text: 'Monthly Average Temperature'
-            },
-            subtitle: {
-                text: 'Source: WorldClimate.com'
-            },
-            xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            },
-            yAxis: {
-                title: {
-                    text: 'Temperature (°C)'
-                }
-            },
-            tooltip: {
-                enabled: false,
-                formatter: function() {
-                    return '<b>'+ this.series.name +'</b><br/>'+
-                        this.x +': '+ this.y +'°C';
-                }
-            },
-            plotOptions: {
-                line: {
-                    dataLabels: {
-                        enabled: true
-                    },
-                    enableMouseTracking: false
-                }
-            },
-            series: [{
-                name: 'Tokyo',
-                data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-            }, {
-                name: 'London',
-                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-            }]
-        });
-    });
-	
 	
    
 

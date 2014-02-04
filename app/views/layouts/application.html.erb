@@ -1,110 +1,139 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Boot</title>
-  <%= stylesheet_link_tag 'bootstrap',:media => 'screen'%>
-  <%= javascript_include_tag "application" %>
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <%= csrf_meta_tags %>
- </head>
+    
+    <head>
+        <title>Boot</title>
+        <%=stylesheet_link_tag 'bootstrap',:media=>'screen'%>
+            <%=javascript_include_tag "application" %>
+                <script src="http://code.highcharts.com/highcharts.js"></script>
+                <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+                <%=csrf_meta_tags %>
+    </head>
+    
     <body>
+       
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class = "icon-bar"><span>
                     </a>
-                    
-                    <a class="brand" href= ""> <%= image_tag("logo.png", :alt => "#", :class => "round" , :width => "20") %>Marck BioScience </a>
-                      <div class="nav-collapse">
-                          <ul class="nav nav-tabs">
-                              <li><%= link_to "HOME", home_path %></li>
-                             
+ <a class="brand" href=""> <%= image_tag("logo.png", :alt => "#", :class => "round" , :width => "20") %>Marck BioScience </a>
 
-     
-      
-      <% if signed_in? %>
-          <li><%= link_to "SIGNOUT",destroy_authorize_session_path, :method => :delete ,:data => { confirm: 'Are you sure?' }  %></li>
-              <% if hr_signed_in? %>
-                  <li><%= link_to "Dashboard", hmain_path %> </li>
-                  <ul class = "nav pull-right">
-                           <li><div class="dropdown"><a id="dLabel" role="button"  class="btn btn-primary" data-target="#" href= "#" ><i class="fa fa-money"></i> Budget 
-             </a></li>
-                      </div>
-                    </ul>
-                <% elsif employe_signed_in? %>
-                  <li><%= link_to "DASHBOARD" , emain_path %></li>
-                <% else %>
-                  <li><%= link_to "DASHBOARD" , amain_path %></li>
-                  <ul class = "nav pull-right">
-                           <li><div class="dropdown"><a id="dLabel" role="button"  class="btn btn-primary" data-target="#" href= "#" ><i class="fa fa-money"></i> Budget 
-             </a></li>
-                      </div>
-                    </ul>
-              <% end %>
-        <% else %>
-             <li>
-                 <div class="dropdown">
-                    <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>SIGN_IN_AS <span class="caret"></span>
+                    <div class="nav-collapse">
+                        <ul class="nav nav-tabs">
+                            <li>
+                                <%=link_to "HOME", home_path %>
+                            </li>
+                            <% if signed_in? %>
+                                <li>
+                                    <%=link_to "SIGNOUT",destroy_authorize_session_path, :method=>:delete ,:data => { confirm: 'Are you sure?' } %></li>
+                                <% if hr_signed_in? %>
+                                    <li>
+                                        <%=link_to "Dashboard", hmain_path %>
+                                    </li>
+                                    <ul class="nav pull-right">
+                                        <li>
+                                            <div class="dropdown"><a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Budget 
+             </a>
+                                        </li>
+                                        </div>
+                                    </ul>
+                                    <% elsif employe_signed_in? %>
+                                        <li>
+                                            <%=link_to "DASHBOARD" , emain_path %>
+                                        </li>
+                                        <% else %>
+                                            <li>
+                                                <%=link_to "DASHBOARD" , amain_path %>
+                                            </li>
+                                            <ul class="nav pull-right">
+                                                <li>
+                                                    <div class="dropdown"><a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Budget 
+             </a>
+                                                </li>
+                                                </div>
+                                            </ul>
+                                            <% end %>
+                                                <% else %>
+                                                    <li>
+                                                        <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>SIGN_IN_AS <span class="caret"></span>
                     </a>
-                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                      <li><a tabindex="#"  ><%= link_to "Authorize person", alogin_path %></a></li>
-                      <li><a tabindex="#" > <%= link_to "Employee", elogin_path %></a></li>
-                      <li><a tabindex="#"  ><%= link_to "General manager", hlogin_path %></a></li>
-                </ul><br/>
-                </div>
-             </li>
 
-             <li><div class="dropdown"><a id="dLabel" role="button"  class="btn btn-warning" data-target="#" href= "/employes/sign_up" ><i class="fa fa-plus"></i><i class="fa fa-user fa-fw"></i>New Employee 
-             </a></li>
-               
-             
-
-      <% end %>
-
-     
+                                                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                                                <li><a tabindex="#"><%= link_to "Authorize person", alogin_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Employee", elogin_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"><%= link_to "General manager", hlogin_path %></a>
+                                                                </li>
+                                                            </ul>
+                                                            <br/>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="dropdown"><a id="dLabel" role="button" class="btn btn-warning" data-target="#" href="/emps/sign_up"><i class="fa fa-plus"></i><i class="fa fa-user fa-fw"></i>New Employee 
+             </a>
+                                                    </li>
+                                                    <% end %>
                         </ul>
-                        
+                        </div>
                     </div>
-                  </div>
                 </div>
-    <hr>
-    <%= yield %>
-    <hr>
-   <div class="clearfix"></div>
-            <div class="container-fluid m-t-large">
-                <footer>
-                  <center>
-                    <p>
-                        <span class="pull-left">© Copyright <a href="" target="_blank"> Marck Biosciences Ltd.</a> 2014</span>
-                        <span class="hidden-phone pull-right">Created by <a href="#">PANDYA SOFTWARE</a></span>
-                    </p>
-                  <p>
-                           
-                           <table>
-                                <tr>
-                                  <ul>
-                                <td><li><%= link_to "-HELP", help_path %></li></td>
-                                <td><li><%= link_to "-CONTACT", contact_path %></li></td>
-                                <td> <li><%= link_to "-ABOUT",about_path %></li></td>
-                                <td><li><%= link_to "-DEVELOPER" ,developer_path %> </li>
-                              </td>
-                            </ul>
-                             </tr>
-                          </table>
-                             
-                             
-                              
-                    </p>
-                  </center>
-
-                </footer>
-            </div>
-
+                 <% flash.each do |type, message| %>
+       <div class="alert <%= bootstrap_class_for(type) %> fade in">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= message %>
+        <% if hr_signed_in? %>
+         welcome general manager <%= current_hr.username %> 
+         <%end%>
         </div>
-</body>
+<% end %>
+                
+                <%=yield %>
+                    <hr>
+                    <div class="clearfix"></div>
+                    <div class="container-fluid m-t-large">
+                        <footer>
+                            <center>
+                                <p> <span class="pull-left">© Copyright <a href="" target="_blank"> Marck Biosciences Ltd.</a> 2014</span>
+ <span class="hidden-phone pull-right">Created by <a href="#">PANDYA SOFTWARE</a></span>
+
+                                </p>
+                                <p>
+                                    <table>
+                                        <tr>
+                                            <ul>
+                                                <td>
+                                                    <li>
+                                                        <%=link_to "-HELP", help_path %>
+                                                    </li>
+                                                </td>
+                                                <td>
+                                                    <li>
+                                                        <%=link_to "-CONTACT", contact_path %>
+                                                    </li>
+                                                </td>
+                                                <td>
+                                                    <li>
+                                                        <%=link_to "-ABOUT",about_path %>
+                                                    </li>
+                                                </td>
+                                                <td>
+                                                    <li>
+                                                        <%=link_to "-DEVELOPER" ,developer_path %>
+                                                    </li>
+                                                </td>
+                                            </ul>
+                                        </tr>
+                                    </table>
+                                </p>
+                            </center>
+                        </footer>
+                    </div>
+            </div>
+    </body>
+
 </html>

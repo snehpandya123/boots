@@ -7,7 +7,5 @@ class Authorize < ActiveRecord::Base
          attr_accessor :login
          attr_accessible :password,:password_confirmation,:remember_me, :email , :username
          validates :username,
-  :uniqueness => {
-    :case_sensitive => false
-  }
-     end
+                   :uniqueness => {:case_sensitive => false}
+ end

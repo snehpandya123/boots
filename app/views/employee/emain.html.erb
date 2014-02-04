@@ -1,25 +1,27 @@
-<% if employe_signed_in?%>
-<div class="container-fluid">
-    <div class="row-fluid">
-<% if current_employe.sign_in_count == 1 %>
-   <div class = "alert alert-success">
-           Wellcome <%= current_employe.username %>,Hope you will enjoy using this. 
+<div class = "wrapper">
+ <% if emp_signed_in?%>
+ <div class="container-fluid">
+    <% if current_emp.sign_in_count == 1 %>
+    <div class = "alert alert-success">
+           Welcome <%= current_emp.username %>,Hope you will enjoy using this. 
     </div> 
     <%= render "content" %>
-    <% else %>
+      <% else %>
     <div class = "alert alert-success">
-           Wellcome back <%= current_employe.username %>, You have signed in <%= current_employe.sign_in_count %> times.
+           Welcome back <%= current_emp.username %>, You have signed in <%= current_emp.sign_in_count %> times.
     </div>  
+    
     <%= render "content" %>
+
     <%end %>
-</div>
-</div>
+ </div>
+
 <% else %>
 <div class = "alert alert-danger">
     you can not have any authentication to this page 
 </div>
-<% end %>
-
+<% end %> 
+</div>
 
 
     

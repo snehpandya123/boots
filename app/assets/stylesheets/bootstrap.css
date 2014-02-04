@@ -219,6 +219,8 @@ body {
     font-weight: 400;
     position: relative;
     padding-top: 40px;
+    overflow: scroll;
+    
 }
 
 a {
@@ -2039,11 +2041,8 @@ box_a {border:1px solid #ddd;background:#fff;position:relative}
 .social-box .body .flot-base {
   width: 100%!important;
 }
-.social-box .body .vmap {
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-}
+
+
 .social-box .body .form-horizontal {
   margin-bottom: -12px;
 }
@@ -2053,9 +2052,7 @@ box_a {border:1px solid #ddd;background:#fff;position:relative}
   margin-right: -12px;
   padding-left: 192px;
 }
-.social-box .body .tab-content {
-  overflow: hidden;
-}
+
 
 .social-box.social-blue.social-bordered {
   border-color: #003781;

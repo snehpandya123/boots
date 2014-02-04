@@ -1,7 +1,9 @@
       <!-- start: Header -->
-        
-                <div class="wrap">
+        <div class="wrap">
             <div class="container-fluid">
+                 <div class = "alert alert-success">
+           Welcome back <%= current_hr.username %>, You have signed in <%= current_hr.sign_in_count %> times
+            </div> 
                 <div class="row-fluid">
 
                     <div class="span9 text-center">
@@ -52,9 +54,9 @@
                             <ul id="dashboard-menu">
                                 <li >
 
-                                    <a href="/amain">
+                                    <a href="#">
                                         <i class="fa fa-home fa-fw"></i>
-                                        <span>Home</span>
+                                        <span>Dashboard</span>
                                     </a>
                                 </li>            
                                 <li class="active">
@@ -62,48 +64,64 @@
                                         <div class="arrow"></div>
                                         <div class="arrow_border"></div>
                                     </div>
-                                    <a href="charts.html">
+                                    <a href="#">
                                         <i class="fa fa-signal"></i>
                                         <span>Charts</span>
                                     </a>
                                 </li>
+                                    
                                 <li>
-                                    <a class="dropdown-toggle" href="#">
-                                        <i class="fa fa-group"></i>
-                                        <span>Users</span>
+                                    <a class="" href="#">
+                                    <span data-toggle="collapse" data-parent="#menu-group-1" href="#sub-item-1" class="sign">
+                                        <i class="fa fa-group"></i>Replication</span>
+                                       
 
                                     </a>
-                                    <ul class="submenu">
-                                        <li><a href="users.html"><i class="icon-list icon-2x"></i> User list</a></li>
-                                        <li><a href="profile_edit.html"><i class="icon-cog"></i> Settings</a></li>
-                                        <li><a href="public_profile.html"><i class="icon-star"></i> User profile</a></li>
+                                   <ul class="children nav-child unstyled small collapse" id="sub-item-1">
+                                       <li class="item-2 deeper parent active">
+                                           
+                                        <li><span data-toggle="collapse" data-parent="#menu-group-1" id = "new">
+                                          
+                                           <i class="fa fa-plus"></i>
+                                             </span>New</li>
+                                         <li><span data-toggle="collapse" data-parent="#menu-group-1" data-icon="&#x2297;">
+                                             <i class="fa fa-frown-o"></i>
+                                             </span>Pending</li>
+                                              <li><span data-toggle="collapse" data-parent="#menu-group-1">
+                                            <i class="fa fa-thumbs-down" ></i>
+                                             </span>Rejected</li>
+                                              <li><span data-toggle="collapse" data-parent="#menu-group-1">
+                                          <i class="fa fa-thumbs-up"></i>
+                                             </span>Approved</li>
+                                             
+                                </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a class="dropdown-toggle" href="#">
-                                        <i class="fa fa-edit"></i>
-                                        <span>Forms</span>
+                                 <li>
+                                    <a class="" href="#">
+                                    <span data-toggle="collapse" data-parent="#menu-group-2" href="#sub-item-2" class="sign">
+                                       <i class="fa fa-shopping-cart"></i>Asset</span>
+                                       
 
                                     </a>
-                                    <ul class="submenu">
-                                        <li><a href="forms.html"><i class="icon-edit-sign"></i> Form</a></li>
-                                        <li><a href="form_wizard.html"><i class="icon-arrow-right"></i> Wizard</a></li>
+                                   <ul class="children nav-child unstyled small collapse" id="sub-item-2">
+                                       <li class="item-2 deeper parent active">
+                                           
+                                        <li><span data-toggle="collapse" data-parent="#menu-group-2">
+                                            <i class="fa fa-plus"></i>
+                                             </span>ADD</li>
+                                         <li><span data-toggle="collapse" data-parent="#menu-group-2">
+                                            <i class="fa fa-eye"></i> 
+                                             </span>View</li>
+                                              
+                                             
+                                </li>
                                     </ul>
                                 </li>
+                                
+                                
                                 <li>
-                                    <a href="gallery-grid.html">
-                                        <i class="fa fa-picture"></i>
-                                        <span>Gallery</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="calendar.html">
-                                        <i class="fa fa-calendar-empty"></i>
-                                        <span>Calendar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="database.html">
+                                    <a href="#" id ="table">
                                         <i class="fa fa-th-large"></i>
                                         <span>Tables</span>
                                     </a>
@@ -118,20 +136,18 @@
 
 
                     <!-- start: Content -->
-                     <div class = "alert alert-success">
-           Wellcome back <%= current_hr.username %>, You have signed in <%= current_hr.sign_in_count %> times.
-            </div> 
+                    
                     <div id="content" class="span11">
                         <ul class="breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="index.html">Dashboard</a>
+                                <a href="#">Dashboard</a>
                                 <span class="icon-angle-right"></span>
                             </li>
                             <li><a href="#">Awesome Plugins </a>
                                 <span class="icon-angle-right"></span>
                             </li>
-                            <li><a href="charts.html">Charts</a>
+                            <li><a href="#">Charts</a>
                             </li>
                         </ul>
                         <h3> Charts</h3>
@@ -288,27 +304,11 @@
                         </div>
                     </div>
                 </div>
-
-
+        </div>
             </div><!--/#content.span19-->
            
-        <script src="js/charts/jquery.flot.js?v1.4.0"></script>
-        <script src="js/charts/jquery.flot.resize.js?v1.4.0"></script>
-        <script src="js/charts/jquery.flot.pie.js?v1.4.0"></script>
-        <script src="js/charts/jquery.flot.stack.js?v1.4.0"></script>
-        <script src="js/charts/jquery.flot.symbol.js?v1.4.0"></script>
-        <script src="js/charts/jquery.sparkline.min.js?v1.4.0"></script>
-        <script src="js/charts/jquery.easy-pie-chart.js?v1.4.0"></script>
-        <script src="js/charts/raphael.2.1.0.min.js?v1.4.0"></script>
-        <script src="js/charts/justgage.1.0.1.min.js?v1.4.0"></script>
-        <script src="js/charts/charts.js?v1.4.0"></script>
-        <script>
-            
-        </script>
+        
 
 
 
-
-    </body>
-
-</html>
+   

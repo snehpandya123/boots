@@ -1,5 +1,10 @@
 Boot::Application.routes.draw do
   
+  devise_for :emps 
+ devise_scope :emp do
+  get '/elogin' => 'devise/sessions#new'
+  get '/elogout' => 'devise/sessions#destroy'
+end
   devise_for :authorizes 
   devise_scope :authorize  do
   get '/alogin' => 'devise/sessions#new'
@@ -13,10 +18,7 @@ devise_for :hrs
 end
 
 devise_for :employes 
-  devise_scope :employe  do
-  get '/elogin' => 'devise/sessions#new'
-  get '/elogout' => 'devise/sessions#destroy'
-end
+ 
  
   resources :vendors
   resources :replications
