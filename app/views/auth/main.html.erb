@@ -1,8 +1,5 @@
 <% if authorize_signed_in? %>
- <div class="alert alert-success alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-           Wellcome back <%= current_authorize.username %>, You have signed in <%= current_authorize.sign_in_count %> times.
-</div>
+ 
     <div class="container-fluid">
        <div class="row-fluid">
             <div class="span1">
@@ -33,10 +30,10 @@
                                 <li class="item-2 deeper parent active">
                                     <li><span data-toggle="collapse" data-parent="#menu-group-1">
                                             <i class="fa fa-frown-o"></i>
-                                             </span>pending</li>
-                                    <li><span data-toggle="collapse" data-parent="#menu-group-1">
-                                            <i class="fa fa-plus"></i> </i>
-                                             </span>ADD</li>
+                                             </span></li>
+                                    <li><span data-toggle="collapse" data-parent="#menu-group-1" href="#addasset" >
+                                             </i>
+                                             </span>add</li>
                                     <li><span data-toggle="collapse" data-parent="#menu-group-1">
                                             <i class="fa fa-stack-exchange"></i>
                                              </span>Stock</li>
@@ -74,21 +71,21 @@
                 </div>
             </div>
             <div class= "span11">
+                <div class="well">
+                <h2>Vendors Table</h2>
                  <%= render "/vendors/index" %>
+            </div>
+        </div>
+            
+            <div class = "span11">
+              <div class= "well">
+                <h2>Assets Table</h2>
+                    <%= render "/assets/index" %>
             </div>
 
         </div>
         </div>
-       
-        
-   
-       
-        
-            
-        
-    
-
-        <% else %>
+<% else %>
             
 
         <div class="alert alert-danger">NOT ELIGIBLE...Only authorize person can sign_in
@@ -96,3 +93,4 @@
         </div>
             
         <% end %>
+    </div>

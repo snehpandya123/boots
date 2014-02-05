@@ -1,0 +1,55 @@
+
+ <%= form_for(@asset) do |f| %>
+ <center><h1>Add Asset</h1></center>
+ <div class = "well">
+  <a class ="red">
+ <% if @asset.errors.any? %>
+  <div id="error_explanation">
+  <h2><%= pluralize(@asset.errors.count, "error") %>
+  prohibited this <%= @asset.class.to_s.underscore.humanize.downcase %>
+    from being saved:</h2>
+  <p>There were problems with the following fields:</p>
+  <ul>
+  <% @asset.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+</div>
+<% end %>
+</a></div>
+          <table width="700">
+            <tr>
+              <td>
+                <%= f.label :Asset_name %>
+                <h3><i class="fa fa-user"></i>
+                  <%= f.text_field :name %>
+                </h3>
+              </td>
+               <td>
+                <%= f.label :Type_of_asset %><h3><i class="fa fa-align-justify"></i> 
+                <%= f.text_field :tp %></h3>
+              </td>
+            </tr>
+              <tr>
+                
+                 <td>
+   
+                  <%= f.label :Location %><h3><i class="fa fa-map-marker"></i>
+                  <%= f.text_field :location %></h3>
+                  <%= select("location", "vendor_id",Vendor.all.collect {|p| [ p.name, p.id ] }, { include_blank: true })%>
+                  
+           
+                <td>
+   
+                 <%= f.label :Cost %><h3><i class="fa fa-phone"></i>
+                 <%= f.text_field :cost %></h3>
+               </td>
+             </tr>
+                 <td>
+    
+                      <%= f.submit "Save", class: "btn  btn-primary btn-lg btn3d"  %>
+                      <%= f.submit "Cancel",  class: "btn btn-danger btn-lg btn3d" %>
+                    </td>
+                    </tr>
+                    </table>
+<% end %>

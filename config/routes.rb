@@ -37,7 +37,7 @@ devise_for :employes
   get "assets/index"
   
   
-  
+  root :to => 'pages#home'
   
   get '/contact', :to => 'pages#contact' 
   

@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <title>Boot</title>
         <%=stylesheet_link_tag 'bootstrap',:media=>'screen'%>
-            <%=javascript_include_tag "application" %>
-                <script src="http://code.highcharts.com/highcharts.js"></script>
-                <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-                <%=csrf_meta_tags %>
+        <%=javascript_include_tag "application" %>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+         <%=csrf_meta_tags %>
     </head>
     
     <body>
-       
-        <div class="navbar navbar-fixed-top">
+       <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
-                <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <div class="container"> 
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class = "icon-bar"><span>
                     </a>
- <a class="brand" href=""> <%= image_tag("logo.png", :alt => "#", :class => "round" , :width => "20") %>Marck BioScience </a>
+                    <a class="brand" href=""> <%= image_tag("logo.png", :alt => "#", :class => "round" , :width => "20") %>Marck BioScience </a>
 
                     <div class="nav-collapse">
                         <ul class="nav nav-tabs">
@@ -87,7 +86,11 @@
         <button class="close" data-dismiss="alert">×</button>
         <%= message %>
         <% if hr_signed_in? %>
-         welcome general manager <%= current_hr.username %> 
+         <center>welcome general manager <%= current_hr.username %></center>
+         <% elsif authorize_signed_in?%>
+          <center>Wellcome back <%= current_authorize.username %>, You have signed in <%= current_authorize.sign_in_count %> times.</center> 
+            <% else %>
+             Wellcome back <%= current_emp.username %>, You have signed in <%= current_emp.sign_in_count %> times.
          <%end%>
         </div>
 <% end %>

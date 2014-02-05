@@ -1,7 +1,6 @@
 class VendorsController < ApplicationController
   def new
-  		
-		@vendor  =  Vendor.new
+ 		@vendor  =  Vendor.new
   end
   def create
 		@vendor = Vendor.new(params[:vendor])

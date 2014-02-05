@@ -6,19 +6,16 @@ class AssetsController < ApplicationController
   def create
   	@asset = Asset.new(params[:asset])
 			if @asset.save
-				
 				flash[:success] = "Vendor Added Successfully"
 				redirect_to @asset
-			else
-				
-				render 'new'
+      else
+        render "amian"
 			end
   end
 
   def show
   	@asset = Asset.find(params[:id])
-	
-	@title = @asset.name
+	 @title = @asset.name
   end
 
   def index
