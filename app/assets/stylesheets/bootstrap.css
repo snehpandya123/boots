@@ -210,18 +210,7 @@ display: inline-block;
 margin: 1em;
 }
 
-body {
-    background: #f5f5f5;
-    color: #3b3b41;
-    border: none;
-    font-family: 'Open Sans', sans-serif;
-    font: normal 13px arial,sans-serif;
-    font-weight: 400;
-    position: relative;
-    padding-top: 40px;
-    overflow: scroll;
-    
-}
+
 
 a {
     color: #646464;
@@ -2717,12 +2706,14 @@ textarea {
 }
 
 body {
+
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "papayrus", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: black;
-  background-color:white;
+  background-color:#C9C9C9;
+  padding-top: 60px; 
 }
 .form-signin {
   max-width: 400px; 
@@ -3649,20 +3640,23 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
 
 form {
-  margin:50px;
-  margin-left: 50px;
-   
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 0;
-  padding: 20px;
+ 
   width: auto;
   color: black;
   height: auto;
-  background-color: white;
+  background-color: #F7F2F6;
 
   background-image:url('#');
 

@@ -89,8 +89,10 @@
          <center>welcome general manager <%= current_hr.username %></center>
          <% elsif authorize_signed_in?%>
           <center>Wellcome back <%= current_authorize.username %>, You have signed in <%= current_authorize.sign_in_count %> times.</center> 
-            <% else %>
+            <% elsif emp_signed_in? %>
              Wellcome back <%= current_emp.username %>, You have signed in <%= current_emp.sign_in_count %> times.
+             <% else%>
+             not authorize
          <%end%>
         </div>
 <% end %>

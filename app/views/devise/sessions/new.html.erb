@@ -20,22 +20,18 @@
                     <div>
                      <p><div class ="well">
                      <h2>Sign in</h2>
-
-                       <h2><i class="fa fa-user"></i> <%= f.text_field :username , :placeholder => "Enter username..."%></p></h2>
+                          <hr class="colorgraph">
+                       <h2><i class="fa fa-user"></i> <%= f.text_field :username , :placeholder => "Enter username..." , :id => "username" %></p></h2>
 
                       <div>
                         
-                         <h2><i class="fa fa-key"></i><%= f.password_field :password , :placeholder => "Enter password.." %></div></h2>
+                         <h2><i class="fa fa-key"></i><%= f.password_field :password , :placeholder => "Enter password.." ,:id => "password" %></div></h2>
+                          <hr class="colorgraph">
                         
-                         <% if devise_mapping.rememberable? -%>
-                         <div>
-                          <%= f.check_box :remember_me %> <%= f.label :remember_me %>
-                      </div>
-                      
-                    <% end -%>
-                  
+                        
 
-  <div><%= f.submit "Sign in" ,:class => "btn btn-success "%><br /><%= f.submit "Cancle" ,:class => "btn btn-danger "%></div>
+               <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success" %>
+                    <%= f.submit "Cancle" ,:class => "btn btn-block btn-lg btn-danger", :id => "cancle" %>
 <% end %>
 
 </td>

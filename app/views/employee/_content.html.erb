@@ -29,25 +29,33 @@
 
                                     </a>
                                    <ul class="children nav-child unstyled small collapse" id="sub-item-1">
-                                       <li class="item-2 deeper parent active">
-                                           
-                                        <li><span data-toggle="collapse" data-parent="#menu-group-1" id = "new">
-                                          
-                                           <i class="fa fa-plus"></i>
-                                             </span>New</li>
-                                         <li><span data-toggle="collapse" data-parent="#menu-group-1" data-icon="&#x2297;">
-                                             <i class="fa fa-frown-o"></i>
-                                             </span>Pending</li>
+                                      <a class= "" href ="#" >   
+                                            <li>
+                                                <span data-toggle="collapse" data-parent="#menu-group-1">
+                                                    <i class="fa fa-user"></i>
+                                                </span>New
+                                            </li>
+                                        </a>
+                                        <a class="" href="#">
+                                            <li>
+                                                <span data-toggle="collapse" data-parent="#menu-group-1">
+                                                    <i class="fa fa-frown-o"></i>
+                                               </span>Pending</li>
+                                         </a>
+                                          <a class="" href="#">
                                               <li><span data-toggle="collapse" data-parent="#menu-group-1">
                                             <i class="fa fa-thumbs-down" ></i>
                                              </span>Rejected</li>
+                                         </a>
+                                          <a class="" href="#">
                                               <li><span data-toggle="collapse" data-parent="#menu-group-1">
                                           <i class="fa fa-thumbs-up"></i>
                                              </span>Approved</li>
                                              
                                 </li>
+                            </a>
                                     </ul>
-                                </li>
+                             
                                  <li>
                                     <a class="" href="#">
                                     <span data-toggle="collapse" data-parent="#menu-group-2" href="#sub-item-2" class="sign">
@@ -86,6 +94,7 @@
   			 <div class = "span11">
         	<div class = "well">         
             		<%= render "/replications/new" %>
+                    
         	</div>
         </div>
        </div>

@@ -7,18 +7,13 @@
     </div> 
     <%= render "content" %>
       <% else %>
-    <div class = "alert alert-success">
-           Welcome back <%= current_emp.username %>, You have signed in <%= current_emp.sign_in_count %> times.
-    </div>  
-    
-    <%= render "content" %>
-
-    <%end %>
+     <%= render "content" %>
+<% end %>
  </div>
 
 <% else %>
 <div class = "alert alert-danger">
-    you can not have any authentication to this page 
+    you can not have any authentication to this page <% link_to "click here" , elogin_path %> to signin
 </div>
 <% end %> 
 </div>
