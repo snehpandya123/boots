@@ -1,15 +1,19 @@
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span8">
-       <div id="continer" style="height: 300px width: 350px"></div>
+    <div class="span9">
+      <div class = "well">
+        
+    <%= pie_chart({"Hr department" => 10 , "L.v.p" => 5 , "S.v.p" => 13 , "Controller" => 24}) %>
         </div>
+
+      </div>
        
-         <div class="span4">
+         <div class="span3">
          <table>
            <tr>
             <td>
-                <%= image_tag("bindi.jpg", :alt => "Sample App", :class => "round" , :width => "700") %>
+                <%= image_tag("banner02.jpg", :alt => "Sample App", :class => "round" , :width => "700") %>
              </td>
               </tr>
               <tr>
@@ -30,7 +34,10 @@
                         
                         
 
-               <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success" %>
+               <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success", :id => "signin" %>
+                <div id="divMsg" >
+             <i class = "fa fa-key"></i>    
+              </div>
                     <%= f.submit "Cancle" ,:class => "btn btn-block btn-lg btn-danger", :id => "cancle" %>
 <% end %>
 

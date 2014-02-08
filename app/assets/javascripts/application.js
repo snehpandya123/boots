@@ -12,10 +12,25 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jsapi
+//= require chartkick
 //= require jquery.ui.all
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+function loading(){
+     $('#submit').on('click', function() {
+    var $this = $(this);
+    $this.button('loading');
+    setTimeout(function() {
+        $this.button('reset');
+    }, 2000);
+});
+}
+ $(document).ready(function(){
+    
+ loading();
+});
 $(document).ready(function(){
 $('#cancle').click(function(){
 $('#username').val('').focus();

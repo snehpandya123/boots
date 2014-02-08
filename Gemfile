@@ -6,6 +6,9 @@ gem "font-awesome-rails"
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'
+gem "chartkick", "~> 1.2.1"
+gem "groupdate", "~> 1.0.4"
+gem "active_median", "~> 0.0.1"
 
 # Use SCSS for stylesheets
 
