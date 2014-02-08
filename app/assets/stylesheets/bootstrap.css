@@ -3657,8 +3657,9 @@ form {
   color: black;
   height: auto;
   background-color: #F7F2F6;
+  background-size: cover;
 
-  background-image:url('#');
+  background-image:url('/assets/bg7.jpg');
 
   
 }

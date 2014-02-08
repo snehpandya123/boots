@@ -39,9 +39,9 @@
                                         </li>
                                         </div>
                                     </ul>
-                                    <% elsif employe_signed_in? %>
+                                    <% elsif emp_signed_in? %>
                                         <li>
-                                            <%=link_to "DASHBOARD" , emain_path %>
+                                            <%=link_to "DASHBOARD" , amain_path %>
                                         </li>
                                         <% else %>
                                             <li>
@@ -49,10 +49,11 @@
                                             </li>
                                             <ul class="nav pull-right">
                                                 <li>
-                                                    <div class="dropdown"><a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Budget 
-             </a>
+                                                    <div id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Replication<span class = "badge">0</span>
+             </d>
                                                 </li>
                                                 </div>
+
                                             </ul>
                                             <% end %>
                                                 <% else %>
