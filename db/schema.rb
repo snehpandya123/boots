@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140203145337) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "addassets", force: true do |t|
     t.string   "item"
     t.string   "type"
@@ -112,6 +115,12 @@ ActiveRecord::Schema.define(version: 20140203145337) do
     t.string   "particular"
     t.string   "unit"
     t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "snehs", force: true do |t|
+    t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

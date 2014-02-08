@@ -16,20 +16,12 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-
-$('body').on('shown.bs.modal', '#myModal', function () {
-   $(".modal-body").html($("#table-lst-regions").html());
-});
-
 $(document).ready(function(){
 $('#cancle').click(function(){
 $('#username').val('').focus();
 $('#password').val('');
 });
 });
-
-
-
 $(document).ready(function() {        
     
     //Execute the slideShow
@@ -152,18 +144,3 @@ $(document).ready(function()
     });
 });
 
-
-
-//THIS IS FOR THE COLOMN DRILLDOWN
-
-
-
-	
-   
-
-
-
-
-    
-
-    

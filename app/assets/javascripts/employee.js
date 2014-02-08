@@ -1,6 +1,8 @@
 $(document).ready(function() {     
     $('#submit').prop('disabled', true).removeClass("btn btn-block btn-lg btn-primary").addClass("btn btn-block btn-lg btn-default");
+    
      $('#btn_AddToList').click(function () {
+     
      $('#submit').prop('disabled', true).removeClass("btn btn-block btn-lg btn-info").addClass("btn btn-block btn-lg btn-default");
     var val = $('#txt_RegionName').val();
     var val2 = $('#txt_Region').val();
