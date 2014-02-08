@@ -25,6 +25,7 @@ gem 'twitter-bootstrap-rails'
 gem "devise", "~> 3.2.2"
 gem "highcharts-rails", "~> 3.0.7"
 gem "kaminari"
+gem 'jquery-ui-rails'
 
 
 

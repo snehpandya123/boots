@@ -13,6 +13,9 @@ $(document).ready(function() {
         $('#txt_Regi').val('');
     $('#btn_AddToList1').click(function () {
          $('#submit').prop('disabled', false).removeClass("btn btn-block btn-lg btn-default").addClass('btn btn-block btn-lg btn-info');
+   $('body').on('shown.bs.modal', '#myModal', function () {
+   $(".modal-body").html($("#table-lst-regions").html());
+});
     });
       });
 });

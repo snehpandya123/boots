@@ -12,9 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$('body').on('shown.bs.modal', '#myModal', function () {
+   $(".modal-body").html($("#table-lst-regions").html());
+});
+
 $(document).ready(function(){
 $('#cancle').click(function(){
 $('#username').val('').focus();
