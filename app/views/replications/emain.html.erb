@@ -1,0 +1,25 @@
+<div class = "wrapper">
+ <% if emp_signed_in?%>
+ <div class="container-fluid">
+    <% if current_emp.sign_in_count == 1 %>
+    <div class = "alert alert-success">
+           Welcome <%= current_emp.username %>,Hope you will enjoy using this. 
+    </div> 
+    <%= render "content" %>
+      <% else %>
+     <%= render "content" %>
+<% end %>
+ </div>
+
+<% else %>
+<div class = "alert alert-danger">
+    you can not have any authentication to this page <% link_to "click here" , elogin_path %> to signin
+</div>
+<% end %> 
+</div>
+
+
+    
+
+    
+      

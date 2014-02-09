@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Boot</title>
+        <%= favicon_link_tag '/assets/favicon.ico' %>
+        <title>Marck Biosciences Ltd.</title>
         <%=stylesheet_link_tag 'bootstrap',:media=>'screen'%>
         <%=javascript_include_tag "application" %>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-         <%=csrf_meta_tags %>
+        <%=csrf_meta_tags %>
     </head>
     
     <body>
@@ -39,19 +40,20 @@
                                         </li>
                                         </div>
                                     </ul>
-                                    <% elsif emp_signed_in? %>
+                                    <% elsif authorize_signed_in? %>
                                         <li>
                                             <%=link_to "DASHBOARD" , amain_path %>
                                         </li>
-                                        <% else %>
-                                            <li>
-                                                <%=link_to "DASHBOARD" , amain_path %>
-                                            </li>
-                                            <ul class="nav pull-right">
-                                                <li>
+                                         <li>
                                                     <div id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Replication<span class = "badge">0</span>
              </d>
                                                 </li>
+                                        <% else %>
+                                            <li>
+                                                <%=link_to "DASHBOARD" , emain_path %>
+                                            </li>
+                                            <ul class="nav pull-right">
+                                               
                                                 </div>
 
                                             </ul>

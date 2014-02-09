@@ -8,7 +8,10 @@ class EmployeeController < ApplicationController
 		@replication = Replication.new(params[:replication])
 			if @replication.save
 				flash[:success] = "Replication Added Successfully"
-				redirect_to employee_emain_path
+				render "emain"
+			else
+				flash[:notice] = "try again later..cannot b saved"
+				render "emain"
 			end
 		
   end

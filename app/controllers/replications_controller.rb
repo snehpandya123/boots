@@ -7,8 +7,13 @@ class ReplicationsController < ApplicationController
    def create
 		@replication = Replication.new(params[:replication])
 			if @replication.save
-				redirect_to employee_emain_path
+				flash[:success] = "Replication Added Successfully"
+				render "emain"
+			else
+				flash[:notice] = "try again later..cannot b saved"
+				render "emain"
 			end
+		
 	end		
 	def show
 	@replication = Replication.find(params[:id])

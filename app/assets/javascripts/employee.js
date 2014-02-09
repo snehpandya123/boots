@@ -17,7 +17,7 @@ $(document).ready(function() {
          $('#submit').prop('disabled', false).removeClass("btn btn-block btn-lg btn-default").addClass('btn btn-block btn-lg btn-info');
    $('body').on('shown.bs.modal', '#myModal', function () {
    $(".modal-body").html($("#table-lst-regions").html());
-});
-    });
+       });
       });
+    });
 });
