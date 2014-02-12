@@ -7,9 +7,6 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
-*.fa-plus{
-    font-size: 1px;
-}
 
 
 
@@ -2389,8 +2386,7 @@ color: #ffffff !important;
         padding:1px;
         color:#1DCCEF;
     }
-body { padding-top: 60px; 
-margin-top:30px;} 
+
 .clearfix {
   *zoom: 1;
 }
@@ -2708,12 +2704,13 @@ textarea {
 body {
 
   margin: 0;
-  font-family: "papayrus", Helvetica, Arial, sans-serif;
+  font-family: "Times-new Roman", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: black;
   background-color:#C9C9C9;
-  padding-top: 60px; 
+  overflow: auto; 
+  padding : 60px;
 }
 .form-signin {
   max-width: 400px; 
@@ -3658,8 +3655,7 @@ form {
   height: auto;
   background-color: #F7F2F6;
   background-size: cover;
-
-  background-image:url('/assets/bg7.jpg');
+   background-image:url('/assets/bg7.jpg');
 
   
 }
@@ -8069,6 +8065,7 @@ input[type="submit"].btn.btn-mini {
   max-height: 400px;
   padding: 15px;
   overflow-y: auto;
+  overflow-x:auto;
 }
 
 .modal-form {

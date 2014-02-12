@@ -19,45 +19,50 @@
                         <span class="icon-bar"></span>
                         <span class = "icon-bar"><span>
                     </a>
-                    <a class="brand" href=""> <%= image_tag("logo.png", :alt => "#", :class => "round" , :width => "20") %>Marck BioScience </a>
+                    <a class="brand" href=""> <%= image_tag("logo.png", :alt => "#", :class => "round" , :width => "20") %>Marck BioScience 
+                    </a>
 
                     <div class="nav-collapse">
-                        <ul class="nav nav-tabs">
-                            <li>
-                                <%=link_to "HOME", home_path %>
-                            </li>
-                            <% if signed_in? %>
-                                <li>
+                         <ul class="nav nav-tabs">
+                             <li>
+                                 <%=link_to "HOME", home_path %>
+                             </li>
+                         
+                             <% if signed_in? %>
+                                 <li>
                                     <%=link_to "SIGNOUT",destroy_authorize_session_path, :method=>:delete ,:data => { confirm: 'Are you sure?' } %></li>
-                                <% if hr_signed_in? %>
-                                    <li>
-                                        <%=link_to "Dashboard", hmain_path %>
-                                    </li>
-                                    <ul class="nav pull-right">
-                                        <li>
-                                            <div class="dropdown"><a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Budget 
-             </a>
-                                        </li>
-                                        </div>
-                                    </ul>
-                                    <% elsif authorize_signed_in? %>
-                                        <li>
-                                            <%=link_to "DASHBOARD" , amain_path %>
-                                        </li>
-                                         <li>
-                                                    <div id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Replication<span class = "badge">0</span>
-             </d>
-                                                </li>
+                                 
+                                 <% if hr_signed_in? %>
+                                      <li>
+                                            <%=link_to "Dashboard", hmain_path %>
+                                      </li>
+                                    
+                                        <ul class="nav pull-right">
+                                            <li>
+                                                <div class="dropdown"><a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Budget 
+                                             </a>
+                                            </li>
+                                            </div>
+                                        </ul>
+                                  
+                                   <% elsif authorize_signed_in? %>
+                                              <ul class="nav nav-tabs">
+                                             <li>
+                                                        <%=link_to "DASHBOARD" , amain_path %>
+                                             </li>
+                                         </ul>
+                                        
                                         <% else %>
                                             <li>
                                                 <%=link_to "DASHBOARD" , emain_path %>
                                             </li>
-                                            <ul class="nav pull-right">
-                                               
-                                                </div>
-
-                                            </ul>
+                                            
                                             <% end %>
+                                             
+                                                   
+                                                 </div>
+
+
                                                 <% else %>
                                                     <li>
                                                         <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>SIGN_IN_AS <span class="caret"></span>

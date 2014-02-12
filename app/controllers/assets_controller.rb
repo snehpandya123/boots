@@ -14,8 +14,7 @@ class AssetsController < ApplicationController
   end
 
   def show
-  	@asset = Asset.find(params[:id])
-	 @title = @asset.name
+  
   end
 
   def index

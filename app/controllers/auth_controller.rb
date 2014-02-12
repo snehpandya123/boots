@@ -1,13 +1,9 @@
 class AuthController < ApplicationController
- 
-
  def main
   	@vendor  =  Vendor.new
 	@vendor= Vendor.all
 	@vendor = Vendor.order("name").page(params[:page]).per(10)
-	@asset = Asset.new
-	@asset= Asset.all
-	@asset = Asset.order("name").page(params[:page]).per(10)
+	
  end
  
  def create
@@ -22,6 +18,8 @@ class AuthController < ApplicationController
 			if @vendor.save
 				flash[:success] = "Vendor Added Successfully"
 				redirect_to emain_path
+				else
+				render "main"
 			end
   end
 

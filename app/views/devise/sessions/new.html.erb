@@ -1,51 +1,41 @@
+ 
 
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span9">
-      <div class = "well">
-        
-    <%= pie_chart({"Hr department" => 10 , "L.v.p" => 5 , "S.v.p" => 13 , "Controller" => 24}) %>
-        </div>
+ <div class="row-fluid">
+   <div class= "span7">
+    <div class="well">
+    <%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
+    </div>
+    </div>
+    
+    <div class="span5">
+    <div class= "well">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <h2>Sign in</h2>
+                                <hr class="colorgraph">
+                            <h2>
+                                    <i class="fa fa-user"></i>
+                            <%= f.text_field :username , :placeholder => "Enter username..." , :id => "username" %>
+                            </h2>
+                          
 
-      </div>
-       
-         <div class="span3">
-         <table>
-           <tr>
-            <td>
-                <%= image_tag("banner02.jpg", :alt => "Sample App", :class => "round" , :width => "700") %>
-             </td>
-              </tr>
-              <tr>
-            <td>
-                
-                                      
-                   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-                    <div>
-                     <p><div class ="well">
-                     <h2>Sign in</h2>
-                          <hr class="colorgraph">
-                       <h2><i class="fa fa-user"></i> <%= f.text_field :username , :placeholder => "Enter username..." , :id => "username" %></p></h2>
+                         
+                            <h2>
+                              <i class="fa fa-key"></i>
+                            <%= f.password_field :password , :placeholder => "Enter password.." ,:id => "password" %>
+                            </h2>
+                         
+                        <hr class="colorgraph">
+                      
+                       <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success", :id => "signin" %>
+                       <%= f.submit "Cancle" ,:class => "btn btn-block btn-lg btn-danger", :id => "cancle" %>
+      <% end %>   
+    </div>
+   </div>
+  </div>
 
-                      <div>
-                        
-                         <h2><i class="fa fa-key"></i><%= f.password_field :password , :placeholder => "Enter password.." ,:id => "password" %></div></h2>
-                          <hr class="colorgraph">
-                        
-                        
 
-               <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success", :id => "signin" %>
-                <div id="divMsg" >
-             <i class = "fa fa-key"></i>    
-              </div>
-                    <%= f.submit "Cancle" ,:class => "btn btn-block btn-lg btn-danger", :id => "cancle" %>
-<% end %>
+     
 
-</td>
-</tr>
-</div>
-</table>
-</div>
-</div>
-</div>
-
+                       
+                          
+                            
