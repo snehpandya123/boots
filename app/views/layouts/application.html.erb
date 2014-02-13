@@ -88,21 +88,7 @@
                         </div>
                     </div>
                 </div>
-                 <% flash.each do |type, message| %>
-       <div class="alert <%= bootstrap_class_for(type) %> fade in">
-        <button class="close" data-dismiss="alert">×</button>
-        <%= message %>
-        <% if hr_signed_in? %>
-         <center>welcome general manager <%= current_hr.username %></center>
-         <% elsif authorize_signed_in?%>
-          <center>Wellcome back <%= current_authorize.username %>, You have signed in <%= current_authorize.sign_in_count %> times.</center> 
-            <% elsif emp_signed_in? %>
-             Wellcome back <%= current_emp.username %>, You have signed in <%= current_emp.sign_in_count %> times.
-             <% else%>
-             not authorize
-         <%end%>
-        </div>
-<% end %>
+                 
                 
                 <%=yield %>
                     <hr>

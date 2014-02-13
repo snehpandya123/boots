@@ -39,21 +39,25 @@ background: #fff;
     font-size: 12px; /* to change font-size, please change instead .lbl */
 }
 #left ul.nav ul,
-#left ul.nav ul li {
+#left ul.nav ul li
+ {
     list-style: none!important;
     list-style-type: none!important;
     margin-top: 1px;
     margin-bottom: 1px;
 }
-#left ul.nav ul {
+#left ul.nav ul 
+{
     padding-left: 0;
     width: auto;
 }
-#left ul.nav ul.children {
+#left ul.nav ul.children
+ {
     padding-left: 12px;
     width: auto;
 }
-#left ul.nav ul.children li{
+#left ul.nav ul.children li
+{
     margin-left: 0px;
 }
 #left ul.nav li a:hover {

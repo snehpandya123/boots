@@ -37,7 +37,7 @@
                   <%= f.label :Location %><h3><i class="fa fa-map-marker"></i>
                   <%= f.text_field :location %></h3>
                   <%= select("location", "vendor_id",Vendor.all.collect {|p| [ p.name, p.id ] }, { include_blank: true })%>
-                  b
+                  
            
                 <td>
    
