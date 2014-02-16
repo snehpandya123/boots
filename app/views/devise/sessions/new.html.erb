@@ -1,41 +1,50 @@
- 
-
- <div class="row-fluid">
-   <div class= "span7">
+<div class="container-fluid">
+<div class="row-fluid">
+  <div class= "span6">
     <div class="well">
-    <%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
+      <%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
     </div>
-    </div>
-    
-    <div class="span5">
-    <div class= "well">
-      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-        <h2>Sign in</h2>
-                                <hr class="colorgraph">
-                            <h2>
-                                    <i class="fa fa-user"></i>
-                            <%= f.text_field :username , :placeholder => "Enter username..." , :id => "username" %>
-                            </h2>
-                          
-
-                         
-                            <h2>
-                              <i class="fa fa-key"></i>
-                            <%= f.password_field :password , :placeholder => "Enter password.." ,:id => "password" %>
-                            </h2>
-                         
-                        <hr class="colorgraph">
-                      
-                       <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success", :id => "signin" %>
-                       <%= f.submit "Cancle" ,:class => "btn btn-block btn-lg btn-danger", :id => "cancle" %>
-      <% end %>   
-    </div>
-   </div>
   </div>
+  
+  <div class= "span6">
+    <div class="well">
+       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+            <center><h2>Sign in</h2></center>
 
 
+            </h2>
+                <hr class="colorgraph">
+                  <h2>
+                    <i class="fa fa-user"></i>
+                      <%= f.text_field :username , :placeholder => "Enter username..." , :id => "username" %>
+                  </h2>
+        
+                  <h2>
+                    <i class="fa fa-key"></i>
+                       <%= f.password_field :password , :placeholder => "Enter password.." ,:id => "password" %>
+                  </h2>             
+                <hr class="colorgraph">
+                <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success", :id => "signin" %>
+                <%= f.submit "Cancle" ,:class => "btn btn-block btn-lg btn-danger", :id => "cancle" %>
+        <% end %> 
+    </div>
+  </div>
+</div>
      
 
-                       
-                          
-                            
+<div class="row-fluid">
+  <div class= "span6">
+    <div class="well">
+     <%= line_chart Replication.group_by_day(:created_at).count%> 
+    </div>
+  </div>
+  
+  <div class="span6">
+    <div class= "well">
+        
+        <%= line_chart Emp.group_by_day(:current_sign_in_at).count%> 
+      </div>
+    </div>
+</div> 
+
+</div>                         

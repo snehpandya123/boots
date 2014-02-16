@@ -10,6 +10,9 @@
     </head>
     
     <body>
+        <!--START OF MAIN-BODY-->
+       
+        <!--NAV BAR FIXED-TOP-->
        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container"> 
@@ -27,10 +30,13 @@
                              <li>
                                  <%=link_to "HOME", home_path %>
                              </li>
-                         
+
+                         <!-- IF-LOOP STARTS -->
                              <% if signed_in? %>
                                  <li>
-                                    <%=link_to "SIGNOUT",destroy_authorize_session_path, :method=>:delete ,:data => { confirm: 'Are you sure?' } %></li>
+                                    <%=link_to "SIGNOUT",destroy_authorize_session_path, :method=>:delete ,:data => { confirm: 'Are you sure?' } %>
+                                 </li>
+                            <!--INNER IF LOOPS STARTS-->
                                  
                                  <% if hr_signed_in? %>
                                       <li>
@@ -58,12 +64,8 @@
                                             </li>
                                             
                                             <% end %>
-                                             
-                                                   
-                                                 </div>
-
-
-                                                <% else %>
+                                            <!--INNER IF-LOOP ENDS-->
+        <% else %>
                                                     <li>
                                                         <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>SIGN_IN_AS <span class="caret"></span>
                                                      </a>
@@ -84,16 +86,21 @@
                                                          </a>
                                                     </li>
                                                     <% end %>
-                        </ul>
+                                        <!--IF-LOOP ENDS-->
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-                 
-                
-                <%=yield %>
+        <!-- NAV-BAR FIXED TOP ENDS-->
+       
+        <!--THIS IS THE YIELD -->
+        <%=yield %>
+        <!-- END OF YIELD-->
+                    
                     <hr>
+                <!-- FOOTER -->
                     <div class="clearfix"></div>
                     <div class="container-fluid m-t-large">
                         <footer>
@@ -133,7 +140,8 @@
                             </center>
                         </footer>
                     </div>
-            </div>
+                    <!-- END OF THE FOOTER-->
+            
     </body>
 
 </html>

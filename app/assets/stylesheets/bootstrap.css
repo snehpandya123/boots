@@ -16,21 +16,7 @@
  * Copyright 2013 uExel.com
  * Author Shaan@uexel.com
 /* Import Section
-=================================================================== */
-@import url("font-awesome.css");                    /* Font Awesome Styles */
-@import url("font-awesome-ie7.css");                  /* Font Awesome Styles */
-/* Glyphicons Halflings Font */
-/* Basic
-=========================================== */
 
-
-.easyPieChart{position:relative;text-align:center;}.easyPieChart canvas{position:absolute;top:0;left:0;}
-.social-box .body {
-clear: both;
-padding: 0;
-padding: 12px;
-background: #fff;
-}
 /* MENU-LEFT
 -------------------------- */
 /* layout */
@@ -2221,7 +2207,7 @@ color: #ffffff !important;
         }
         
         .nav-collapse .nav{
-            background-color: #2c3e50;
+            background-color: white;
             margin-top: 11px;
            
         }
@@ -2255,7 +2241,7 @@ color: #ffffff !important;
             margin-left: 0px;
         }
         .nav-collapse .nav{
-            background-color: #2c3e50;
+            background-color: white;
             margin-top: 11px;
            
         }
@@ -2282,7 +2268,7 @@ color: #ffffff !important;
     left: -200px;
     position: fixed;
     z-index: 9999;
-    background-color: #f7f7f7;
+    background-color: white;
     padding-top: 0px;
     border-right: 1px solid #ccc;
     width: 165px;
@@ -2712,9 +2698,9 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: black;
-  background-color:#C9C9C9;
+  background-color:black;
   overflow: auto; 
-  padding : 60px;
+  padding-top: 60px;
 }
 .form-signin {
   max-width: 400px; 
