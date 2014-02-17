@@ -3,4 +3,5 @@
 	<td><%= asset.tp %></td>
 	<td><%= asset.location%></td>
 	<td><%= asset.cost%></td>
+	<td><%= button_to "Remove", asset, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
 </tr>

@@ -24,7 +24,12 @@ def index
 		@title = "All users"
 		@vendor= Vendor.all
 		@vendor = Vendor.order("name").page(params[:page]).per(10)
-		
+	end
+def destroy
+   Vendor.find(params[:id]).destroy
+   flash[:success] = "Vendor destroyed."
+		redirect_to vendors_path
+      
+    end
 
-end
 end

@@ -9,7 +9,7 @@ $(document.body).ready(function () {
         var val3 = $('#txt_Regio').val();
         var val4 = $('#txt_Regi').val();
         $('#lst_Regions').append('<tr><td>' + val + '</td>' + '<td>' + val2 + '</td>' + '<td>' + val3 + '</td>' + '<td>'
-         + val4 + '</td><td><button type="button" class="api_key_edit btn btn-small btn-primary" value="31" onclick="editlink(this);">Edit</button><button type="button" class="api_key_delete btn btn-small btn-danger" value="31" onclick="deleteRow(this);">Delete</button></td></tr>');
+         + val4 + '</td><td><button type="button" class="api_key_delete btn btn-small btn-danger" value="31" onclick="deleteRow(this);"><i class="fa fa-trash-o"></i>  Delete</button></td></tr>');
         $('#txt_RegionName').val('').focus();
         $('#txt_Region').val('');
         $('#txt_Regio').val('');
@@ -39,6 +39,23 @@ function reload(el){
 }
     function editlink(el){
         var tr  = $(el).closest('tr');
-         tr.css("background-color", "#123");
-}
+        
+            tr.find('td').each(function()
+            {
+            td.css("background-color", "yellow")
+            });
+     }
+     $(function () {
+             $("#lst_Regions").on( 'dblclick', 'td', function () {
+        var OriginalContent = $(this).text();
 
+
+        var inputNewText = prompt("Enter new content for:", OriginalContent);
+
+        if (inputNewText != null) {
+            $(this).text(inputNewText)
+        }
+
+
+    });
+});

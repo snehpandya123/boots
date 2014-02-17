@@ -6,5 +6,6 @@
 		<td><%=  vendor.ph_no %></td>
 		<td><%=  vendor.mobile_no %></td>
 		<td><%=  vendor.asset_name %></td>
+		<td><%= button_to "Remove", vendor, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
 </tr>
  

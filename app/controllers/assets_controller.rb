@@ -21,4 +21,10 @@ class AssetsController < ApplicationController
   	@asset = Asset.all
   	@asset = Asset.order("name").page(params[:page]).per(5)
   end
+  def destroy
+   Asset.find(params[:id]).destroy
+   flash[:success] = "Vendor destroyed."
+    redirect_to assets_path
+      
+    end
 end
