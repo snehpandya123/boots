@@ -1,7 +1,7 @@
 $(document.body).ready(function () {
-    $('#submit').prop('disabled', true).removeClass("btn btn-block btn-lg btn-primary").addClass("btn btn-block btn-lg btn-default");
-     $('#reload').prop('disabled', false)
-    $('#btn_AddToList').click(function () {
+        $('#submit').prop('disabled', true).removeClass("btn btn-block btn-lg btn-primary").addClass("btn btn-block btn-lg btn-default");
+        $('#reload').prop('disabled', false)
+        $('#btn_AddToList').click(function () {
         $('#reload').prop('disabled', true).removeClass("btn btn-info").addClass("btn btn-default");
         $('#submit').prop('disabled', true).removeClass("btn btn-block btn-lg btn-info").addClass("btn btn-block btn-lg btn-default").html("loading..");
         var val = $('#txt_RegionName').val();
@@ -37,25 +37,31 @@ function reload(el){
 
     location.reload(true);
 }
-    function editlink(el){
-        var tr  = $(el).closest('tr');
-        
-            tr.find('td').each(function()
-            {
-            td.css("background-color", "yellow")
-            });
-     }
-     $(function () {
-             $("#lst_Regions").on( 'dblclick', 'td', function () {
+
+$(function () {
+    $("#lst_Regions").on( 'dblclick', 'td', function () {
         var OriginalContent = $(this).text();
-
-
         var inputNewText = prompt("Enter new content for:", OriginalContent);
-
-        if (inputNewText != null) {
-            $(this).text(inputNewText)
-        }
-
-
+            if (inputNewText != null) {     
+                $(this).text(inputNewText)
+            }
     });
 });
+ $.ajax({
+  url: 'http://localhost:3000/emain',
+  success: function(){
+    alert('success');
+  },
+  error: function(){
+    alert('failure');
+  }
+});
+ 
+ $(function(){
+   $.ajax({
+      url: '#{vendor_path}',
+      cache: false,
+      type: 'GET'
+  });
+ });
+ $(".content-wrapper").html("<%= escape_javascript(render :partial => 'vendors/new') %>");

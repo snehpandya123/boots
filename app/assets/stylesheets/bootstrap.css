@@ -7,7 +7,10 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
-
+.red
+{
+    background-color: red;
+}
 
 
 /*
@@ -2282,6 +2285,7 @@ color: #ffffff !important;
   } 
   #sidebar-nav #dashboard-menu {
     margin-left: 10px;
+     display: none;
   }
   #sidebar-nav #dashboard-menu li a span {
     visibility: visible;
@@ -2315,6 +2319,7 @@ color: #ffffff !important;
 @media (max-width: 480px) { 
     #content{
         padding: 0px;
+         display: none;
     }
     .sidebar-right{
             display: none;
@@ -2701,6 +2706,7 @@ body {
   background-color:#CFCFCF;
   overflow: auto; 
   padding-top: 60px;
+   
 }
 .form-signin {
   max-width: 400px; 
