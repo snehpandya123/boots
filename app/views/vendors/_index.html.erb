@@ -34,5 +34,18 @@
        <%= render @vendor %>
 	
    </tbody>
+   <div><table >
+                <tr>
+                    <td>
+                        <%= button_to "VIEW All" , vendors_path ,:class=>"btn btn-info",:method => :get %>
+                    </td>
+                    <td>
+                        <%= button_to "ADD NEW" , vendors_new_path ,:class=>"btn btn-primary",:method => :get %>
+                    </td>
+                </tr>
+            </table>
+            
+            
+        </div>
 </table>
 

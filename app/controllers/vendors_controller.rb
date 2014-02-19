@@ -18,6 +18,7 @@ class VendorsController < ApplicationController
 	@vendor = Vendor.find(params[:id])
 	
 	@title = @vendor.name
+	
   end
  
 def index

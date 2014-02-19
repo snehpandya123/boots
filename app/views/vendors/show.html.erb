@@ -18,6 +18,7 @@
 								<th>Ph_no</th>
 								<th>Mobile_no</th>
 								<th>Asset_name</th>
+								<th>Take action</th>
 								<th class="td-actions"></th>
 							</tr>
 						</thead>
@@ -30,6 +31,7 @@
 								<td><%= @vendor.ph_no %></td>
 								<td><%= @vendor.mobile_no %></td>
 								<td><%= @vendor.asset_name %></td>
+								<td><%= button_to "Remove", vendor, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
 							</tr>
 							
 							
@@ -39,4 +41,17 @@
 				</div> <!-- /widget-content -->
 			
 			</div> <!-- /widget -->
+			<div><table >
+				<tr>
+					<td>
+						<%= button_to "VIEW All" , vendors_path ,:class=>"btn btn-info",:method => :get %>
+					</td>
+					<td>
+						<%= button_to "ADD NEW" , vendors_new_path ,:class=>"btn btn-primary",:method => :get %>
+					</td>
+				</tr>
+			</table>
+			
+			
+		</div>
             </div>
