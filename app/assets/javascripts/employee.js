@@ -19,6 +19,8 @@ $(document.body).ready(function () {
         $('#submit').prop('disabled', false).removeClass("btn btn-block btn-lg btn-default").addClass('btn btn-block btn-lg btn-info');
         $('body').on('shown.bs.modal', '#myModal', function () {
         $(".modal-body").html($("#table-lst-regions").html());
+
+        
            });
         });
         });
@@ -50,15 +52,29 @@ $(function () {
 });
 
 
-$.ajax({
-  url: 'http://localhost:3000/emain',
-  success: function(){
-    alert('success');
-  },
-  error: function(){
-    alert('failure');
-  }
+
+$(document).ready(function(){
+  $(".click").onclick(function(){
+    $(".content-wrapper").load("help");
+  });
 });
+$(document).ready(function(){
+   $(".new").onclick(function(){
+    $(".content-wrapper").load("emain");
+  });
+ });
+$(document).ready(function(){
+    $(".click-chart").onclick(function(){
+    $(".content-wrapper").load("about");
+  });
+  });
+$(document).ready(function(){
+     $(".pending").onclick(function(){
+    $(".content-wrapper").load("developer");
+  });
+  
+});
+
  
  
 
