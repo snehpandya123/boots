@@ -1,4 +1,6 @@
+<div id = "assetnew">
  <%= form_for(@asset) do |f| %>
+ <center><h1>Add Asset</h1></center>
  <div class = "well">
   <a class ="red">
  <% if @asset.errors.any? %>
@@ -26,6 +28,7 @@
                <td>
                 <%= f.label :address %><h3><i class="fa fa-align-justify"></i> 
                 <%= f.text_area :tp %></h3>
+               
               </td>
             </tr>
               <tr>
@@ -50,3 +53,4 @@
                     </tr>
                     </table>
 <% end %>
+</div>

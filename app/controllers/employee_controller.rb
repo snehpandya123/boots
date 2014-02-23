@@ -1,7 +1,7 @@
 class EmployeeController < ApplicationController
   def emain
   	@replication  =  Replication.new
-  	
+  
 
   end
    def create
@@ -13,9 +13,13 @@ class EmployeeController < ApplicationController
 				flash[:notice] = "try again later..cannot b saved"
 				render "emain"
 			end
+			
 		
   end
   
-   
+  
+
+
 
 end
+
