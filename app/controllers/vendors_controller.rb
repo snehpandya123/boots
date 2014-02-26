@@ -5,6 +5,7 @@ class VendorsController < ApplicationController
   def create
 		@vendor = Vendor.new(params[:vendor])
 			if @vendor.save
+				 VendorMailer.registration_confirmation(@vendor).deliver
 				
 				flash[:success] = "Vendor Added Successfully"
 				redirect_to @vendor

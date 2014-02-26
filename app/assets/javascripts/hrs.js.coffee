@@ -20,4 +20,7 @@ $(document).ready ->
   $(".viewasset").mouseenter ->
   	$(".content-wrapper").load "assets #viewasset"
   	return
+  $(".click").mouseenter ->
+  	$(".content-wrapper").load "emain #eform"
+  	return
 return

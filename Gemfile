@@ -9,6 +9,7 @@ gem 'pg'
 gem "chartkick", "~> 1.2.1"
 gem "groupdate", "~> 1.0.4"
 gem "active_median", "~> 0.0.1"
+gem "actionmailer", "~> 4.0.0"
 
 # Use SCSS for stylesheets
 

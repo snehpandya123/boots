@@ -32,6 +32,8 @@ config.action_mailer.smtp_settings = {
   password: "ernakulam;"
 }
 
+ 
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
