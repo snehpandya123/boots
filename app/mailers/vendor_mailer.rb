@@ -4,7 +4,7 @@ class VendorMailer < ActionMailer::Base
   def registration_confirmation(vendor)
     @vendor = vendor
     
-    mail(:to => "<#{vendor.email}>,bhargavipandya63@yahoo.com", :subject => "Congrates for #{vendor.asset_name}" )
+    mail(:to => "<#{vendor.email}>,sapandya92@yahoo.co.in", :subject => "Congrates for #{vendor.asset_name}" )
 
   end
 end

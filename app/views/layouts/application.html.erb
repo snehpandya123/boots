@@ -94,14 +94,7 @@
             </div>
         </div>
         <!-- NAV-BAR FIXED TOP ENDS-->
-
-<% flash.each do |type, message| %>
-       <div class="alert <%= bootstrap_class_for(type) %> fade in">
-        <button class="close" data-dismiss="alert">×</button>
-        <%= message %>
-        </div>
-<% end %>
-       
+ <%= render 'layouts/flash' %>       
         <!--THIS IS THE YIELD -->
         <%=yield %>
         <!-- END OF YIELD-->

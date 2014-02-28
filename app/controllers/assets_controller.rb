@@ -6,9 +6,9 @@ class AssetsController < ApplicationController
   def create
   	@asset = Asset.new(params[:asset])
 			if @asset.save
+       AssetMailer.registration_confirmation(@asset).deliver
 			 redirect_to emain_path
        flash[:success] = "Asset Added Successfully"
-
       else
        redirect_to emain_path
 			end
@@ -16,9 +16,7 @@ class AssetsController < ApplicationController
 
   def show
     @asset = Asset.find(params[:id])
-  
-     @title = @asset.name
-  
+    @title = @asset.name
   end
 
   def index
@@ -27,6 +25,7 @@ class AssetsController < ApplicationController
   end
   def destroy
    Asset.find(params[:id]).destroy
+    AssetMailer.asset_destroy(@asset).deliver
    flash[:success] = "Vendor destroyed."
     redirect_to assets_path
       
