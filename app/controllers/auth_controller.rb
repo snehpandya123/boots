@@ -3,7 +3,7 @@ class AuthController < ApplicationController
   	@vendor  =  Vendor.new
 	@vendor= Vendor.all
 	@vendor = Vendor.order("name").page(params[:page]).per(10)
-	
+	@requisition = Requisition.all
  end
  
  def create
@@ -21,6 +21,12 @@ class AuthController < ApplicationController
 				else
 				render "main"
 			end
+  end
+
+  def destroy
+    Requisition.find(params[:id]).destroy
+   flash[:success] = "Requisition Removed."
+    redirect_to amain_path
   end
 
 end

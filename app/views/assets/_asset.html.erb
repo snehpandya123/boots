@@ -1,7 +1,22 @@
 <tr>
 	<td><%= asset.name %></td>
-	<td><%= asset.tp %></td>
-	<td><%= asset.location%></td>
+	<td> 
+		<% if asset.tp == "Movable"%>
+		  <span class="label label-success"><%= asset.tp %></span>
+		 <% elsif asset.tp == "Fixed" %>
+		  <span class="label label-warning"><%= asset.tp %></span>
+		  <% else %>
+		   <span class="label label-primary"><%= asset.tp %></span>
+		  <% end %>
+		</td>
+	<td>
+			<% if asset.location== "Admin"%>
+		  <span class="label label-success"><%= asset.location %></span>
+		 <% else %>
+		  <span class="label label-warning"><%= asset.location %></span>
+		  
+		  <% end %>
+		</td>
 	<td><%= asset.cost%></td>
-	<td><%= button_to "Remove", asset, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
+	<td><%= button_to "Remove", real_assets_path(asset), :method => :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
 </tr>

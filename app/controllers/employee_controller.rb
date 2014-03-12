@@ -1,8 +1,7 @@
 class EmployeeController < ApplicationController
   def emain
   	@replication  =  Replication.new
-  
-
+ 
   end
    def create
 		@replication = Replication.new(params[:replication])
@@ -16,13 +15,6 @@ class EmployeeController < ApplicationController
 				render "emain"
 			end
 		end
-			
-		
-  end
-  
-  
-
-
-
+ end
 end
 

@@ -1,0 +1,55 @@
+<div class="span7">   
+<div class="widget stacked widget-table action-table">
+  				
+				<div class="widget-header">
+					<i class="icon-th-list"></i>
+					<h3>requisitionS</h3>
+				</div> <!-- /widget-header -->
+				
+				<div class="widget-content">
+					
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Address</th>
+								<th>Email</th>
+								<th>Location</th>
+								<th>Ph_no</th>
+								<th>Mobile_no</th>
+								<th>Asset_name</th>
+							
+								<th class="td-actions"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><%= @requisition.name %></td>
+								<td><%= @requisition.particular %></td>
+								<td><%= @requisition.unit %></td>
+								<td><%= @requisition.quantity %></td>
+								<td><%= @requisition.from %></td>
+								
+							</tr>
+							
+							
+							</tbody>
+						</table>
+					
+				</div> <!-- /widget-content -->
+			
+			</div> <!-- /widget -->
+			<div><table >
+				<tr>
+					<td>
+						<%= button_to "VIEW All" , requisitions_path ,:class=>"btn btn-info",:method => :get %>
+					</td>
+					<td>
+						<%= button_to "ADD NEW" , requisitions_new_path ,:class=>"btn btn-primary",:method => :get %>
+					</td>
+				</tr>
+			</table>
+			
+			
+		</div>
+            </div>

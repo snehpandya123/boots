@@ -1,7 +1,7 @@
 class ReplicationsController < ApplicationController
   def new
   	@replication  =  Replication.new
-  	@repications = Replication.find(:all)
+  	
 
   end
    def create
@@ -18,4 +18,7 @@ class ReplicationsController < ApplicationController
 	def show
 	@replication = Replication.find(params[:id])
  end	
+ def index
+ 	@replication = Replication.all
+ end
 end

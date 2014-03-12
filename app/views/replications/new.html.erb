@@ -56,3 +56,58 @@
     
            </div>
            </div>
+
+<%= form_for (@replication) do |f| %>
+      <h2><center><u>Replication slip</u></center></h2>
+      <table width = "600">
+      <tr>
+      <td>
+          <%= f.label :SR_NO %>
+      </td>
+      <td>
+          <%= f.number_field :sr_no , :id => "txt_RegionName" %>
+      </td>
+    
+      <td>
+        <%= f.label :Particular %>
+      </td>
+      <td>
+        <%= f.text_area :particular , :id => "txt_Region" %>
+      </td>
+   
+      <td>
+        <%= f.label :Unit %>
+      </td>
+      <td>
+        <%= f.text_field :unit ,:id => "txt_Regio" %>
+      </td>
+     
+
+      <td> 
+        <%= f.label :Required_Quantity %>
+      </td>
+      <td>
+        <%= f.text_field :quantity ,:id => "txt_Regi" %>
+      </td>
+      </tr>
+      <tr>
+         <input class="btn btn-primary" name="commit" type="submit" value="Submit" />
+      <td></td><td></td><td></td>
+      <td>
+      
+      </td></tr>
+      </table>
+      <br />
+      
+  
+    
+
+
+    
+     
+     
+  </div>
+  </div>
+  </div>
+  </div>
+  <% end %>

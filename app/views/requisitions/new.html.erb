@@ -1,0 +1,31 @@
+<% if emp_signed_in? %>
+<%= form_for (@requisition) do |f| %>
+<%=f.label :name %>
+<%= f.select(:name, realasset_for_select, :prompt => 'Select') %>
+<%=f.label :paticular %>
+<%=f.text_field :particular %>
+<%=f.label :unit %>
+<%=f.text_field :unit %>
+<%=f.label :quantity %>
+<%=f.text_field :quantity %>
+<%=f.label :from %>
+<%=f.text_field :from , :value => "#{current_emp.username.capitalize}" , :readonly => :true %>
+<%= f.submit "save"  , class: "btn btn-primary"%>
+<% end %>
+<% elsif authorize_signed_in? %>
+<%= form_for (@requisition) do |f| %>
+<%=f.label :name %>
+<%= f.select(:name, realasset_for_select, :prompt => 'Select') %>
+<%=f.label :paticular %>
+<%=f.text_field :particular %>
+<%=f.label :unit %>
+<%=f.text_field :unit %>
+<%=f.label :quantity %>
+<%=f.text_field :quantity %>
+<%=f.label :from %>
+<%=f.text_field :from , :value => "#{current_authorize.username.capitalize}" , :readonly => :true %>
+<%= f.submit "save"  , class: "btn btn-primary"%>
+<% end %>
+<% else %>
+not authorized 
+<% end %>

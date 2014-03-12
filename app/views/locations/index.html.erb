@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <form class = "form-inline" action="#" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="system-search" placeholder="Search" name="q" required>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+            
+        </div>
+        <div class="col-md-5">
+         <table class="table table-striped table-bordered table-condensed" width = "500">
+                    <thead>
+							<tr style = 'background-color: white'>
+								<th> <i class="fa fa-male"></i> Location  </th>
+								
+								<th><i class="fa fa-phone"></i>  TAKE actions</th>
+								
+							
+							</tr>
+	</thead>
+	<tbody>
+
+      
+       <% @location.each do |r| %>
+      
+      <tr>
+        <td><%= r.location %></td>
+        
+       <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
+       <tr>
+      
+        <% end %>
+       
+   </tbody>
+</table>
+<div><table >
+                <tr>
+                   
+                </tr>
+            </table>
+            
+            
+        </div>
+</div>
+</div>
+</div>
+
+

@@ -1,10 +1,11 @@
+
  <%= form_for(@vendor) do |f| %>
  <div class = "well">
   <a class ="red">
  <% if @vendor.errors.any? %>
 <div id="error_explanation">
 <h2><%= pluralize(@vendor.errors.count, "error") %>
-prohibited this <%= @vendort.class.to_s.underscore.humanize.downcase %>
+prohibited this <%= @vendor.class.to_s.underscore.humanize.downcase %>
 from being saved:</h2>
 <p>There were problems with the following fields:</p>
 <ul>
@@ -60,8 +61,9 @@ from being saved:</h2>
                 </td>
               <td>
                       <%= f.submit "Save", class: "btn  btn-primary btn-lg btn3d"  %>
-                      <%= f.submit "Cancel",  class: "btn btn-danger btn-lg btn3d" %>
+                     
                     </td>
                     </tr>
                     </table>
 <% end %>
+ <%=button_to "View All", vendors_path, :class => "btn btn-danger" %>

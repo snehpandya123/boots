@@ -1,0 +1,80 @@
+<div class = "container">
+<div id = "assetnew">
+
+ <%= form_for(@realasset) do |f| %>
+ <div class = "well">
+  <a class ="red"> <%= render "error" %>
+   </a></div>
+ <center><h1>Add Asset</h1></center>
+ 
+          <table width="700">
+            <tr>
+              <td>
+                <%= f.label :Full_name %>
+                <h3><i class="fa fa-user"></i>
+                  <%= f.text_field :name %>
+                </h3>
+              </td>
+               <td>
+                <%= f.label :Type %><h3><i class="fa fa-align-justify"></i> 
+               <%= f.select :typ, options_for_select([["movable",'Movable'],["fixed",'Fixed']]), :prompt => "select type of asset" %>
+
+   
+               
+              </td>
+            </tr>
+              <tr>
+                
+                 <td>
+                
+   
+        <%= f.label :Location %><h3><i class="fa fa-map-marker"></i>
+            <%= f.select(:locat, location_for_select, :prompt => 'Select') %>
+            <% end %>
+         <input type="button" id= "submit" value="Add location"  class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-loading-text="loding..." />
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><center>ADD location</center></h4>
+            <div>
+           <%= form_for(@location) do |f| %>
+             <%= f.label :name_of_location %>
+             <%= f.text_field :location %>
+             <%= f.submit "save" %>
+             <% end %>
+          </div>
+         </div>
+            <div class="modal-body">
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+        
+  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= form_for(@realasset) do |f| %>
+   
+                 <%= f.label :Approximate_Cost %><h3><i class="fa fa-phone"></i>
+                 <%= f.text_field :cost %></h3>
+               </td>
+                 <td>
+    
+                      <%= f.submit "Save", class: "btn btn-success"  %>
+                     
+                     
+                    </td>
+                    </tr>
+                    </table>
+
+<% end %>
+
+</div>
+
+</div>

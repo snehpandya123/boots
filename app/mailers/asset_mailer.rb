@@ -2,16 +2,16 @@ class AssetMailer < ActionMailer::Base
  
    default from: "snehp92@gmail.com"
 
-  def registration_confirmation(asset)
-    @asset = asset
+  def registration_confirmation(realasset)
+    @realasset = realasset
     
-    mail(:to => "sapandya92@yahoo.co.in", :subject => "#{asset.name} in Added." )
+    mail(:to => "sapandya92@yahoo.co.in", :subject => " #{realasset.name} is Added." )
 
   end
-  def asset_destroy(asset)
-  	@asset = asset
+  def asset_destroy(realasset)
+  	@realasset = realasset
 
-  	mail(:to => "sapandya92@yahoo.co.in" , :subject => "Asset :- #{asset.name} is deleted. ")
+  	mail(:to => "sapandya92@yahoo.co.in" , :subject => " Asset is deleted. ")
   	
   end
 end
