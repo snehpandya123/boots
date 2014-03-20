@@ -13,3 +13,6 @@ deleteRow = function(el) {
 reload = function(el) {
   location.reload(true);
 };
+function AutoRefresh( t ) {
+	setTimeout("location.reload(true);", t);
+}

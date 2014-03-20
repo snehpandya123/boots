@@ -8,9 +8,9 @@ class RealassetsController < ApplicationController
       @realasset = Realasset.new(params[:realasset])
         if @realasset.save
           AssetMailer.registration_confirmation(@realasset).deliver
-            flash[:success] = "Vendor Added Successfully"
+            flash[:success] = "Asset Added Successfully"
             if emp_signed_in?
-          redirect_to requisitions_new_path
+          redirect_to emain_path
             elsif authorize_signed_in?
                redirect_to realassets_new_path
             end

@@ -1,9 +1,9 @@
 <div class = "container">
     
       <div class = "well">
-        <a class ="red">
+        <d class ="red">
           <%= render "error" %>
-        </a>
+        </d>
       </div><%= form_for(@realasset) do |f| %>
           <center><h1>Add Asset</h1></center>
               <table width="700">
@@ -30,7 +30,7 @@
                         <%= f.select(:locat, location_for_select, :prompt => 'Select') %>
                   <td>
                   <td>
-         <input type="button" id= "submit" value="Add location"  class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-loading-text="loding..." /> 
+        
                   </td>
               </tr>
               <tr>
@@ -50,20 +50,4 @@
 <% end %>
 
 </div>
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel"><center>ADD location</center></h4>
-            <div>
-              <%= render "/locations/new" %>
-          </div>
-         </div>
-            <div class="modal-body">
-            </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-    </div>
-  </div>
+ 

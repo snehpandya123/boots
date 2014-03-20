@@ -3918,11 +3918,13 @@ select {
   width: 220px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
+  overflow: scroll;
 }
 
 select[multiple],
 select[size] {
-  height: auto;
+  height: 220px;
+  overflow: scroll;
 }
 
 select:focus,

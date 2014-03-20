@@ -8,11 +8,17 @@ class RequisitionsController < ApplicationController
   def create
     @requisition = Requisition.new(params[:requisition])
     if @requisition.save
-      flash[:success] = "Requisition Submitted sUCCESSIFULLLY"
-      redirect_to @requisition
+      flash[:success] = "Requisition Submitted successfull"
+      redirect_to emain_path
     else
+      if emp_signed_in?
       flash[:warning] = "Unable to send requisition try again"
-      redirected_to requisition_new_path
+      redirect_to emain_path
+    elsif authorize_signed_in?
+      flash[:warning] = "Unable to send requisition try again"
+      redirect_to emain_path
+      end
+      
     end
   end
 

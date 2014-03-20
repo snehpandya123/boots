@@ -23,7 +23,7 @@ class LocationsController < ApplicationController
           flash[:success] = "Location  Added Successfully"
             redirect_to realassets_new_path
           else
-            redirect_to realassets_new_path
+            render 'new'
         end
   end
 end

@@ -2,7 +2,7 @@
 <div class="row-fluid">
   <div class= "span6">
     <div class="well">
-      <%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
+      <%= pie_chart({"Asset" => Realasset.count , "Requisition" => Requisition.count, "Vendor" => Vendor.count , "Location" => Location.count , "Employee" => Emp.count , "Authorize" => Authorize.count , "hr" =>Hr.count}) %>
     </div>
   </div>
   
@@ -35,7 +35,11 @@
 <div class="row-fluid">
   <div class= "span6">
     <div class="well">
-     <%= line_chart Replication.group_by_day(:created_at).count%> 
+       <%= line_chart Realasset.group_by_day(:created_at).count %>
+      
+     
+     
+      
     </div>
   </div>
   
