@@ -1,6 +1,6 @@
-<a class = "red">
-          <% if @location.errors.any? %>
-
+<div class = "container">
+<d class = "red">
+<% if @location.errors.any? %>
 <div id="error_explanation">
 <h2><%= pluralize(@location.errors.count, "error") %>
 prohibited this <%= @location.class.to_s.underscore.humanize.downcase %>
@@ -13,14 +13,16 @@ from being saved:</h2>
 </ul>
 </div>
 <% end %>
-</a>
+</d>
   
-    
+ <h3>Add Location</h3>   
 <%= form_for(@location) do |f| %>
-<%= f.label :name_of_location %>
 
-			<%= f.text_field :location %>
+<table><tr><td><%= f.label :Name_of_location %></td><td>
+
+			<%= f.text_field :location %></td>
 		
-			<%= f.submit "Add" %>
+			<td><%= f.submit "Add", :class => "btn btn-success" %></td></tr></table>
 		
 <% end %>
+</div>

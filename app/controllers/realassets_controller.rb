@@ -26,6 +26,7 @@ class RealassetsController < ApplicationController
 
     def index
       @realasset = Realasset.all
+      @realasset = Realasset.order("name").page(params[:page]).per(5)
     end
   
     def destroy

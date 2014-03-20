@@ -1,0 +1,49 @@
+<ul class="nav nav-tabs">
+                                                    <li>
+                                                        <%=link_to "DASHBOARD" , amain_path %>
+                                                     </li>
+                                                    <li>
+                                                        <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>Add New <span class="caret"></span>
+                                                     </a>
+
+                                                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                                                <li><a tabindex="#"><%= link_to "Asset", realassets_new_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Vendor", vendors_new_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "Employee", new_emp_registration_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "Location", locations_new_path %></a>
+                                                                </li>
+                                                               
+
+                                                                
+                                                            </ul>
+                                                            <br/>
+                                                        </div>
+                                                    </li>
+                                                     <li>
+                                                        <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>Views <span class="caret"></span>
+                                                     </a>
+
+                                                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                                                <li><a tabindex="#"><%= link_to "Asset", realassets_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Vendor", vendors_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "Reqisition", requisitions_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Location", locations_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "PURCHASE ORDER", '#' %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Asset transaction", '#' %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Stock", '#' %></a>
+                                                                </li>
+                                                                
+                                                            </ul>
+                                                            <br/>
+                                                        </div>
+                                                    </li>
+                                         </ul>
