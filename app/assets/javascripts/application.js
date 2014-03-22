@@ -18,6 +18,26 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+ $(function(){
+
+         $('.po').click(function() {
+        var $row = $(this).parents('tr'); 
+        var name1 =  $row.find('td:eq(0)').html();
+        var name2 =  $row.find('td:eq(1)').html();
+        alert(name1);
+        var url = '/po' + 
+        'name1=' + encodeURIComponent(name1) + 
+        '&name2=' + encodeURIComponent(name2);
+
+        
+        $(".box").val(name1);
+    window.localtion.href = url;
+    
+});
+        });
+
+
+                  
 
 $(document).ready(function()
 {

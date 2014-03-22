@@ -1,55 +1,113 @@
-<div class="span7">   
-<div class="widget stacked widget-table action-table">
-  				
-				<div class="widget-header">
-					<i class="icon-th-list"></i>
-					<h3>requisitionS</h3>
-				</div> <!-- /widget-header -->
-				
-				<div class="widget-content">
-					
-					<table class="table table-striped table-bordered">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Address</th>
-								<th>Email</th>
-								<th>Location</th>
-								<th>Ph_no</th>
-								<th>Mobile_no</th>
-								<th>Asset_name</th>
-							
-								<th class="td-actions"></th>
-							</tr>
-						</thead>
-						<tbody>
+  
+
+<div class = "container" >
+	<p style = "color: maroon; font-size: 30pt" align = "right"><i><b>PURCHASE ORDER</b></i></p>
+	<hr size = "5" color= "maroon" align = "center" width = "100%">
+	<p align = "right" style = "font-size: 15pt; color: MidnightBlue"> 
+		<%= Time.now.strftime("%B,%d %Y") %>
+		</p>
+		
+		<table align = "left" style = "font-size:12pt">
+			
+			<tr>
+                 
+				<td>
+					<p style = "font-size: 15pt"><b>MARCK BIOSCIENCE</b>
+					</p>
+				</td>
+			</tr>
+		    <tr>
+		    	<td>Plot no: 876,</td>
+		    </tr>
+		    <tr>
+		    	<td>N.H.no.8, Hariyala, </td>
+		    </tr>
+		    <tr>
+		    	<td>Kheda</td>
+		    </tr>
+		    <tr>
+		    	<td>Phone: +91 2694 304000<br /></td>
+		    </tr>
+		    <tr>
+				<td>Gujarat, India<br /></td></tr>
+				<tr>
+				<td>Fax: +91 2694 304050<br /></td>
+			</tr>
+	
+		</table>
+		
+</div>
+<div class = "container">
+<hr size = "5" color= "maroon" align = "center" width = "100%" >
+		<p align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE NO. :MRC<%=(0...4).map { ('a'..'z').to_a[rand(26)] }.join %> <%=rand(1..2000)%></b></p>
+<br/>
+<br/>
+     <p align = "left" style = "color: MidnightBlue; font-size: 12pt"><b>P.O NO. :MRC<%=(0...4).map { ('a'..'z').to_a[rand(26)] }.join %> <%=rand(1..2000)%></b></p>
+     <table style="border:1px solid black;border-collapse:collapse;">
+     	<tr>
+     		<td>
+     			TO,
+     		</td>
+     	</tr>
+     	<tr>
+     		<td>
+     		<%= select_tag(:option, vendor_for_select ) %>
+     	</td>
+     		</tr>
+     </table>
+     <br/>
+     <br/>
+     <table class="table table-striped table-bordered table-condensed">
+       <tr style = 'background-color: white'>
+       	<th>P.O Date</th>
+       	<th>Requisitioner</th>
+       	<th>Forwarded by</th>
+       	<th>Forwarded to</th>
+       	<th>Terms</th>
+       </tr>
+       <tr>
+       	<td>
+       		  <%=Time.now().strftime("%B,%d  %Y") %>
+       	</td>
+       	<td>
+       		 <%= @requisition.from %>
+       	</td>
+       	<td>
+       		 <%=current_authorize.username.capitalize%> 
+       	</td>
+       	<td>
+       		R.s.subramanian
+       	</td>
+       	<td>
+       		<%= select_tag(:option, options_for_select([['25 days', 1], ['50 days', 2], ['60 days', 3], ['90 days', 4], ['Top API', 5]], selected: :option , :prompt => "select Text")) %>
+       	</td>
+       </tr>
+   </table>
+<table class="table table-striped table-bordered table-condensed">
+                    <thead>
+                            <tr style = 'background-color: white'>
+                                <th> <i class="fa fa-laptop"></i></i> Name </th>
+                                <th><i class="fa fa-bars"></i>  Particular</th>
+                                <th><i class="fa fa-envelope-o"></i> Unit</th>
+                                <th><i class="fa fa-plus-square-o"></i></i>Quantity</th>
+                                <th><i class="fa fa-money"></i>TOTAL</th>
+                         
+                            </tr>
+    </thead>
+    <tbody>
 							<tr>
 								<td><%= @requisition.name %></td>
 								<td><%= @requisition.particular %></td>
 								<td><%= @requisition.unit %></td>
 								<td><%= @requisition.quantity %></td>
-								<td><%= @requisition.from %></td>
+								<td></td>
 								
 							</tr>
 							
 							
 							</tbody>
-						</table>
-					
-				</div> <!-- /widget-content -->
-			
-			</div> <!-- /widget -->
-			<div><table >
-				<tr>
-					<td>
-						<%= button_to "VIEW All" , requisitions_path ,:class=>"btn btn-info",:method => :get %>
-					</td>
-					<td>
-						<%= button_to "ADD NEW" , requisitions_new_path ,:class=>"btn btn-primary",:method => :get %>
-					</td>
-				</tr>
-			</table>
-			
-			
-		</div>
-            </div>
+</table>
+	</div>
+
+
+

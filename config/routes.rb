@@ -41,11 +41,12 @@ devise_for :employes
   resources :requisitions
   resources :realassets
   resources :vendors
-  resources :replications
-  resources :assets, as: "real_assets", path: "real_assets" ,:controller => "assets" #-> real_assets_path - /real_assets
+  
 
   resources :locations
   
+  get 'capax', :to => 'auth#capax'
+  get 'po', :to  => 'auth#po'
   get  'amain' , :to => 'auth#main'
   get 'hmain' , :to => 'hrs#hhome'
   get 'emain' , :to => 'employee#emain'

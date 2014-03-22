@@ -27,13 +27,13 @@ class RequisitionsController < ApplicationController
   end
 
   def show
-  @requisition = Requisition.find(params[:id])
+      @requisition = Requisition.find(params[:id])
   
   end
 
   def index
-    @requisition = Requisition.all
-    @requisition = Requisition.order("name").page(params[:page]).per(5)
+      @requisition = Requisition.all
+      @requisition = Requisition.order("name").page(params[:page]).per(5)
   end
 
   def destroy

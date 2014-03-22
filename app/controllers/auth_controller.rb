@@ -28,5 +28,11 @@ class AuthController < ApplicationController
    flash[:success] = "Requisition Removed."
     redirect_to amain_path
   end
+  def po
+  end
+  def capax
+  end
+  	
+  
 
 end

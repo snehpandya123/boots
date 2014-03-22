@@ -34,22 +34,14 @@
                     <td><%= r.from %></td>
                     <td><%= r.created_at %>
                     <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure you want to delete?" } %>
-                        <%= button_to "PO", r, method: :delete, :class => "btn btn-info" ,data: { confirm: "Are you sure?" } %>
-                        <%= button_to "Capax", r, method: :delete, :class => "btn btn-warning" ,data: { confirm: "Are you sure?" } %>
+                        <%= button_to "PO", r , method: :get, :class => "btn btn-primary" ,data: { confirm: "Really wants to generate Po?" } %>
+                        <%= button_to "Capax", capax_path, method: :get,  :class => "btn btn-warning" ,data: { confirm: "Are you sure?" } %>
                     </td>
                  <tr>
             <% end %>
             </tbody>
         </table>
-            <div>
-                <table >
-                    <tr>
-                        <td>
-                            <%= button_to "ADD NEW" , requisitions_new_path,:class=>"btn btn-primary",:method => :get %>
-                         </td>
-                    </tr>
-                </table>
-            </div>
+            
         </div>
     </div>
 

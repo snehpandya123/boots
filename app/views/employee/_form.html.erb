@@ -1,22 +1,5 @@
 
-<div class = "well">
-	<h2>Requisition slip</h2>
-  	<d class ="red">
- 		<% if @requisition.errors.any? %>
-			<div id="error_explanation">
-				<h2><%= pluralize(@requisition.errors.count, "error") %>
-					prohibited this <%= @requisition.class.to_s.underscore.humanize.downcase %>
-					from being saved:</h2>
-				<p>There were problems with the following fields:</p>
-					<ul>
-						<% @requisition.errors.full_messages.each do |msg| %>
-							<li><%= msg %></li>
-						<% end %>
-					</ul>
-			</div>
-		<% end %>
-	</d>
-</div><%= form_for (@requisition) do |f| %>
+<%= form_for (@requisition) do |f| %>
  <table>
  	<tr>
  		<td>
