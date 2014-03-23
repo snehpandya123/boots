@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -10,9 +11,9 @@ gem "chartkick", "~> 1.2.1"
 gem "groupdate", "~> 1.0.4"
 gem "active_median", "~> 0.0.1"
 gem "actionmailer", "~> 4.0.0"
-gem 'heroku', '~> 3.6.0'
+
 gem 'rails_12factor', group: :production
-gem 'ruby', '~> 2.0.0'
+
 # Use SCSS for stylesheets
 
 gem 'protected_attributes'
