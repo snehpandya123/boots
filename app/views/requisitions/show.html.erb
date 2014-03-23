@@ -39,7 +39,11 @@
 </div>
 <div class = "container">
 <hr size = "5" color= "maroon" align = "center" width = "100%" >
-		<p align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE NO. :MRC<%=(0...4).map { ('a'..'z').to_a[rand(26)] }.join %> <%=rand(1..2000)%></b></p>
+		<p align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE NO. ></b></p>
+    <%=@rand_value = (0...4).map { ('a'..'z').to_a[rand(26)] }.join.to_s + rand(1..2000).to_s %>
+    <%= label_tag "text" %>
+    <%= text_field_tag "text", @rand_value , :id=>"copy" %>
+    <input type = "text" id="invoice" />
 <br/>
 <br/>
      <p align = "left" style = "color: MidnightBlue; font-size: 12pt"><b>P.O NO. :MRC<%=(0...4).map { ('a'..'z').to_a[rand(26)] }.join %> <%=rand(1..2000)%></b></p>
