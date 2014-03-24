@@ -1,29 +1,92 @@
 
-<%= form_for (@requisition) do |f| %>
-<%=f.label :name %>
-<%= f.select(:name, realasset_for_select, :prompt => 'Select') %>
-<%=f.label :paticular %>
-<%=f.text_field :particular %>
-<%=f.label :unit %>
-<%=f.text_field :unit %>
-<%=f.label :quantity %>
-<%=f.text_field :quantity %>
-
-<% if emp_signed_in? %>
-	<%=f.label :from %>
-	<%=f.text_field :from , :value => "#{current_emp.username.capitalize}" , :readonly => :true %>
+<div class = "well">
+	<p style = "font-size:20pt;color: MidnightBlue"><i><b>Requisition Slip</b></i></p>
+	 <hr class="colorgraph">
+  	<d class ="red">
+ 		<% if @requisition.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@requisition.errors.count, "error") %>
+					prohibited this <%= @requisition.class.to_s.underscore.humanize.downcase %>
+					from being saved:</h2>
+				<p>There were problems with the following fields:</p>
+					<ul>
+						<% @requisition.errors.full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						<% end %>
+					</ul>
+			</div>
+		<% end %>
+	</d>
+</div><%= form_for (@requisition) do |f| %>
+ <table align = "center">
+ 	<tr>
+ 		<td>
+			<%=f.label :Asset_name ,:style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%= f.select(:name, realasset_for_select, :prompt => 'Select') %>
+			<%= link_to "Add asset.." , realassets_new_path , :style => "color: MidnightBlue; font-size: 12pt; font-weight: bold;"%>
+	    </td>
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :particular, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;"  %>
+		</td>
+		<td>
+			<%=f.text_area :particular %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :unit, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%= f.select(:unit, location_for_select, :prompt => 'Select') %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :quantity, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :quantity %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :Total, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		
+		<td>
 	
-<% elsif authorize_signed_in? %>
-	<%=f.label :from %>
-	<%=f.text_field :from , :value => "#{current_authorize.username.capitalize}" , :readonly => :true %>
-<% else %>
-not authorized 
-
-<% end %>
-	
-<%= f.submit "save"  , class: "btn btn-primary"%>
-	
-
-<% end %>
-
+		</td>	
+	</tr>
+	<% if emp_signed_in? %>
+	<tr>
+		<td>
+			<%=f.label :from, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :from , :value => "#{current_emp.username.capitalize}" , :readonly => :true %>
+		</td>	
+	</tr>
+	<% elsif authorize_signed_in? %>
+	<tr>
+		<td>
+			<%=f.label :from, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :from , :value => "#{current_authorize.username.capitalize}" , :readonly => :true %>
+		</td>	
+	</tr>
+	<% else %>
+	Unable to add requisition <% end %>
+    <tr>
+    	
+    </tr>
+    <tr><td> <%= f.submit "save"  , class: "btn btn-success" ,:style => "text-align: center;"%></td></tr>
+</table>
+  
+ <% end %>
+<hr class="colorgraph">
 

@@ -15,14 +15,20 @@ from being saved:</h2>
 <% end %>
 </d>
   
- <h3>Add Location</h3>   
+ <p style = "font-size:20pt;color: MidnightBlue"><i><b>ADD LOCATION</b></i></p>
+	 <hr class="colorgraph">   
 <%= form_for(@location) do |f| %>
-
-<table><tr><td><%= f.label :Name_of_location %></td><td>
-
-			<%= f.text_field :location %></td>
+<table>
+	<tr>
+	<td>
+	<%= f.label :Name_of_location, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %></td><td>
+			<%= f.text_field :location, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %></td>
+		</tr>
+		<tr>
 		
-			<td><%= f.submit "Add", :class => "btn btn-success" %></td></tr></table>
+			<td><%= f.submit "Add", :class => "btn btn-success", :style => "color: white; font-size: 12pt; font-weight: bold;" %></td>
+		</tr>
+	</table>
 		
 <% end %>
 </div>

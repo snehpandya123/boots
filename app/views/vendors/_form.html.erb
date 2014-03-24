@@ -1,6 +1,7 @@
-
- <%= form_for(@vendor) do |f| %>
+<%= form_for(@vendor) do |f| %>
  <div class = "well">
+    <p style = "font-size:20pt;color: MidnightBlue; align: left"><i class="fa fa-laptop"></i><i><b>ADD VENDORS</b></i></p>
+   <hr class="colorgraph">
   <a class ="red">
  <% if @vendor.errors.any? %>
 <div id="error_explanation">
@@ -19,51 +20,51 @@ from being saved:</h2>
           <table width="700">
             <tr>
               <td>
-                <%= f.label :Full_name %>
-                <h3><i class="fa fa-user"></i>
-                  <%= f.text_field :name %>
+                <%= f.label :Full_name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                <h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-user fa fa-2x"></i>
+                  <%= f.text_field :name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
                 </h3>
               </td>
                <td>
-                <%= f.label :address %><h3><i class="fa fa-align-justify"></i> 
-                <%= f.text_area :address %></h3>
+                <%= f.label :address ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%><h3  style ="color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-align-justify fa fa-2x"></i> 
+                <%= f.text_area :address,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
               </td>
             </tr>
               <tr>
                 <td>
    
-                 <%= f.label :email %><h3><i class="fa fa-envelope"></i>
-                 <%= f.text_field :email %></h3>
+                 <%= f.label :email,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-envelope fa fa-2x"></i>
+                 <%= f.text_field :email,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
                </td>
                  <td>
    
-                  <%= f.label :location %><h3><i class="fa fa-map-marker"></i>
-                  <%= f.text_field :location %></h3>
+                  <%= f.label :location,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-map-marker fa fa-2x"></i>
+                  <%= f.text_field :location,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
                 </td>
               </tr>
               <tr>
                 <td>
    
-                 <%= f.label :ph_no %><h3><i class="fa fa-phone"></i>
-                 <%= f.text_field :ph_no %></h3>
+                 <%= f.label :ph_no,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-phone fa fa-2x"></i>
+                 <%= f.text_field :ph_no ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%></h3>
                </td>
                  <td>
     
-                  <%= f.label :mobile_no %><h3><i class="fa fa-phone-square"></i>
-                  <%= f.text_field :mobile_no %></h3>
+                  <%= f.label :mobile_no ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%><h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-phone-square fa fa-2x"></i>
+                  <%= f.text_field :mobile_no,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
                 </td>
               </tr>
               <tr>
                 <td>
       
-                  <%= f.label :asset_name %><h3><i class="fa fa-truck"></i> 
-                  <%= f.text_field :asset_name %></h3>
+                  <%= f.label :asset_name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-truck fa fa-2x"></i> 
+                  <%= f.text_field :asset_name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
                 </td>
               <td>
-                      <%= f.submit "Save", class: "btn  btn-primary btn-lg btn3d"  %>
+                      <%= f.submit "Save", class: "btn btn-primary ",  :style => "color:  white; font-size: 12pt; font-weight: bold;"  %>
                      
                     </td>
                     </tr>
                     </table>
 <% end %>
- <%=button_to "View All", vendors_path, :class => "btn btn-danger" %>
+<hr class="colorgraph">
