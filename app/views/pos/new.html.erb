@@ -1,0 +1,47 @@
+<%= form_for(@po) do |f| %>
+
+<%= f.label :Invoice_No %>
+<%= f.text_field :invoiceno %>
+
+<%= f.label :PO_No %>
+<%= f.text_field :pono %>
+
+<%= f.label :Vendor_Name %>
+<%= f.text_field :vname %>
+
+<%= f.label :Vendor_Address %>
+<%= f.text_field :vadd %>
+
+<%= f.label :PO_Date %>
+<%= f.text_field :podate %>
+
+<%= f.label :Requisition %>
+<%= f.text_field :requisitner %>
+
+<%= f.label :Forwarded_by %>
+<%= f.text_field :forby %>
+
+<%= f.label :Forwarded_To %>
+<%= f.text_field :forto %>
+
+<%= f.label :Terms %>
+<%= f.text_field :terms %>
+
+<%= f.label :Asset_Name %>
+<%= f.text_field :name %>
+
+<%= f.label :Particular %>
+<%= f.text_field :particular %>
+
+<%= f.label :Unit %>
+<%= f.text_field :unit %>
+
+<%= f.label :Quantity %>
+<%= f.text_field :quantity %>
+
+<%= f.label :Total %>
+<%= f.text_field :total %>
+
+<%= f.submit "submit" , :class=> "btn btn-success" %>
+
+<% end %>

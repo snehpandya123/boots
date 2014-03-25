@@ -11,31 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140311183110) do
-
-  create_table "addassets", force: true do |t|
-    t.string   "item"
-    t.string   "type"
-    t.string   "category"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "articles", force: true do |t|
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "assets", force: true do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "tp"
-    t.string   "cost"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140325054747) do
 
   create_table "authorizes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -119,20 +95,30 @@ ActiveRecord::Schema.define(version: 20140311183110) do
     t.datetime "updated_at"
   end
 
+  create_table "pos", force: true do |t|
+    t.string   "invoiceno"
+    t.string   "pono"
+    t.string   "vname"
+    t.string   "vadd"
+    t.string   "podate"
+    t.string   "requisitner"
+    t.string   "forby"
+    t.string   "forto"
+    t.string   "terms"
+    t.string   "name"
+    t.string   "particular"
+    t.string   "unit"
+    t.integer  "quantity"
+    t.integer  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "realassets", force: true do |t|
     t.string   "name"
     t.string   "typ"
     t.string   "locat"
     t.string   "cost"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "replications", force: true do |t|
-    t.integer  "sr_no"
-    t.string   "particular"
-    t.string   "unit"
-    t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

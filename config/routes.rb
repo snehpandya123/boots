@@ -2,6 +2,7 @@ Boot::Application.routes.draw do
   
  
   
+ 
   get "requisitions/new"
   get "requisitions/create"
   get "requisitions/show"
@@ -41,6 +42,7 @@ devise_for :employes
   resources :requisitions
   resources :realassets
   resources :vendors
+  resources :pos
   
 
   resources :locations

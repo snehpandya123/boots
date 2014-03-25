@@ -1,0 +1,75 @@
+
+<%= render "requisitions/error" %>
+<%= form_for (@requisition) do |f| %>
+ <table align = "center">
+ 	<tr>
+ 		<td>
+			<%=f.label :Asset_name ,:style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%= f.select(:name, realasset_for_select, :prompt => 'Select') %>
+			<%= link_to "Add asset.." , realassets_new_path , :style => "color: MidnightBlue; font-size: 12pt; font-weight: bold;"%>
+	    </td>
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :particular, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;"  %>
+		</td>
+		<td>
+			<%=f.text_area :particular %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :unit, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%= f.select(:unit, location_for_select, :prompt => 'Select') %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :quantity, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :quantity %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :Total, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		
+		<td>
+	
+		</td>	
+	</tr>
+	<% if emp_signed_in? %>
+	<tr>
+		<td>
+			<%=f.label :from, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :from , :value => "#{current_emp.username.capitalize}" , :readonly => :true %>
+		</td>	
+	</tr>
+	<% elsif authorize_signed_in? %>
+	<tr>
+		<td>
+			<%=f.label :from, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :from , :value => "#{current_authorize.username.capitalize}" , :readonly => :true %>
+		</td>	
+	</tr>
+	<% else %>
+	Unable to add requisition <% end %>
+    <tr>
+    	
+    </tr>
+    <tr><td> <%= f.submit "save"  , class: "btn btn-success" ,:style => "text-align: center;"%></td></tr>
+</table>
+  
+ <% end %>
+<hr class="colorgraph">
+

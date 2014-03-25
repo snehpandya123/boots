@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invoiceno: MyString
+  pono: MyString
+  vname: MyString
+  vadd: MyString
+  podate: MyString
+  requisitner: MyString
+  forby: MyString
+  forto: MyString
+  terms: MyString
+  name: MyString
+  particular: MyString
+  unit: MyString
+  quantity: 1
+  total: 1
+
+two:
+  invoiceno: MyString
+  pono: MyString
+  vname: MyString
+  vadd: MyString
+  podate: MyString
+  requisitner: MyString
+  forby: MyString
+  forto: MyString
+  terms: MyString
+  name: MyString
+  particular: MyString
+  unit: MyString
+  quantity: 1
+  total: 1

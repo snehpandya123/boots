@@ -1,6 +1,7 @@
   
 
 <div class = "container" >
+  <div id= "pagecontent" >
 	<p style = "color: maroon; font-size: 30pt" align = "right"><i><b>PURCHASE ORDER</b></i></p>
 	<hr size = "5" color= "maroon" align = "center" width = "100%">
 	<p align = "right" style = "font-size: 15pt; color: MidnightBlue"> 
@@ -8,7 +9,7 @@
 		</p>
 		
 		<table align = "left" style = "font-size:12pt">
-			
+			<%= form_for(@po) do |f| %>
 			<tr>
                  
 				<td>
@@ -36,17 +37,19 @@
 	
 		</table>
 		
-</div>
-<div class = "container">
-<hr size = "5" color= "maroon" align = "center" width = "100%" >
-		<p align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE NO. ></b></p>
-    <%=@rand_value = (0...4).map { ('a'..'z').to_a[rand(26)] }.join.to_s + rand(1..2000).to_s %>
-    <%= label_tag "text" %>
-    <%= text_field_tag "text", @rand_value , :id=>"copy" %>
-    <input type = "text" id="invoice" />
+
+
+<hr size = "5" color= "maroon" align = "center" width = "100%" ><p>
+		<d align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE Number
+    
+      <%= f.text_field :invoiceno ,:value=> rand_value , :id=> "copy", :readonly=> "true" %>
+    </b></d>
+    
+    <%= f.hidden_field :pono , :id=> "invoice" ,:readonly=> "true" %> </d></p>
+    
 <br/>
 <br/>
-     <p align = "left" style = "color: MidnightBlue; font-size: 12pt"><b>P.O NO. :MRC<%=(0...4).map { ('a'..'z').to_a[rand(26)] }.join %> <%=rand(1..2000)%></b></p>
+     
      <table style="border:1px solid black;border-collapse:collapse;">
      	<tr>
      		<td>
@@ -55,7 +58,14 @@
      	</tr>
      	<tr>
      		<td>
-     		<%= select_tag(:option, vendor_for_select ) %>
+          <%= f.label :Vendor_Name %>
+       <%= f.select(:vname, vendor_for_select, :prompt => 'Select') %>
+
+    <%= f.label :Vendor_Address %>
+    <%= f.select(:vadd, vendoradd_for_select, :prompt => 'Select') %>
+    
+   
+     		
      	</td>
      		</tr>
      </table>
@@ -71,19 +81,23 @@
        </tr>
        <tr>
        	<td>
+          <%= f.hidden_field :podate, :value=> "#{Time.now().strftime("%B,%d  %Y")}" %>
        		  <%=Time.now().strftime("%B,%d  %Y") %>
        	</td>
        	<td>
+          <%= f.hidden_field :requisitner ,:value=>"#{@requisition.from}" %>
        		 <%= @requisition.from %>
        	</td>
        	<td>
+          <%= f.hidden_field :forby ,:value=> "#{current_authorize.username.capitalize}" %>
        		 <%=current_authorize.username.capitalize%> 
        	</td>
        	<td>
+          <%= f.hidden_field :forto ,:value=> "R.s.subramanian" %>
        		R.s.subramanian
        	</td>
        	<td>
-       		<%= select_tag(:option, options_for_select([['25 days', 1], ['50 days', 2], ['60 days', 3], ['90 days', 4], ['Top API', 5]], selected: :option , :prompt => "select Text")) %>
+       		<%= f.select :terms, options_for_select([["25days",'25days'],["50days",'50days']]), :prompt => "select terms", :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
        	</td>
        </tr>
    </table>
@@ -100,17 +114,31 @@
     </thead>
     <tbody>
 							<tr>
-								<td><%= @requisition.name %></td>
-								<td><%= @requisition.particular %></td>
-								<td><%= @requisition.unit %></td>
-								<td><%= @requisition.quantity %></td>
-								<td></td>
+								<td>
+                  <%= f.hidden_field :name ,:value=> "#{@requisition.name}" %>
+                  <%= @requisition.name %></td>
+								<td>
+                  <%= f.hidden_field :particular ,:value=> "#{@requisition.particular}" %>
+                  <%= @requisition.particular %></td>
+								<td>
+                  <%= f.hidden_field :unit ,:value=> "#{@requisition.unit}" %>
+                  <%= @requisition.unit %></td>
+								<td>
+                    <%= f.hidden_field :quantity ,:value=> "#{@requisition.quantity}" %>
+                  <%= @requisition.quantity %></td>
+								<td>
+                    <%= f.text_field :total %>
+                </td>
 								
 							</tr>
 							
 							
 							</tbody>
 </table>
+</div>
+<%= f.submit "Send for approval" , :class=> "btn btn-primary" %>
+<button id= "print" type="button" class="btn btn-success" onclick="Print();">PRINT</button>
+<% end %>
 	</div>
 
 

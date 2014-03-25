@@ -1,15 +1,5 @@
       <!-- start: Header -->
        
-            
-            <div class="container-fluid">
-                <div class="row-fluid">
-            <div class = "alert alert-success">
-           Welcome back <%= current_hr.username %>, You have signed in <%= current_hr.sign_in_count %> times
-            </div> 
-        </div>
-    </div>
-               
-
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="span1">
@@ -92,7 +82,7 @@
                     </div>
                     <div class= "span11">
                         <div class="well">
-                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+                           <%= render "/pos/index" %>
                         </div>
                     </div>
                 </div>

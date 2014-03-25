@@ -17,9 +17,6 @@ class RequisitionsController < ApplicationController
     else
       if emp_signed_in?
       flash[:warning] = "Unable to send requisition try again"
-      render "new"
-    elsif authorize_signed_in?
-      flash[:warning] = "Unable to send requisition try again"
       redirect_to emain_path
       end
       
@@ -28,6 +25,7 @@ class RequisitionsController < ApplicationController
 
   def show
       @requisition = Requisition.find(params[:id])
+      @po = Po.new
   
   end
 

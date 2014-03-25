@@ -18,7 +18,7 @@ test:
   timeout: 5000
 
 production:
- adapter: postgresql
+  adapter: postgresql
   database: test_database
   username: postgres
   password: ;ernakulam
