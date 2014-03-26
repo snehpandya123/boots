@@ -3923,7 +3923,7 @@ select {
 
 select[multiple],
 select[size] {
-  height: 220px;
+  height: 30px;
   overflow: scroll;
 }
 
@@ -3934,6 +3934,7 @@ input[type="checkbox"]:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+
 }
 
 .uneditable-input,
@@ -4036,6 +4037,7 @@ textarea[class*="span"],
 .row-fluid .uneditable-input[class*="span"] {
   float: none;
   margin-left: 0;
+
 }
 
 .input-append input[class*="span"],
@@ -4166,6 +4168,7 @@ select[readonly],
 textarea[readonly] {
   cursor: not-allowed;
   background-color: #eeeeee;
+
 }
 
 input[type="radio"][disabled],

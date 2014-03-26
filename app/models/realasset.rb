@@ -7,6 +7,6 @@ class Realasset < ActiveRecord::Base
 	validates :cost, numericality: { only_integer: true ,  :message => "should be Number only"},
     		  :length => {:maximum => 10  }
     		
-    validates :name , :format => { :with => string_regex }
+    validates :name , :format => { :with => string_regex , :message => "should not contain special character" }
 
 end

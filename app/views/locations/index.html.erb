@@ -1,4 +1,6 @@
+
 <div class="container">
+   <% if authorize_signed_in? || hr_signed_in? %>
     <div class="row">
         <div class="col-md-9">
             <form class = "form-inline" action="#" method="get">
@@ -47,6 +49,11 @@
         </div>
 </div>
 </div>
+<% else %>
+<div class = "alert alert-danger">
+    you  do not have any authentication to view this page .
+</div>
+<%end %>
 </div>
 
 

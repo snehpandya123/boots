@@ -2,7 +2,35 @@
 <%=link_to "Dashboard", hmain_path %>
  </li>
   <ul class="nav pull-right">
-  <li>
+ 
+<li>
+   <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>Views <span class="caret"></span>
+                                                     </a>
+
+                                                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                                                <li><a tabindex="#"><%= link_to "Asset", realassets_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Vendor", vendors_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "Reqisition", requisitions_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Location", locations_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "PURCHASE ORDER", pos_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Asset transaction", '#' %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Stock", '#' %></a>
+                                                                </li>
+                                                                
+                                                            </ul>
+                                                           
+                                                            <br />
+                                                        </div>
+                                                    </li>
+
+                                                     <li>
+
  <div class="dropdown"><a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Budget 
   </a>
  </li>

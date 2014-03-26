@@ -1,4 +1,9 @@
 <div class="container-fluid">
+  <% if emp_signed_in? || hr_signed_in? || authorize_signed_in? %>
+  <div class = "alert alert-info">
+    you  are already signed in.
+</div>
+<% else %>
 <div class="row-fluid">
   <div class= "span6">
     <div class="well">
@@ -25,7 +30,7 @@
                   </h2>             
                 <hr class="colorgraph">
                 <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success", :id => "signin" %>
-                
+                <%= render "devise/shared/links" %>
         <% end %> 
     </div>
   </div>
@@ -46,9 +51,11 @@
   <div class="span6">
     <div class= "well">
         
-        <%= line_chart Emp.group_by_day(:current_sign_in_at).count%> 
+        <%= line_chart Po.group_by_day(:created_at).count%> 
       </div>
     </div>
 </div> 
+
+   <% end %>
 
 </div>                         

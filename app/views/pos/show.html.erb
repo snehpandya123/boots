@@ -1,2 +1,66 @@
-<h1>Pos#show</h1>
-<p>Find me in app/views/pos/show.html.erb</p>
+  
+<div class="widget stacked widget-table action-table">
+  				
+				<div class="widget-header">
+					<i class="icon-th-list"></i>
+					<h3>Purchase order</h3>
+				</div> <!-- /widget-header -->
+				
+				<div class="widget-content">
+					
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Invoice number</th>
+								<th>Po number</th>
+								<th>Vendor Email</th>
+								<th>Vendor Address</th>
+								<th>Po date</th>
+								<th>Requisition</th>
+								<th>Authorized person</th>
+								<th>General manager</th>
+								<th>terms</th>
+								<th>Asset name</th>
+								<th>Asset particular</th>
+								<th>Asset unit</th>
+								<th>Asset quantity</th>
+								<th>Asset Total</th>
+	
+								
+
+
+								
+
+							
+								<th class="td-actions"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><%= @po.invoiceno %></td>
+								<td><%= @po.pono %></td>
+								<td><%= @po.vname %></td>
+								<td><%= @po.vadd %></td>
+								<td><%= @po.podate %></td>
+								<td><%= @po.requisitner %></td>
+								<td><%= @po.forby %></td>
+								<td><%= @po.forto %></td>
+								<td><%= @po.terms %></td>
+								<td><%= @po.name %></td>
+								<td><%= @po.particular %></td>
+								<td><%= @po.unit %></td>
+								<td><%= @po.quantity %></td>
+								<td><%= @po.total %></td>
+								
+
+								
+							</tr>
+							
+							
+							</tbody>
+						</table>
+					
+				</div> <!-- /widget-content -->
+			
+			</div> <!-- /widget -->
+		

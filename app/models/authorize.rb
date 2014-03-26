@@ -5,7 +5,10 @@ class Authorize < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:username]
          
          attr_accessor :login
+          string_regex = /[a-z]+\z/i
          attr_accessible :password,:password_confirmation,:remember_me, :email , :username
          validates :username,
+
+          :format => { :with => string_regex ,:message=> "must be string"},
                    :uniqueness => {:case_sensitive => false}
  end

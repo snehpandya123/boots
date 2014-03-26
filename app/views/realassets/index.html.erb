@@ -1,3 +1,4 @@
+<% if hr_signed_in? || authorize_signed_in? %>
 <div class="container">
     <div class="row">
         <div class="col-md-9">
@@ -56,6 +57,11 @@
         </div>
 </div>
 </div>
+<% else %>
+<div class = "alert alert-danger">
+    you  do not have any authentication to view this page .
+</div>
+<%end %>
 </div>
 
 

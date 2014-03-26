@@ -11,11 +11,17 @@
           <div class="content-wrapper">       
                    
                         <%= render "/requisitions/index" %> 
+                        
           </div>
         </div>
       </div>
     </div>
   </div>
+  <% else %>
+  <div class = "alert alert-danger">
+    you  do not have any authentication to view this page .
+</div>
+
 
 
 <% end %>

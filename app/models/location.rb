@@ -4,7 +4,8 @@ class Location < ActiveRecord::Base
 	string_regex = /[a-z]+\z/i
 
 	validates :location, 
-			  :format => { :with => string_regex }
+			 
+			  :format => { :with => string_regex ,:message=> "must be string"}
 			  
 
 end

@@ -15,6 +15,7 @@ class PosController < ApplicationController
   end
 
   def show
+     @po = Po.find(params[:id])  
   end
 
   def destroy

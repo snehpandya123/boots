@@ -1,5 +1,5 @@
       <!-- start: Header -->
-       
+     <% if hr_signed_in? %>  
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="span1">
@@ -86,6 +86,11 @@
                         </div>
                     </div>
                 </div>
+                <%else %>
+                <div class = "alert alert-danger">
+    you  do not have any authentication to view this page .
+</div>
+<%end%>
             </div>
 
                    
