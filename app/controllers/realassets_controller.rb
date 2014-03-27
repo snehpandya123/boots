@@ -35,4 +35,19 @@ class RealassetsController < ApplicationController
           flash[:success] = "Asset removed."
       redirect_to realassets_path
   end
+   def edit
+    @realasset = Realasset.find(params[:id])
+     @title = "Edit user"
+  end
+  
+  def update
+    @realasset = Realasset.find(params[:id])
+      if @realasset.update_attributes(params[:realasset])
+        flash[:success] = "Profile updated."
+        redirect_to realassets_path
+      else
+        @title = "Edit user"
+        render 'edit'
+      end
+  end
 end
