@@ -21,3 +21,6 @@
         <% end %> 
     </div>
   </div>
+  <%= line_chart Realasset.group_by_day(:created_at).count %>
+    <%= line_chart Po.group_by_day(:created_at).count%> 
+     <%= pie_chart({"Asset" => Realasset.count , "Requisition" => Requisition.count, "Vendor" => Vendor.count , "Location" => Location.count , "Employee" => Emp.count , "Authorize" => Authorize.count , "hr" =>Hr.count , "Purchase order" => Po.count}) %>

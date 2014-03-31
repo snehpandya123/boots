@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325054747) do
+ActiveRecord::Schema.define(version: 20140331152340) do
 
   create_table "authorizes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -131,6 +131,8 @@ ActiveRecord::Schema.define(version: 20140325054747) do
     t.string   "from"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "total"
+    t.integer  "cost"
   end
 
   create_table "vendors", force: true do |t|

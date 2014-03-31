@@ -9,7 +9,7 @@ class PosController < ApplicationController
         flash[:success] = "Purchase Order is send for approval successfully wait for replay"
         redirect_to amain_path
       else
-        flash[:warning] = "Unable to send Purchase Order"
+        flash[:warning] = "Unable to send Purchase Order TRY TO FILL ALL MISSING VALUES"
         redirect_to amain_path
       end
   end

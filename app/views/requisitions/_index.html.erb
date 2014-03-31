@@ -19,7 +19,8 @@
                     <th><i class="fa fa-envelope-o"></i>Unit</th>
                     <th><i class="fa fa-map-marker"></i>Quantity</th>
                     <th><i class="fa fa-phone"></i>From</th>
-                    <th><i class="fa fa-phone"></i>Date</th>
+                    <th><i class="fa fa-phone"></i>Cost</th>
+                     <th><i class="fa fa-phone"></i>Total</th>
                     <th><i class="fa fa-phone"></i>TAKE actions</th>
                 </tr>
             </thead>
@@ -32,7 +33,8 @@
                     <td><%= r.unit %></td>
                     <td><%= r.quantity %></td>
                     <td><%= r.from %></td>
-                    <td><%= r.created_at %>
+                    <td><%= r.cost %></td>
+                    <td><%= r.total %></td>
                     <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure you want to delete?" } %>
                         <%= button_to "PO", r , method: :get, :class => "btn btn-primary" ,data: { confirm: "Really wants to generate Po?" } %>
                         <%= button_to "Capax", capax_path, method: :get,  :class => "btn btn-warning" ,data: { confirm: "Are you sure?" } %>

@@ -32,16 +32,23 @@
 			<%=f.label :quantity, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
 		</td>
 		<td>
-			<%=f.text_field :quantity %>
+			<%=f.text_field :quantity ,:id =>"a1" %>
 		</td>	
 	</tr>
 	<tr>
 		<td>
-			
+			<%=f.label :cost, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
 		</td>
-		
 		<td>
-	
+			<%=f.text_field :cost, :id => "a2" %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :total, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :total, :id => "a3" ,:readonly => "true" %>
 		</td>	
 	</tr>
 	<% if emp_signed_in? %>

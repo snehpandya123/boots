@@ -127,7 +127,8 @@
                     <%= f.hidden_field :quantity ,:value=> "#{@requisition.quantity}" %>
                   <%= @requisition.quantity %></td>
 								<td>
-                    <%= f.text_field :total %>
+                     <%= @requisition.total %></td>
+                    <%= f.hidden_field :total  ,:value=> "#{@requisition.total}" %>
                 </td>
 								
 							</tr>
