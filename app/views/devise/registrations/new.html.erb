@@ -1,20 +1,32 @@
+<div class="main-header1">
 <div class="container">
-	<div class="row-fluid">
-		<div class="span8">
+	<div style="margin-top:80px;" class="row-fluid">
+    <div class="offset3 span7 well">
 			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
 					<table >
 						<p style = "font-size:20pt;color: MidnightBlue; align: left"><i class="fa fa-pencil"></i><i><b>SIGN UP</b></i></p>
+						<div class = "well">
+							<d class = "red">
+									<%= devise_error_messages! %>
+							</d>
+						</div>
 							<hr class="colorgraphs">
 					<tr>	
 						<td>
 							
 								<%= f.label :Email, :style => "color:  black; font-size: 12pt; font-weight: bold;" %>
+							</td>
+							</tr><tr>
+								<td>
 						
 								<%= f.email_field :email, :autofocus => true , :placeholder => "Enter email..", :style => "color:  black; font-size: 12pt; font-weight: bold;" %>
 						</td>
+					</tr>
+						<tr>
 				
 						<td>
-							<%= f.label :username , :style => "color:  black; font-size: 12pt; font-weight: bold;"%>
+							<%= f.label :username , :style => "color:  black; font-size: 12pt; font-weight: bold;"%></td></tr><tr><td>
 						
 							<%= f.text_field :username ,:placeholder => "Enter username.." %>
 						</td>
@@ -24,7 +36,10 @@
 <%= f.label :password, :style => "color:  black; font-size: 12pt; font-weight: bold;" %>
 <%= f.password_field :password , :placeholder=> "password.." %>
 </td>
+	</tr>
+	<tr>
 <td>
+
 <%= f.label :password_confirmation , :style => "color:  black; font-size: 12pt; font-weight: bold;"%>
 <%= f.password_field :password_confirmation , :placeholder => "password_confirmation.." %>
 </td>
@@ -37,10 +52,7 @@
 <hr class="colorgraphs">
 </div>
 <div class = "span4">
-<div class = "well">
-<a class = "red">
-<%= devise_error_messages! %>
-</a>
+
 </div>
 </div>
 </div>

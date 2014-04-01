@@ -1,0 +1,17 @@
+
+	<div class= "container">
+	<div class = "span10 well">
+		<h1>Realassets by days</h1>
+		
+<%= line_chart Realasset.group_by_day(:created_at).count %>
+</div>
+<div class = "span10 well" >
+<h1>Purchase order by day</h1>
+    <%= line_chart Po.group_by_day(:created_at).count%> 
+</div>
+<div class = "span10 well">
+
+   <h1>Pi chart of all the Datas</h1>
+     <%= pie_chart({"Asset" => Realasset.count , "Requisition" => Requisition.count, "Vendor" => Vendor.count , "Location" => Location.count , "Employee" => Emp.count , "Authorize" => Authorize.count , "hr" =>Hr.count , "Purchase order" => Po.count}) %>
+ </div>
+</div>

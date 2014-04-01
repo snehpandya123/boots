@@ -13,7 +13,7 @@
 }
 .main-header1 {
  
-   background: url("/assets/bgimage2.jpg");
+   background: url("/assets/bgimage3.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3076,7 +3076,7 @@ body {
   color: black;
   background-color:#CFCFCF;
   overflow: auto; 
-  padding-top: 60px;
+  padding-top: 45px;
    
 }
 .form-signin {
