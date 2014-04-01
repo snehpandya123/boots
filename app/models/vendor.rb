@@ -4,7 +4,7 @@ class Vendor < ActiveRecord::Base
 	validates :location,:asset_name, presence: true
 	
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-	string_regex = /[a-z]+\z/i
+	string_regex = /\A[a-z]+\z/i
 	validates :name, :presence => true,:length => { :maximum => 50 },:format => { :with => string_regex }
 	validates :email, :presence => true,
 			  :format => { :with => email_regex },

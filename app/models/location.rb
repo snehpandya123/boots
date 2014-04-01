@@ -1,7 +1,7 @@
 class Location < ActiveRecord::Base
 	attr_accessible :location
 	validates :location, presence: true
-	string_regex = /[a-z]+\z/i
+	string_regex = /\A[a-z]+\z/i
 
 	validates :location, 
 			 
