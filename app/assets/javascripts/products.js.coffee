@@ -4,14 +4,3 @@
 
 
 
-
-$ ->
-  $("#lst_Regions").on "dblclick", "td", ->
-    OriginalContent = undefined
-    inputNewText = undefined
-    OriginalContent = $(this).text()
-    inputNewText = prompt("Enter new content for:", OriginalContent)
-    $(this).text inputNewText  if inputNewText isnt null
-    return
-
-  return
