@@ -27,7 +27,7 @@
             <tbody>
                
              <% @requisition.each do |r| %>
-                  <tr class = "pos">
+                  <tr class="pos">
                     <td><%= r.name %></td>
                     <td><%= r.particular %></td>
                     <td><%= r.unit %></td>
@@ -35,9 +35,9 @@
                     <td><%= r.from %></td>
                     <td><%= r.cost %></td>
                     <td><%= r.total %></td>
-                    <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure you want to delete?" } %>
-                        <%= button_to "PO", r , method: :get, :class => "pos" ,data: { confirm: "Really wants to generate Po?" } %>
-                        <%= button_to "Capax", capax_path, method: :get,  :class => "btn btn-warning" ,data: { confirm: "Are you sure?" } %>
+                    <td>
+                        <%= button_to "send for approval", r , method: :get, :class => "pos" ,data: { confirm: "Really wants to generate Po?" } %>
+                       
                     </td>
                  <tr>
             <% end %>
