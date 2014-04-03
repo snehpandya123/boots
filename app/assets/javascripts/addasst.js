@@ -5,7 +5,7 @@ $(window).load(function(){
   $(".pos").click(function(e){
      debugger;
         localStorage.setItem("visited" + $(this).closest("tr").index(), true);
-        $(this).css("color", "red"); // visited
+        $(this).prop("disabled", true); // visited
     });
 
     for(var i = 0, len = $(".pos").length; i < len; i++){

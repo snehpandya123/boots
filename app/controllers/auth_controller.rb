@@ -9,11 +9,9 @@ class AuthController < ApplicationController
   end
 
   def destroy
-    Requisition.find(params[:id]).destroy
-   flash[:success] = "Requisition Removed."
-    redirect_to amain_path
   end
   def po
+    @emp = Emp.all
   end
   def capax
   end

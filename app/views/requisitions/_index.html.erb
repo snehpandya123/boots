@@ -27,7 +27,7 @@
             <tbody>
                
              <% @requisition.each do |r| %>
-                  <tr class="pos">
+                  <tr>
                     <td><%= r.name %></td>
                     <td><%= r.particular %></td>
                     <td><%= r.unit %></td>
@@ -36,7 +36,7 @@
                     <td><%= r.cost %></td>
                     <td><%= r.total %></td>
                     <td>
-                        <%= button_to "send for approval", r , method: :get, :class => "pos" ,data: { confirm: "Really wants to generate Po?" } %>
+                        <%= button_to "Send for approval", r , method: :get, :class => "btn btn-priamry" ,data: { confirm: "Really wants to generate Po?" } %>
                        
                     </td>
                  <tr>

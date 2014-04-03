@@ -1,6 +1,8 @@
 class Emp < ActiveRecord::Base
 
-   has_many :requisitions
+  
+   has_many :requisitions, :foreign_key => "requisition_id",
+          :dependent => :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
