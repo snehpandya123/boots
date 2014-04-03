@@ -2,9 +2,8 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function()
 {
-	
-		var s = $("#copy").val();
-		$("#invoice").val(s);
+var s = $("#copy").val();
+$("#invoice").val(s);
 	
 });
 

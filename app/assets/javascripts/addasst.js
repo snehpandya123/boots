@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 $(window).load(function(){
 
-  $(".po").click(function(e){
+  $(".pos").click(function(e){
      debugger;
         localStorage.setItem("visited" + $(this).closest("tr").index(), true);
         $(this).css("color", "red"); // visited
