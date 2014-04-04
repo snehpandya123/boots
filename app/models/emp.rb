@@ -7,7 +7,7 @@ class Emp < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,:confirmable,:lockable
 
            
-         attr_accessor :email
+         attr_accessor :login
 
          attr_accessible :password,:password_confirmation,:remember_me, :email , :username
          string_regex = /\A[a-z]+\z/i

@@ -58,6 +58,7 @@
 		</td>
 		<td>
 			<%=f.text_field :from , :value => "#{current_emp.username.capitalize}" , :readonly => :true %>
+			<%=f.hidden_field :emp_id , :value => "#{current_emp.id}" , :readonly => :true %>
 		</td>	
 	</tr>
 	<% elsif authorize_signed_in? %>
