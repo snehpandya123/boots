@@ -1,5 +1,5 @@
 class Requisition < ActiveRecord::Base
-	belongs_to :emps
+	belongs_to :emp
 
 	attr_accessible :name , :unit , :quantity ,:from ,:particular ,:total , :cost
 

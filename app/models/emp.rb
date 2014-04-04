@@ -1,15 +1,13 @@
 class Emp < ActiveRecord::Base
 
+  has_many :requisitions
   
-   has_many :requisitions, :foreign_key => "requisition_id",
-          :dependent => :destroy
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+ 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable 
+         :recoverable, :rememberable, :trackable, :validatable,:confirmable,:lockable
 
            
-         attr_accessor :login
+         attr_accessor :email
 
          attr_accessible :password,:password_confirmation,:remember_me, :email , :username
          string_regex = /\A[a-z]+\z/i
@@ -19,3 +17,5 @@ class Emp < ActiveRecord::Base
     :case_sensitive => false
   }
 end
+ # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable

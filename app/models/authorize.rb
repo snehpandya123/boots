@@ -2,9 +2,9 @@ class Authorize < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:username]
+         :recoverable, :rememberable, :trackable, :validatable,:lockable,:confirmable
          
-         attr_accessor :login
+         attr_accessor :email
           string_regex = /\A[a-z]+\z/i
          attr_accessible :password,:password_confirmation,:remember_me, :email , :username
          validates :username,
