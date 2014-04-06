@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lcode: MyString
+  lscode: MyString
+  lname: MyString
+  lcharg: 1
+
+two:
+  lcode: MyString
+  lscode: MyString
+  lname: MyString
+  lcharg: 1

@@ -1,0 +1,58 @@
+<div class = "container">
+    
+      <div class = "well">
+         <p style = "font-size:20pt;color: MidnightBlue; align: left"><i class="fa fa-plus-square-o"></i><i><b>ADD Lawyer</b></i></p>
+   <hr class="colorgraph">
+        <d class ="red">
+          
+        </d>
+      </div>
+      <%= form_for @lcity, :url => { :action => "create" } do |f| %>
+       
+              <table width="700">
+                <tr>
+                  <td>
+                    <%= f.label :Lawyer_name, :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                      <h3 style = "color: #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-laptop fa fa-2x"></i>
+                          <%= f.text_field :lname %>
+                      </h3>
+                  </td>
+                  
+                  <td>
+                    <%= f.label :Location, :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                      <h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-align-justify fa fa-2x"></i> 
+                          <%= f.text_field :llocation %></h3>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <%= f.label :Experience , :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%>
+                      <h3 style= "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-map-marker fa fa-2x"></i>
+                        <%= f.text_field :lexperience %></h3>
+                  </td>
+                   <td>
+                 <%= f.label :Rating, :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                  <h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-phone fa fa-2x"></i>
+                  <%= f.text_field :lrating, :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+               </td>
+                  </tr>
+              <tr>
+               <td>
+                 <%= f.label :Lawyer_code, :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                  <h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-phone fa fa-2x"></i>
+                  <%= f.text_field :lcode, :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+               </td>
+                </tr>
+                <tr>
+                  <td>
+                  </td>
+                <td>
+                   <%= f.submit "Save", class: "btn btn-success" , :style => "color: white; font-size: 12pt; font-weight: bold;" %>
+                 </td>
+                    
+              </tr>
+            </table>
+<% end %>
+<hr class="colorgraph">
+</div>

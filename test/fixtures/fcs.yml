@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lcode: MyString
+  lname: MyString
+  llocation: MyString
+  lexperience: 1
+  lrating: MyString
+
+two:
+  lcode: MyString
+  lname: MyString
+  llocation: MyString
+  lexperience: 1
+  lrating: MyString

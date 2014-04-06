@@ -1,0 +1,25 @@
+<div class = "box-2">
+<div id="gallery">
+  
+
+  <a href="#" class="show">
+   <%= image_tag("marck14.png", :alt => "Sample App", :class => "round"  , :rel => "<h3> HOME </h3> <b><u>Marck Biosciences Ltd.</u></b>,<i>located in Ahmedabad, India - is a versatile manufacturer & marketer of Sterile Liquid Parenterals manufactured using Aseptic Blow - Fill - Seal technology. Both Large & Small Volume Parenteral facilities are ISO certified & cGMP compliant. Recently, Marck has got MCC - South Africa approval for its small volume parenterals facility based in Kheda.Globally, Marck has spread its wings in more than 77 countries across 6 continents. Nationwide, it has marked its footprints in 16 states, having presence in all the premium hospitals, institutions & corporate hospitals. Contract Manufacturing being thrust area, Marck offers customized manufacturing solutions to almost all the major companies of the pharmaceutical industry in India.</i>") %>
+ </a>
+<a href = "#">
+   <%= image_tag("marck20.png", :alt => "Sample App", :class => "round" , :rel => "<h3>ABOUT US</h3><i> From being a company that manufactured and marketed IV fluids, today we have formulation and development capabilities, have imbibed a culture conducive for knowledge based activity and have geared our production facility to become a versatile manufacturer of 0.5ml injectables to 1000 ml irrigation solutions.
+       As a responsible corporate citizen, Marck believes in its social commitment. Marck undertook the façade renovation of the heritage buildings at the temple town of Dakor. This was in collaboration with the local state authorities.It is our constant endeavour to promote socially relevant community initiatives such as organizing Blood donation and eye/health camps.   </i>") %>
+   <a href = "#">
+     <%= image_tag("marck17.png", :alt => "Sample App", :class => "round", :rel => "<h3>Innovision </h3> For us at Marck Biosciences, <b>Innovision</b> is a dynamic principle of order, manifesting itself in change, not in rigidity. We believe, because of <b>Innovision</b>, we have an organization that undergoes change without becoming chaotic, an organization that can re-engineer itself to remain relevant in a continuously dynamic environment." ) %>
+   </a>
+   <a href = "#">
+     <%= image_tag("marck19.png", :alt => "Sample App", :class => "round", :rel => "<h3> HELP </h3> <i>At <b>Marck Biosciences Ltd.</b>,we serve the best product the customer wants. We manufacture the standarad product. For more information about us please visit the site mention below.</i>
+       <b><u><i>http://marckindia.com/</i></u></b>") %>
+   </a>
+   <a href = "#">
+     <%= image_tag("marck16.png", :alt => "Sample App", :class => "round", :rel => "<h3>Mission</h3> Our <i><b>Mission</b> is to become a transnational pharmaceutical company through the development and introduction of a wide portfolio of branded and generic products in key markets.</i>" ) %>
+   </a>   
+   
+
+  <div class="caption"><div class="content"></div></div>
+</div></div>
+<div class="clear"></div>
