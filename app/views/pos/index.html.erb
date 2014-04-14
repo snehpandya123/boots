@@ -17,8 +17,8 @@
          <table class="table table-striped table-bordered table-condensed" id="table">
                     <thead>
 							<tr style = 'background-color: white'>
-								<th> <i class="fa fa-male"></i> Po number </th>
-								<th><i class="fa fa-bars"></i>  Asset name</th>
+								<th> <i class="fa fa-male"></i> Invoicenumber </th>
+								<th><i class="fa fa-bars"></i>  Assetname</th>
 								<th><i class="fa fa-envelope-o"></i> Total cost</th>
 								<th><i class="fa fa-map-marker"></i> vendor name</th>
 								<th><i class="fa fa-phone"></i> vendor address</th>
@@ -38,7 +38,13 @@
         <td><%= r.total %></td>
         <td><%= r.vname %></td>
        <td> <%= r.vadd %></td>
-       <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
+       <td><% if r.pono = "1234" %>
+               Under procedure 
+              <% else %>
+              submited successifully
+              <% end %>
+
+                </td>
        <tr>
       
         <% end %>

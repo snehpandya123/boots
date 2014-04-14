@@ -36,10 +36,11 @@
                     <td><%= r.cost %></td>
                     <td><%= r.total %></td>
                     <td>
-                        <%= button_to "Send for approval", r , method: :get, :class => "btn btn-priamry" ,data: { confirm: "Really wants to generate Po?" } %>
+                        <%= button_to "Send for approval ->", r , method: :get, :class => "po"  ,data: { confirm: "Really wants to generate Po?" } %>
                        
                     </td>
-                 <tr>
+                 </tr>
+
             <% end %>
             </tbody>
         </table>

@@ -1,18 +1,8 @@
 Boot::Application.routes.draw do
   
-  get "searches/index"
-  get "search/show"
-  resources :lservices
-  resources :lcities
-  resources :searches
-  get "lservices/new"
-  get "lservices/show"
-  get "lservices/create"
-  get "lservices/index"
-  get "lcities/new"
-  get "lcities/show"
-  get "lcities/index"
-  get "lcities/create"
+ 
+  
+  
   get "requisitions/new"
   get "requisitions/create"
   get "requisitions/show"
