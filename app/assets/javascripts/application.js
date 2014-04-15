@@ -50,3 +50,20 @@ function calculate(e)
 {
     $('#a3').val($('#a1').val() * $('#a2').val());
 }
+
+
+$(document).ready(function(){
+    $("#approve").click(function(){
+        $("#disapprove").hide();
+        $("#action").val("approve");
+    });
+     $("#disapprove").click(function(){
+        $("#approve").hide();
+         $("#action").val("disapprove");
+    });
+     $("#reset").click(function(){
+        $("#approve").show();
+         $("#disapprove").show();
+          $("#action").val("");
+    });
+});

@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <form class = "form-inline" action="#" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="system-search" placeholder="Search" name="q" required>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+            <div class="col-md-9">
+        <table class="table table-striped table-bordered table-condensed">
+            <thead>
+                <tr style = 'background-color: white'>
+                    <th> <i class="fa fa-male"></i> Invoice</th>
+                    <th><i class="fa fa-bars"></i>From</th>
+                    <th><i class="fa fa-envelope-o"></i>Date</th>
+                    <th><i class="fa fa-map-marker"></i>Status</th>
+                   
+                </tr>
+            </thead>
+            <tbody >
+               
+             <% @poapp.each do |poapp| %>
+                  <tr class = "hide">
+                    <td><%= poapp.invoice %></td>
+                    <td><%= poapp.from %></td>
+                    <td><%= poapp.date %></td>
+                    <td><%= poapp.action %></td>
+                    
+                   
+                 </tr>
+
+            <% end %>
+            </tbody>
+        </table>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================
+

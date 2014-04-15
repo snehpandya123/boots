@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406155126) do
+ActiveRecord::Schema.define(version: 20140415100117) do
 
   create_table "authorizes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -110,33 +110,20 @@ ActiveRecord::Schema.define(version: 20140406155126) do
   add_index "hrs", ["email"], name: "index_hrs_on_email", unique: true, using: :btree
   add_index "hrs", ["reset_password_token"], name: "index_hrs_on_reset_password_token", unique: true, using: :btree
 
-  create_table "lcities", force: true do |t|
-    t.string   "lcode"
-    t.string   "lname"
-    t.integer  "lexperience"
-    t.string   "llocation"
-    t.string   "lrating"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "locations", force: true do |t|
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "lservices", force: true do |t|
-    t.string   "lcode"
-    t.string   "lscode"
-    t.string   "lname"
-    t.integer  "lcharg"
+  create_table "poapps", force: true do |t|
+    t.string   "invoice"
+    t.string   "action"
+    t.string   "from"
+    t.string   "date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "lcity_id"
   end
-
-  add_index "lservices", ["lcity_id"], name: "index_lservices_on_lcity_id", using: :btree
 
   create_table "pos", force: true do |t|
     t.string   "invoiceno"
@@ -180,13 +167,6 @@ ActiveRecord::Schema.define(version: 20140406155126) do
   end
 
   add_index "requisitions", ["emp_id"], name: "index_requisitions_on_emp_id", using: :btree
-
-  create_table "searches", force: true do |t|
-    t.string   "city"
-    t.string   "service"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "vendors", force: true do |t|
     t.string   "name"

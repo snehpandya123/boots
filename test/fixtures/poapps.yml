@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invoice: MyString
+  action: MyString
+  from: MyString
+  date: MyString
+
+two:
+  invoice: MyString
+  action: MyString
+  from: MyString
+  date: MyString

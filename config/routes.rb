@@ -1,8 +1,18 @@
 Boot::Application.routes.draw do
   
  
+  resources :requisitions
+  resources :realassets
+  resources :vendors
+  resources :pos
+  resources :locations
+  resources :poapps
   
   
+  get "poapps/new"
+  get "poapps/create"
+  get "poapps/show"
+  get "poapps/index"
   get "requisitions/new"
   get "requisitions/create"
   get "requisitions/show"
@@ -39,13 +49,7 @@ end
 
 devise_for :employes 
  
-  resources :requisitions
-  resources :realassets
-  resources :vendors
-  resources :pos
   
-
-  resources :locations
   
   get 'capax', :to => 'auth#capax'
   get 'po', :to  => 'auth#po'
@@ -53,15 +57,11 @@ devise_for :employes
   get 'hmain' , :to => 'hrs#hhome'
   get 'emain' , :to => 'employee#emain'
    get 'charts' , :to => 'employee#charts'
-  get "replications/new"
-  get "replications/show"
+ 
   get "vendors/new"
   get "vendors/show"
  
-  get "assets/create"
-  get "assets/show"
-  get "assets/index"
-  
+ 
   
   root :to => 'pages#home'
   

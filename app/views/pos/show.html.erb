@@ -12,7 +12,37 @@
 		<table align = "left" style = "font-size:12pt">
 			
 			<tr>
-                 
+                <%= form_for(@poapp) do |f| %> 
+                 <%= f.hidden_field :from , :value => "#{@po.requisitner}" %>
+                 <%= f.hidden_field :date , :value => "#{@po.podate}" %>
+                 <%= f.hidden_field :invoice , :value => "#{@po.invoiceno}" %>
+                 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+ 						 Take action
+				</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Take action</h4>
+      </div>
+      <div class="modal-body">
+         <%= image_tag("approve.png", :alt => "Sample App", :class => "round" , :width => "100" ,:id=>"approve") %>
+          <%= f.hidden_field :action , :id=> "action" %>
+        <%= image_tag("disapprove.png", :alt => "Sample App", :class => "round" , :width => "100" , :id=>"disapprove") %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id = "reset">Reset</button>
+        <%= f.submit "submit" %>
+      </div>
+    </div>
+  </div>
+</div>
+                <% end %>
 				<td>
 					<p style = "font-size: 15pt"><b>MARCK BIOSCIENCE</b>
 					</p>
