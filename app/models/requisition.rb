@@ -1,5 +1,6 @@
 class Requisition < ActiveRecord::Base
 	belongs_to :emp
+	has_one :po, through: :emp
 
 	attr_accessible :name , :unit , :quantity ,:from ,:particular ,:total , :cost , :emp_id
 

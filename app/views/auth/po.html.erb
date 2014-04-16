@@ -1,56 +1,42 @@
-
 <div class="container">
+    
     <div class="row">
-        <div class="col-md-9">
-            <form class = "form-inline" action="#" method="get">
-                <div class="input-group">
-                    <input type="text" class="form-control" id="system-search" placeholder="Search" name="q" required>
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                    </span>
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">Employee Details</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
                 </div>
-            </form>
-        </div>
-    </div>
-      <div class = "row">
-          <div class="col-md-9">
-            <table class="table table-striped table-bordered table-condensed">
-              <thead>
-                  <tr style = 'background-color: white'>
-                      <th> <i class="fa fa-male"></i> Username </th>
-                      <th><i class="fa fa-bars"></i> Email</th>
-                      <th><i class="fa fa-bars"></i>count</th>
-                      <th><i class="fa fa-bars"></i>Time</th>
-                      <th><i class="fa fa-bars"></i>Last time</th>
-                      <th><i class="fa fa-envelope-o"></i>ip</th>
-                      <th><i class="fa fa-map-marker"></i>last ip</th>
-                      <th><i class="fa fa-phone"></i>TAKE actions</th>
-                </tr>
-              </thead>
-              
-            <tbody>
-                <% @emp.each do |e| %>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="Username" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Email" disabled></th>
+                        
+                        <th><input type="text" class="form-control" placeholder="Assets" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Status" disabled></th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <% @emp.each do |e| %>
                     <tr >
                       <td><%= e.username %></td>
                       <td><%= e.email %></td>
-                      <td><%= e.sign_in_count %></td>
-                      <td><%= e.current_sign_in_at %></td>
-                      <td><%= e.last_sign_in_at %></td>
-                      <td><%= e.current_sign_in_ip %></td>
-                      <td><%= e.last_sign_in_ip%></td>
-                      <td><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                          <%= e.requisitions.count %> Assets 
-                          </button> </td>
-                   </tr> <%end %>
+                      <td><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal<%= e.id %>">
+                  <%= e.requisitions.count %> Assets 
+                        </button></td>
+                      <td></td>
+                          
 
-            </tbody>
-        </table>
-                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                      <td>
+                     <div class="modal fade" id="myModal<%= e.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel"></h4>
+                                    <h4 class="modal-title" id="myModalLabel"><%= e.username.capitalize %> requisitions</h4>
                               </div>
                             <div class="modal-body">
                               <table class="table table-striped table-bordered table-condensed">
@@ -59,15 +45,26 @@
                                     <th><i class="fa fa-bars"></i> particular</th>
                                     <th><i class="fa fa-bars"></i>unit</th>
                                     <th><i class="fa fa-bars"></i>quantity</th>
-                                    <th><i class="fa fa-bars"></i>Last cost</th>
+                                    <th><i class="fa fa-bars"></i>cost</th>
+                                    <th><i class="fa fa-bars"></i>Total</th>
                                 </tr>                    
                                 
-                                <tbody>
-                                  <tr>
-                                    
-                                  </tr>
-                                </tbody>
-                              </table>
+                                <tbody> 
+                                     <% e.requisitions.each do |requisition| %>  
+                                       <tr>
+                                          <td><%= requisition.name %></td>
+                                          <td><%= requisition.particular %></td>
+                                           <td><%= requisition.unit %></td>
+                                            <td><%= requisition.quantity %></td>
+                                             <td><%= requisition.cost %></td>
+                                              <td><%= requisition.total %></td>
+     
+                                     </tr>
+                                          <% end %> 
+                                        
+                                  
+                                    </tbody>
+                            </table>
                           </div>
                           
                           <div class="modal-footer">
@@ -76,20 +73,12 @@
                         </div>
                       </div>
                     </div>
-                        
-                   
-                
-           
-
-<!-- Modal -->
-
+                    </td>
+                   </tr> <%end %>
+                </tbody>
+            </table>
         </div>
     </div>
-   </div>
-
-
-
-
-
-
-
+</div>
+</div>
+   

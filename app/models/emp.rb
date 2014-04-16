@@ -1,6 +1,8 @@
 class Emp < ActiveRecord::Base
 
   has_many :requisitions
+  has_many :pos, through: :requisitions
+  has_many :poapps, through: :pos 
   
  
   devise :database_authenticatable, :registerable,

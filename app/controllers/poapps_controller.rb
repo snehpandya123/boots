@@ -22,6 +22,9 @@ class PoappsController < ApplicationController
 
   def index
     @poapp = Poapp.all
-    @poapps = Poapp.find_by_action("disapprove")
+
+    @poapps =  Poapp.where(action: 'approve').pluck( :invoice , :from)
+    @poappss =  Poapp.where(action: 'disapprove').pluck( :invoice , :from)
+   
   end
 end
