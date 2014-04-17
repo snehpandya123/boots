@@ -1,8 +1,8 @@
 class Requisition < ActiveRecord::Base
 	belongs_to :emp
-	has_one :po, through: :emp
+	has_many :pos
 
-	attr_accessible :name , :unit , :quantity ,:from ,:particular ,:total , :cost , :emp_id
+	attr_accessible :name , :unit , :quantity ,:from ,:particular ,:total , :cost , :emp_id 
 
 	validates :name , :unit , :quantity ,:from ,:particular ,:total , :cost , presence: true
  	

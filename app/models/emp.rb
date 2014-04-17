@@ -3,6 +3,7 @@ class Emp < ActiveRecord::Base
   has_many :requisitions
   has_many :pos, through: :requisitions
   has_many :poapps, through: :pos 
+  has_many :realassets
   
  
   devise :database_authenticatable, :registerable,

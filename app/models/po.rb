@@ -1,14 +1,17 @@
 class Po < ActiveRecord::Base
 
       belongs_to :requisition
-
+      has_many :poapps
+     
 	attr_accessible  :invoiceno , :pono, :vname,
        :vadd,:podate,:requisitner,:forby,:forto,:terms,
        :name,
       :particular,
        :unit,
       :quantity,
-      :total
+      :total,
+      :requisition_id,
+      :requisition_attributes
 
       validates  :invoiceno , :pono, :vname,
        :vadd,:podate,:requisitner,:forby,:forto,:terms,
@@ -16,6 +19,6 @@ class Po < ActiveRecord::Base
       :particular,
        :unit,
       :quantity,
-      :total, presence: true
+      :total, :requisition_id, presence: true
 
   end

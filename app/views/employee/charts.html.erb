@@ -13,6 +13,8 @@
 
    <h1>Pi chart of all the Datas</h1>
      <%= pie_chart({"Asset" => Realasset.count , "Requisition" => Requisition.count, "Vendor" => Vendor.count , "Location" => Location.count , "Employee" => Emp.count , "Authorize" => Authorize.count , "hr" =>Hr.count , "Purchase order" => Po.count}) %>
+
+     <%= pie_chart({"Requested Requisition" => "#{@emp.count}" , "Asset added" => "#{@rel.count}" }) %>
  </div>
 </div>
 

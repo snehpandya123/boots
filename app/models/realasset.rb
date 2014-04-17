@@ -1,6 +1,14 @@
 class Realasset < ActiveRecord::Base
-	attr_accessible :name , :typ , :cost , :locat
-	validates :cost,:name,:typ ,:locat, presence: true
+
+	belongs_to :emp
+	belongs_to :hr
+	belongs_to :authorize
+	attr_accessible :name , :typ , :cost , :locat , :emp_id , :hr_id , :authorize_id
+	
+
+	
+			
+			
 
 	string_regex = /\A[a-z]+\z/i
 

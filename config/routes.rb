@@ -56,6 +56,7 @@ devise_for :employes
   get  'amain' , :to => 'auth#main'
   get 'hmain' , :to => 'hrs#hhome'
   get 'emain' , :to => 'employee#emain'
+  get 'track' , :to => 'employee#eform'
    get 'charts' , :to => 'employee#charts'
  
   get "vendors/new"

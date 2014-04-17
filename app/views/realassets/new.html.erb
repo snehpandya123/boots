@@ -38,7 +38,16 @@
                </td>
                   </tr>
               <tr>
-               
+                <% if emp_signed_in? %>
+                <%= f.hidden_field :emp_id , :value=> "#{current_emp.id}" %>
+                <%elsif hr_signed_in? %>
+                <%= f.hidden_field :emp_id , :value=> "#{current_hr.id}" %>
+                <%elsif authorize_signed_in? %>
+                <%= f.hidden_field :emp_id , :value=> "#{current_authorize.id}" %>
+                <%else%>
+                <%end %>
+                  
+                  
                 </tr>
                 <tr>
                   <td>

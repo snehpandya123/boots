@@ -1,6 +1,6 @@
 class Poapp < ActiveRecord::Base
 
-	has_one :Po
+     belongs_to :po
 	
 
 	attr_accessible  :invoice , :from, :date, :action

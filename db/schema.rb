@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140415100117) do
+ActiveRecord::Schema.define(version: 20140417202254) do
 
   create_table "authorizes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -123,7 +123,10 @@ ActiveRecord::Schema.define(version: 20140415100117) do
     t.string   "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "po_id"
   end
+
+  add_index "poapps", ["po_id"], name: "index_poapps_on_po_id", using: :btree
 
   create_table "pos", force: true do |t|
     t.string   "invoiceno"
@@ -142,7 +145,10 @@ ActiveRecord::Schema.define(version: 20140415100117) do
     t.integer  "total"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "requisition_id"
   end
+
+  add_index "pos", ["requisition_id"], name: "index_pos_on_requisition_id", using: :btree
 
   create_table "realassets", force: true do |t|
     t.string   "name"
@@ -151,7 +157,14 @@ ActiveRecord::Schema.define(version: 20140415100117) do
     t.string   "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "emp_id"
+    t.integer  "hr_id"
+    t.integer  "authorize_id"
   end
+
+  add_index "realassets", ["authorize_id"], name: "index_realassets_on_authorize_id", using: :btree
+  add_index "realassets", ["emp_id"], name: "index_realassets_on_emp_id", using: :btree
+  add_index "realassets", ["hr_id"], name: "index_realassets_on_hr_id", using: :btree
 
   create_table "requisitions", force: true do |t|
     t.string   "name"
