@@ -1,12 +1,17 @@
 Boot::Application.routes.draw do
   
  
+  get "sends/new"
+  get "sends/create"
+  get "sends/show"
+  get "sends/index"
   resources :requisitions
   resources :realassets
   resources :vendors
   resources :pos
   resources :locations
   resources :poapps
+  resources :sends
   
   
   get "poapps/new"

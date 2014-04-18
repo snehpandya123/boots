@@ -1,5 +1,5 @@
 
-  
+  <% if hr_signed_in? %>
 
 <div class = "container" >
   <div id= "pagecontent" >
@@ -16,34 +16,35 @@
                  <%= f.hidden_field :from , :value => "#{@po.requisitner}" %>
                  <%= f.hidden_field :date , :value => "#{@po.podate}" %>
                  <%= f.hidden_field :invoice , :value => "#{@po.invoiceno}" %>
+                 <%= f.hidden_field :po_id , :value => "#{@po.id}" %>
                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
  						 Take action
 				</button>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Take action</h4>
-      </div>
-      <div class="modal-body">
-         <%= image_tag("approve.png", :alt => "Sample App", :class => "round" , :width => "100" ,:id=>"approve") %>
-          <%= f.hidden_field :action , :id=> "action" %>
-        <%= image_tag("disapprove.png", :alt => "Sample App", :class => "round" , :width => "100" , :id=>"disapprove") %>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id = "reset">Reset</button>
-        <%= f.submit "submit" %>
-      </div>
-    </div>
-  </div>
-</div>
-                <% end %>
-				<td>
+       <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+         <div class="modal-content">
+    	  <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h4 class="modal-title" id="myModalLabel">Take action</h4>
+      	  </div>
+      		<div class="modal-body">
+         			<%= image_tag("approve.png", :alt => "Sample App", :class => "round" , :width => "100" ,:id=>"approve") %>
+          				<%= f.hidden_field :action , :id=> "action" %>
+        			<%= image_tag("disapprove.png", :alt => "Sample App", :class => "round" , :width => "100" , :id=>"disapprove") %>
+            </div>
+		
+		      <div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        		<button type="button" class="btn btn-primary" id = "reset">Reset</button>
+        			<%= f.submit "submit" %>
+      			</div>
+    		</div>
+		  </div>
+		</div>
+       <% end %>
+					<td>
 					<p style = "font-size: 15pt"><b>MARCK BIOSCIENCE</b>
 					</p>
 				</td>
@@ -70,59 +71,53 @@
 		
 
 
-<hr size = "5" color= "maroon" align = "center" width = "100%" ><p>
-		<d align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE:-
-    
-      <%= @po.invoiceno %>
-    </b></d>
-    <br/>
-<br/>
+				<hr size = "5" color= "maroon" align = "center" width = "100%" ><p>
+					<d align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE:-
+	    
+    					  <%= @po.invoiceno %>
+    				</b></d>
+    				<br/>
+					<br/>
      
-     <table style="border:1px solid black;border-collapse:collapse;">
-     	<tr>
-     		<td>
-     			TO,
-     		</td>
-     	</tr>
-     	<tr>
+		     <table style="border:1px solid black;border-collapse:collapse;">
+		     	<tr>
+     				<td>
+     					TO,
+     					</td>
+     				</tr>
+     				<tr>
      		
-         <td><%= @po.vadd %></td>
-		
- 
-    
-   
-     		
-     	
-     		</tr>
-     </table>
-     <br/>
-     <br/>
-     <table class="table table-striped table-bordered table-condensed">
-       <tr style = 'background-color: white'>
-       	<th>P.O Date</th>
-       	<th>Requisitioner</th>
-       	<th>Forwarded by</th>
-       	<th>Forwarded to</th>
-       	<th>Terms</th>
-       </tr>
-       <tr>
-       	<td>
-          <%= @po.podate %>
-       	</td>
-       	<td>
-         <%= @po.requisitner %>
-       	</td>
-       	<td>
-        <%= @po.forby %>
-       	</td>
-       	<td>
-          <%= @po.forto %>
-       	</td>
-       	<td>
-       		<%= @po.terms %>
-       	</td>
-       </tr>
-   </table>
+			         <td><%= @po.vadd %></td>
+					</tr>
+				     </table>
+     				<br/>
+     				<br/>
+     		<table class="table table-striped table-bordered table-condensed">
+       			<tr style = 'background-color: white'>
+       				<th>P.O Date</th>
+       				<th>Requisitioner</th>
+       			<th>Forwarded by</th>
+       				<th>Forwarded to</th>
+       					<th>Terms</th>
+       			</tr>
+       				<tr>	
+       					<td>
+          					<%= @po.podate %>
+       					</td>
+       						<td>
+         						<%= @po.requisitner %>
+       						</td>
+       						<td>
+        							<%= @po.forby %>
+       						</td>
+       						<td>
+          							<%= @po.forto %>
+       						</td>
+       							<td>
+       								<%= @po.terms %>
+       							</td>
+       							</tr>
+   				</table>
 <table class="table table-striped table-bordered table-condensed">
                     <thead>
                             <tr style = 'background-color: white'>
@@ -160,74 +155,142 @@
 </table>
 </div>
 <button id= "print" type="button" class="btn btn-success" onclick="Print();">PRINT</button>
-
-	</div>
-
-
-
-  
-<div class="widget stacked widget-table action-table">
-  				
-				<div class="widget-header">
-					<i class="icon-th-list"></i>
-					<h3>Purchase order</h3>
-				</div> <!-- /widget-header -->
-				
-				<div class="widget-content">
-					
-					<table class="table table-striped table-bordered">
-						<thead>
-							<tr>
-								<th>Invoice number</th>
-								<th>Po number</th>
-								<th>Vendor Email</th>
-								<th>Vendor Address</th>
-								<th>Po date</th>
-								<th>Requisition</th>
-								<th>Authorized person</th>
-								<th>General manager</th>
-								<th>terms</th>
-								<th>Asset name</th>
-								<th>Asset particular</th>
-								<th>Asset unit</th>
-								<th>Asset quantity</th>
-								<th>Asset Total</th>
+</div>
+</div>
+<% elsif authorize_signed_in? %>
+	<div class = "container" >
+  <div id= "pagecontent" >
+	<p style = "color: maroon; font-size: 30pt" align = "right"><i><b>PURCHASE ORDER</b></i></p>
+	<hr size = "5" color= "maroon" align = "center" width = "100%">
+	<p align = "right" style = "font-size: 15pt; color: MidnightBlue"> 
+		<%= Time.now.strftime("%B,%d %Y") %>
+		</p>
+		
+		<table align = "left" style = "font-size:12pt">
+			 <%= form_for(@send) do |f| %> 
+			<tr>
+               
+                 
+                 <%= f.hidden_field :po_id , :value => "#{@po.id}" %>
+                 
 	
-								
+       
+					<td>
+					<p style = "font-size: 15pt"><b>MARCK BIOSCIENCE</b>
+					</p>
+				</td>
+			</tr>
+		    <tr>
+		    	<td>Plot no: 876,</td>
+		    </tr>
+		    <tr>
+		    	<td>N.H.no.8, Hariyala, </td>
+		    </tr>
+		    <tr>
+		    	<td>Kheda</td>
+		    </tr>
+		    <tr>
+		    	<td>Phone: +91 2694 304000<br /></td>
+		    </tr>
+		    <tr>
+				<td>Gujarat, India<br /></td></tr>
+				<tr>
+				<td>Fax: +91 2694 304050<br /></td>
+			</tr>
+	
+		</table>
+		
 
 
-								
-
-							
-								<th class="td-actions"></th>
-							</tr>
-						</thead>
-						<tbody>
+				<hr size = "5" color= "maroon" align = "center" width = "100%" ><p>
+					<d align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE:-
+	    
+    					  <%= @po.invoiceno %>
+    				</b></d>
+    				<br/>
+					<br/>
+     
+		     <table style="border:1px solid black;border-collapse:collapse;">
+		     	<tr>
+     				<td>
+     					TO,
+     					</td>
+     				</tr>
+     				<tr>
+     		
+			         <td><%= @po.vadd %></td>
+					</tr>
+				     </table>
+     				<br/>
+     				<br/>
+     		<table class="table table-striped table-bordered table-condensed">
+       			<tr style = 'background-color: white'>
+       				<th>P.O Date</th>
+       				<th>Requisitioner</th>
+       			<th>Forwarded by</th>
+       				<th>Forwarded to</th>
+       					<th>Terms</th>
+       			</tr>
+       				<tr>	
+       					<td>
+          					<%= @po.podate %>
+       					</td>
+       						<td>
+         						<%= @po.requisitner %>
+       						</td>
+       						<td>
+        							<%= @po.forby %>
+       						</td>
+       						<td>
+          							<%= @po.forto %>
+       						</td>
+       							<td>
+       								<%= @po.terms %>
+       							</td>
+       							</tr>
+   				</table>
+<table class="table table-striped table-bordered table-condensed">
+                    <thead>
+                            <tr style = 'background-color: white'>
+                                <th> <i class="fa fa-laptop"></i></i> Name </th>
+                                <th><i class="fa fa-bars"></i>  Particular</th>
+                                <th><i class="fa fa-envelope-o"></i> Unit</th>
+                                <th><i class="fa fa-plus-square-o"></i></i>Quantity</th>
+                                <th><i class="fa fa-money"></i>TOTAL</th>
+                         
+                            </tr>
+    </thead>
+    <tbody>
 							<tr>
-								<td><%= @po.invoiceno %></td>
-								<td><%= @po.pono %></td>
-								<td><%= @po.vname %></td>
-								<td><%= @po.vadd %></td>
-								<td><%= @po.podate %></td>
-								<td><%= @po.requisitner %></td>
-								<td><%= @po.forby %></td>
-								<td><%= @po.forto %></td>
-								<td><%= @po.terms %></td>
-								<td><%= @po.name %></td>
-								<td><%= @po.particular %></td>
-								<td><%= @po.unit %></td>
-								<td><%= @po.quantity %></td>
-								<td><%= @po.total %></td>
-								
-
+								<td>
+                  
+                  <%= @po.name %></td>
+								<td>
+                  
+                  <%= @po.particular %></td>
+								<td>
+                 
+                  <%= @po.unit %></td>
+								<td>
+                    
+                  <%= @po.quantity %></td>
+								<td>
+                     <%= @po.total %></td>
+                   
+                </td>
 								
 							</tr>
 							
 							
 							</tbody>
-						</table>
-					
-				</div> <!-- /widget-content -->
-			
-			</div> <!-- /widget -->
-		
+</table>
+</div>
+<%= f.submit "send mail", :class => "btn btn-primary" %>
+<% end %>
+<button id= "print" type="button" class="btn btn-success" onclick="Print();">PRINT</button>
+</div>
+</div>
+<% else %>
+	<H1>not authorized to view this page</H1>
+<% end %>
+	

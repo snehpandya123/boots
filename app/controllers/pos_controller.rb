@@ -15,6 +15,7 @@ class PosController < ApplicationController
   end
 
   def show
+    @send = Send.new
      @po = Po.find(params[:id]) 
      @poapp = Poapp.new 
   end

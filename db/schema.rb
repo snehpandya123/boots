@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417202254) do
+ActiveRecord::Schema.define(version: 20140418190855) do
 
   create_table "authorizes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -180,6 +180,14 @@ ActiveRecord::Schema.define(version: 20140417202254) do
   end
 
   add_index "requisitions", ["emp_id"], name: "index_requisitions_on_emp_id", using: :btree
+
+  create_table "sends", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "po_id"
+  end
+
+  add_index "sends", ["po_id"], name: "index_sends_on_po_id", using: :btree
 
   create_table "vendors", force: true do |t|
     t.string   "name"

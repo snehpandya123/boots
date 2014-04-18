@@ -3,7 +3,7 @@ class Poapp < ActiveRecord::Base
      belongs_to :po
 	
 
-	attr_accessible  :invoice , :from, :date, :action
+	attr_accessible  :invoice , :from, :date, :action , :po_id , :po_attributes
 
 	validates :invoice , :from, :date, :action , presence: true
 

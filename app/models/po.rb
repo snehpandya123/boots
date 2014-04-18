@@ -2,6 +2,7 @@ class Po < ActiveRecord::Base
 
       belongs_to :requisition
       has_many :poapps
+      has_many :sends
      
 	attr_accessible  :invoiceno , :pono, :vname,
        :vadd,:podate,:requisitner,:forby,:forto,:terms,

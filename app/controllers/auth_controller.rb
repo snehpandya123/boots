@@ -14,6 +14,8 @@ class AuthController < ApplicationController
     @emp = Emp.all
   end
   def capax
+    @po = Po.joins(:poapps).where('poapps.action LIKE ?', "approve")
+
   end
   	
   
