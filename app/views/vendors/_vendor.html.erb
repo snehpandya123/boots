@@ -1,11 +1,14 @@
 <tr style = 'background-color: white ;'>
-		<td><%= link_to vendor.name , vendor  %></td>
+		<td><%= link_to vendor.name   %></td>
 		<td><%=  vendor.address %></td>	
 		<td><%=  vendor.email %></td>
 		<td><%=  vendor.location %></td>
 		<td><%=  vendor.ph_no %></td>
 		<td><%=  vendor.mobile_no %></td>
 		<td><%=  vendor.asset_name %></td>
-		<td><%= button_to "Remove", vendor, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
+		<td><table><tr><td><%= button_to "Edit", vendor, method: :get, :class => "btn btn-info" ,data: { confirm: "Do you want to edit?" } %></td><td><%= button_to "Remove", vendor, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td></tr></table>
+
+			
+			</td>
 </tr>
  

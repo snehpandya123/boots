@@ -22,11 +22,12 @@ class RealassetsController < ApplicationController
 
     def show
      @realasset = Realasset.find(params[:id])  
-    end
+      redirect_to edit_realasset_path
+        end
 
     def index
       @realasset = Realasset.all
-      @realasset = Realasset.order("name").page(params[:page]).per(5)
+      @realasset = Realasset.order("id DESC").page(params[:page]).per(5)
     end
   
     def destroy
@@ -43,10 +44,10 @@ class RealassetsController < ApplicationController
   def update
     @realasset = Realasset.find(params[:id])
       if @realasset.update_attributes(params[:realasset])
-        flash[:success] = "Profile updated."
+        flash[:success] = "Asset updated Successfully...."
         redirect_to realassets_path
       else
-        @title = "Edit user"
+       
         render 'edit'
       end
   end

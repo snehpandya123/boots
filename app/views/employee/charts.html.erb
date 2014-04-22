@@ -1,5 +1,11 @@
 
 	<div class= "container">
+		 <% if emp_signed_in? %>
+     <%= pie_chart({"Requested Requisition" => "#{@emp.count}" , "Asset added" => "#{@rel.count}" }) %>
+
+      <%= pie_chart({"Requested Requisition" => "#{@emp.count}","Approved Requisition" => "#{@empa.count}" , "Rejected Requisition" => "#{@empd.count}"  }) %>
+
+     <%elsif authorize_signed_in? %>s
 	<div class = "span10 well">
 		<h1>Realassets by days</h1>
 		
@@ -9,12 +15,23 @@
 <h1>Purchase order by day</h1>
     <%= line_chart Po.group_by_day(:created_at).count%> 
 </div>
+<div class = "span10 well" >
+<h1>vendors by day</h1>
+    <%= line_chart Vendor.group_by_day(:created_at).count%> 
+</div>
 <div class = "span10 well">
 
    <h1>Pi chart of all the Datas</h1>
      <%= pie_chart({"Asset" => Realasset.count , "Requisition" => Requisition.count, "Vendor" => Vendor.count , "Location" => Location.count , "Employee" => Emp.count , "Authorize" => Authorize.count , "hr" =>Hr.count , "Purchase order" => Po.count}) %>
 
-     <%= pie_chart({"Requested Requisition" => "#{@emp.count}" , "Asset added" => "#{@rel.count}" }) %>
+      <%= pie_chart({"Approve po" => "#{@autha.count}" , "Disapprove po" => "#{@authd.count}" }) %>
+    
+ 	<%else%>
+ 	no pi chart 
+ 	<%end %>	
+
+ 				
  </div>
+
 </div>
 

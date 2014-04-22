@@ -23,8 +23,9 @@
                        <%= f.password_field :password , :placeholder => "Enter password.." ,:id => "password" %>
                   </h2>             
                 <hr class="colorgraph">
-                <%= f.submit "Sign in" ,:class => "btn btn-block btn-lg btn-success", :id => "signin" %>
-                <%= render "devise/shared/links" %>
+                <table><tr><td> <%= f.submit "Sign in" ,:class => "btn btn-success", :id => "signin" %></td><tr><td><%= render "devise/shared/links" %></td></tr></table>
+               
+                
         <% end %> 
     
   </div>

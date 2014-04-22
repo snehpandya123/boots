@@ -1,6 +1,7 @@
 class Poapp < ActiveRecord::Base
 
      belongs_to :po
+     belongs_to :hr
 	
 
 	attr_accessible  :invoice , :from, :date, :action , :po_id , :po_attributes

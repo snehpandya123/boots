@@ -2664,7 +2664,7 @@ color: #ffffff !important;
 
   #sidebar-nav {
     left: -200px;
-    position: fixed;
+    position: relative;
     z-index: 9999;
     background-color: white;
     padding-top: 0px;
@@ -4046,7 +4046,7 @@ form {
   height: auto;
   background-color: #F7F2F6;
   background-size: cover;
-   background-image:url('/assets/bg7.jpg');
+   background-image:url('/assets/form1.jpg');
 
   
 }

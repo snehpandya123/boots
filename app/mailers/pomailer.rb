@@ -3,7 +3,8 @@ class Pomailer < ActionMailer::Base
 
   def registration_confirmation(po)
     @po = po
-    mail(:to => "sapandya92@yahoo.co.in", :subject => " New purchase order send by " )
+    
+    mail(:to => "sapandya92@yahoo.co.in,#{po.vname}", :subject => " New purchase order send by " )
     
 
   end

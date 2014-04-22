@@ -34,10 +34,9 @@ def after_sign_out_path_for(resource)
         elogin_path
     end
 end
-
-
-
-
 end
+
+
+
 
 

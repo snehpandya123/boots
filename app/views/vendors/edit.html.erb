@@ -1,0 +1,81 @@
+ <div class="container">
+    <div class="row">
+      <legend><a href="#"><i class="fa fa-laptop"></i></a> Add Vendors</legend>
+            <%= form_for(@vendor) do |f| %>
+ <div class = "well">
+    <p style = "font-size:20pt;color: MidnightBlue; align: left"><i class="fa fa-laptop"></i><i><b>ADD VENDORS</b></i></p>
+   <hr class="colorgraph">
+  <a class ="red">
+ <% if @vendor.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@vendor.errors.count, "error") %>
+prohibited this <%= @vendor.class.to_s.underscore.humanize.downcase %>
+from being saved:</h2>
+<p>There were problems with the following fields:</p>
+<ul>
+<% @vendor.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+</a></div>
+          <table width="700">
+            <tr>
+              <td>
+                <%= f.label :Full_name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                <h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-user fa fa-2x"></i>
+                  <%= f.text_field :name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                </h3>
+              </td>
+               <td>
+                <%= f.label :address ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%><h3  style ="color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-align-justify fa fa-2x"></i> 
+                <%= f.text_area :address,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+              </td>
+            </tr>
+              <tr>
+                <td>
+   
+                 <%= f.label :email,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-envelope fa fa-2x"></i>
+                 <%= f.text_field :email,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+               </td>
+                 <td>
+   
+                  <%= f.label :location,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-map-marker fa fa-2x"></i>
+                  <%= f.text_field :location,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+   
+                 <%= f.label :ph_no,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-phone fa fa-2x"></i>
+                 <%= f.text_field :ph_no ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%></h3>
+               </td>
+                 <td>
+    
+                  <%= f.label :mobile_no ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%><h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-phone-square fa fa-2x"></i>
+                  <%= f.text_field :mobile_no,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+      
+                  <%= f.label :asset_name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-truck fa fa-2x"></i> 
+                  <%= f.text_field :asset_name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+                </td>
+              <td>
+                      <%= f.submit "Update", class: "btn btn-primary ",  :style => "color:  white; font-size: 12pt; font-weight: bold;"  %>
+                     
+                    </td>
+                    </tr>
+                    </table>
+<% end %>
+<hr class="colorgraph">
+    </div>
+ </div>
+
+
+
+
+
+

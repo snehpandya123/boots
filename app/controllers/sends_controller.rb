@@ -6,7 +6,7 @@ class SendsController < ApplicationController
   def create
   @send = Send.new(params[:send])
   	if @send.save
-  		 Pomailer.registration_confirmation(@send).deliver
+  		 Pomailer.registration_confirmation(@send.po).deliver
   		flash[:success] = "Send mail"
   		redirect_to capax_path
   	else

@@ -37,7 +37,9 @@
                     <td><%= r.total %></td>
                     <td>
                         <%= button_to "Send for approval ->", r , method: :get, :class => "po"  ,data: { confirm: "Really wants to generate Po?" } %>
-                       
+                        <%if "#{r.total}".to_i > 10000 %>
+                          <%= button_to "Generate capax", cap_path , method: :get, :class => "btn btn-info"  ,data: { confirm: "Really wants to generate capax?" } %>
+                          <% end %>
                     </td>
                  </tr>
 

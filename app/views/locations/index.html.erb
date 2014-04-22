@@ -14,7 +14,8 @@
             
         </div>
         <div class="col-md-5">
-         <table class="table table-striped table-bordered table-condensed" width = "500">
+
+         <table class="table table-striped table-bordered table-condensed" >
                     <thead>
 							<tr style = 'background-color: white'>
 								<th> <i class="fa fa-male"></i> Location  </th>
@@ -32,7 +33,11 @@
       <tr>
         <td><%= r.location %></td>
         
-       <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
+       <td>
+<table><tr><td> <%= button_to "Edit", r, method: :get, :class => "btn btn-info" ,data: { confirm: "Are you sure you want to edit?" } %></td> <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td></tr></table>
+       
+
+      
        <tr>
       
         <% end %>

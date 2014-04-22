@@ -1,4 +1,8 @@
 class Vendor < ActiveRecord::Base
+
+	belongs_to :authorize
+	belongs_to :hr
+
 	attr_accessible :name, :address, :email, :location, :ph_no, :mobile_no, :asset_name
 
 	validates :location,:asset_name, presence: true

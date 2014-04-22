@@ -2,6 +2,8 @@ class AuthController < ApplicationController
  def main
   	
 	@requisition = Requisition.all
+   
+ 
  end
  
  def create
@@ -15,9 +17,11 @@ class AuthController < ApplicationController
   end
   def capax
     @po = Po.joins(:poapps).where('poapps.action LIKE ?', "approve")
-
   end
-  	
+  def sen
+   @po = Po.all
+  end
+  
   
 
 end

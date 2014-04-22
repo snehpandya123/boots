@@ -57,7 +57,7 @@
                                             <!--INNER IF-LOOP ENDS-->
                     <% else %>
                                                     <li>
-                                                        <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>SIGNIN <span class="caret"></span>
+                                                        <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-info" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>Login <span class="caret"></span>
                                                      </a>
 
                                                             <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
@@ -83,7 +83,9 @@
         <!-- NAV-BAR FIXED TOP ENDS-->
  <%= render 'layouts/flash' %>       
         <!--THIS IS THE YIELD -->
+        <%= render 'layouts/sidebar' %>
         <%=yield %>
+       
         <!-- END OF YIELD-->
                     
                     <hr>

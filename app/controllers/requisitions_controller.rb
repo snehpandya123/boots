@@ -31,7 +31,7 @@ class RequisitionsController < ApplicationController
 
   def index
       @requisition = Requisition.all
-      @requisition = Requisition.order("name").page(params[:page]).per(5)
+      @requisition = Requisition.order("id DESC").page(params[:page]).per(5)
   end
 
   def destroy
@@ -39,5 +39,9 @@ class RequisitionsController < ApplicationController
     @requisition.destroy
     redirect_to requisitions_path
     
+  end
+  def cap
+    
+ 
   end
 end

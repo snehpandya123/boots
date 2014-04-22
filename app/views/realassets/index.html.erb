@@ -38,7 +38,11 @@
         <td><%= r.cost %></td>
         <td><%= r.typ %></td>
        <td> <%= r.locat %></td>
-       <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td>
+       <td><table>
+        <tr><td><%= button_to "Edit", r, method: :get, :class => "btn btn-info" ,data: { confirm: "Are you sure?" } %></td><td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td></tr>
+       </table>
+
+       </td>
         <td></td>
        
        </tr>

@@ -34,6 +34,7 @@ Boot::Application.routes.draw do
   get "locations/index"
   get "locations/destroy"
   get "locations/create"
+
   
   devise_for :emps 
  devise_scope :emp do
@@ -63,6 +64,11 @@ devise_for :employes
   get 'emain' , :to => 'employee#emain'
   get 'track' , :to => 'employee#eform'
    get 'charts' , :to => 'employee#charts'
+   get 'asst' , :to => 'realassets#new'
+   get 'locnnew' , :to => 'locations#new'
+    get 'vennew' , :to => 'vendors#new'
+    get 'cap', :to=> 'requisitions#cap'
+    get 'sen' , :to => 'auth#sen'
  
   get "vendors/new"
   get "vendors/show"
