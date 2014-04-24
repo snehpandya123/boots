@@ -1,0 +1,57 @@
+<div class = "container">
+	<table class="table table-striped table-bordered table-condensed">
+            <thead>
+                <tr style = 'background-color: white'>
+                    <th> <i class="fa fa-male"></i> Name </th>
+                    <th><i class="fa fa-bars"></i>Invoice no</th>
+                    
+                    <th><i class="fa fa-bars"></i>Requisitionar by</th>
+                    
+                    <th><i class="fa fa-bars"></i>Send at</th>
+                     <th><i class="fa fa-bars"></i>STOCK</th>
+                    
+                </tr>
+            </thead>
+           			  <%= form_for (@stock) do |f| %>
+            <tbody>
+            	<tr>
+            		<td>
+            				<%= f.hidden_field :ssend_id, :value=> "#{@ssend.id}" %>
+            			<%= f.hidden_field :name , :value=> "#{@po.name}" %>
+            			<%= @po.name %>
+
+            		</td>
+					<td>
+						<%= f.hidden_field :invoice , :value=> "#{@po.pono}" %>
+						<%= @po.pono %>
+					</td>
+					<td>
+						<%= f.hidden_field :requ , :value=> "#{@po.requisitner }" %>
+						<%= @po.requisitner %>
+
+					</td>
+					<td>
+						<%= f.hidden_field :sendto, :value=> "#{ @ssend.created_at.strftime("%B,%d %Y") }" %>
+						<%= @ssend.created_at.strftime("%B,%d %Y") %>
+
+					</td>  
+
+					<td>
+						<%= f.submit "Save to stock" , :class=> "btn btn-info" %>
+						
+
+					</td>            		
+            	</tr>
+                <%end %>
+                      
+           
+           
+            </tbody>
+            
+        </table>
+	
+	
+</div>
+
+ 
+	

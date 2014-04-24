@@ -19,7 +19,8 @@ class AuthController < ApplicationController
     @po = Po.joins(:poapps).where('poapps.action LIKE ?', "approve")
   end
   def sen
-   @po = Po.all
+   @po = Po.joins(:ssends).where('ssends.po_id IS NOT NULL')
+   @stock = Stock.new
   end
   
   

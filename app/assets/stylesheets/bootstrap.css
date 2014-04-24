@@ -2746,12 +2746,14 @@ color: #ffffff !important;
     #gallery a {
         float:left;
         position:absolute;
+         margin-top: -10px;
     }
     
     #gallery a img {
         border:none;
         width: auto;
         height: auto;
+        margin-top: 0px;
 
     }
     
@@ -3098,9 +3100,9 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: black;
-  background-color:#CFCFCF;
+  background-color:white;
   overflow: auto; 
-  padding-top: 45px;
+  padding-top: 55px;
    
 }
 .form-signin {

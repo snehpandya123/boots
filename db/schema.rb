@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418190855) do
+ActiveRecord::Schema.define(version: 20140424190348) do
+
+  create_table "allots", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "stock_id"
+  end
+
+  add_index "allots", ["stock_id"], name: "index_allots_on_stock_id", using: :btree
 
   create_table "authorizes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -181,13 +189,25 @@ ActiveRecord::Schema.define(version: 20140418190855) do
 
   add_index "requisitions", ["emp_id"], name: "index_requisitions_on_emp_id", using: :btree
 
-  create_table "sends", force: true do |t|
+  create_table "ssends", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "po_id"
   end
 
-  add_index "sends", ["po_id"], name: "index_sends_on_po_id", using: :btree
+  add_index "ssends", ["po_id"], name: "index_ssends_on_po_id", using: :btree
+
+  create_table "stocks", force: true do |t|
+    t.string   "name"
+    t.string   "invoice"
+    t.string   "requ"
+    t.string   "sendto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "ssend_id"
+  end
+
+  add_index "stocks", ["ssend_id"], name: "index_stocks_on_ssend_id", using: :btree
 
   create_table "vendors", force: true do |t|
     t.string   "name"

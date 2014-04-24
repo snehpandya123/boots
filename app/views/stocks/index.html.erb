@@ -1,0 +1,47 @@
+<div class = "container">
+	<div class = "well">
+	<table class="table table-striped table-bordered table-condensed">
+            <thead>
+                <tr style = 'background-color: white'>
+                    <th> <i class="fa fa-male"></i>Requisitioner</th>
+                    <th><i class="fa fa-bars"></i>Name</th>
+                    
+                    <th><i class="fa fa-bars"></i>Received on</th>
+                    
+                    <th><i class="fa fa-bars"></i>Invoice</th>
+                     <th><i class="fa fa-bars"></i>STOCK</th>
+                    
+                </tr>
+            </thead>
+           			 
+            <tbody>
+            	<% @stock.each do |s| %>
+            	<tr>
+                    <%= form_for (@allot) do |f| %>
+                    <%= f.hidden_field :stock_id , :value=> "#{s.id}" %>
+            			<td><%=s.requ %></td>
+            			<td><%=s.name %></td>
+            			<td><%=s.invoice %></td>
+            			<td><%=s.created_at %></td>
+            			
+            		<td><%= f.submit "allot" ,:class => "btn btn-primary" %></td>
+            		        		<% end %>
+            	</tr>
+            	<%end %>
+              
+                      
+           
+           
+            </tbody>
+            
+        </table>
+	
+	</div>
+</div>
+
+ 
+	
+
+
+
+

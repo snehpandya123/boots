@@ -96,6 +96,7 @@
                                             <th><i class="fa fa-bars"></i>Send for approval</th>
                                             <th><i class="fa fa-bars"></i>Action taken on</th>
                                             <th><i class="fa fa-bars"></i>result</th>
+                                             <th><i class="fa fa-bars"></i>Send on</th>
                                         </tr>                    
                                 
                                         <tbody> 
@@ -118,10 +119,25 @@
 
                                                            <% end %>
 
+                                                            <%end%>
 
                                                       </td>
-                                                      <%end%>
+                                                      <% p.ssends.each do |j| %>
+                                                      <td>
+                                                        <%= j.created_at %>
 
+                                                      </td>
+                                                      <% j.stocks.each do |n| %>
+                                                      <td>
+                                                      <%= n.created_at %>
+                                                      </td>
+                                                        <% n.allots.each do |l| %>
+                                                        <td>
+                                                          <%=l.created_at %>
+                                                        </td>
+                                                        <%end %>
+                                                      <%end %>
+                                                      <% end %>
                                                     <%end %>
                                             </tr>
                                                 <% end %> 

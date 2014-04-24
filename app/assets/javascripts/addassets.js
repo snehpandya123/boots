@@ -48,3 +48,26 @@ $(document).ready(function(){
 
 //search 
 
+$(document).ready(function(){
+ 
+ $(".rasset").click(function(e){
+     
+        localStorage.setItem("receive" + $(this).closest("tr").index(), true);
+        $(this).css("color", "red"); // visited
+    });
+
+    for(var i = 0, len = $(".rasset").length; i < len; i++){
+
+        if(localStorage.getItem("receive" + i)){
+          
+            $(".rasset:eq(" + i + ")").css("color", "blue"); 
+
+            $(".reasset:eq(" + i + ")").hide(); 
+              
+            // visited
+        }else
+        {
+            $(".rasset:eq(" + i + ")").css("color", "blue"); // not visited
+        }
+    }
+});
