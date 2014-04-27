@@ -22,12 +22,12 @@
             <tbody>
                
             <% @po.each do |p| %>
-                  <tr>
-                   <td><%= p.name %></td>
+                  <tr class = "rec">
+                        <td><%= p.name %></td>
 						<td><%= p.pono %></td>
                   
                     <td>
-                        <%= button_to "Send to vendor ->", p , method: :get, :class => "btn btn-primary"  ,data: { confirm: "Really wants to send to vendor?" } %>
+                        <%= button_to "Send to vendor ->", p , method: :get, :class => "rece"  ,data: { confirm: "Really wants to send to vendor?" } %>
                        
                     </td>
                  </tr>

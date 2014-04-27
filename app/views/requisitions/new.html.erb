@@ -79,6 +79,15 @@
 			<%=f.text_field :from , :value => "#{current_authorize.username.capitalize}" , :readonly => :true %>
 		</td>	
 	</tr>
+	<% elsif hr_signed_in? %>
+	<tr>
+		<td>
+			<%=f.label :from, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :from , :value => "#{current_authorize.username.capitalize}" , :readonly => :true %>
+		</td>	
+	</tr>
 	<% else %>
 	Unable to add requisition <% end %>
     <tr>

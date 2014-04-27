@@ -17,7 +17,7 @@ class EmployeeController < ApplicationController
  	@empa = Emp.find(current_emp.id).poapps.where('poapps.action LIKE ?' , "approve")
  	@empd = Emp.find(current_emp.id).poapps.where('poapps.action LIKE ?' , "disapprove")
  	end
- 	if authorize_signed_in?
+ 	if authorize_signed_in? || hr_signed_in?
  		
  		@autha = Po.joins(:poapps).where('poapps.action LIKE ?', "approve")
  		@authd = Po.joins(:poapps).where('poapps.action LIKE ?', "disapprove")

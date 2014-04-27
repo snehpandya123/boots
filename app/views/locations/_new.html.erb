@@ -1,7 +1,6 @@
 
-        <a class ="red">
-          <% if @location.errors.any? %>
-
+<a class ="red">
+ <% if @location.errors.any? %>
 <div id="error_explanation">
 <h2><%= pluralize(@location.errors.count, "error") %>
 prohibited this <%= @location.class.to_s.underscore.humanize.downcase %>

@@ -38,13 +38,6 @@
         <td><%= r.total %></td>
         <td><%= r.vname %></td>
        <td> <%= r.vadd %></td>
-       <td><% if r.pono = "1234" %>
-               Under procedure 
-              <% else %>
-              submited successifully
-              <% end %>
-
-                </td>
        <tr>
       
         <% end %>
@@ -59,9 +52,16 @@
 </div>
 
 <% else %>
-<div class = "alert alert-danger">
-    you  do not have any authentication to view this page .
-</div>
+<div class="col-sm-6 col-md-6">
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    ×</button>
+                <span class="fa fa-hand-right"></span> <strong>Alert..!!</strong>
+                <hr class="message-inner-separator">
+                <p>
+                    You are not authorized to view this page.</p>
+            </div>
+        </div>
 <% end %>
 </div>
 

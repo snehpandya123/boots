@@ -1,2 +1,65 @@
-<h1>Allots#index</h1>
-<p>Find me in app/views/allots/index.html.erb</p>
+<div class="container">
+    <div class="row">
+      <% if authorize_signed_in? ||hr_signed_in? %>
+        <div class="col-md-9">
+            <form class = "form-inline" action="#" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="system-search" placeholder="Search" name="q" required>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+             
+             
+        </div>
+        <div class="col-md-9">
+         <table class="table table-striped table-bordered table-condensed" id="table">
+                    <thead>
+							<tr style = 'background-color: white'>
+								<th> <i class="fa fa-male"></i> Asset </th>
+								<th><i class="fa fa-bars"></i> Invoice</th>
+								<th><i class="fa fa-envelope-o"></i> Requisitioner</th>
+								<th><i class="fa fa-map-marker"></i> Alloted on</th>
+								
+								
+							
+							</tr>
+	</thead>
+	<tbody>
+
+      <% @stock.each do |a| %>
+      <tr>
+          <td><%= a.name %></td>  
+         <td> <%= a.invoice %></td>
+           <td> <%= a.requ %></td>
+           <% a.allots.each do |f| %>
+           <td><%= f.created_at.strftime("%B,%d %Y") %> </td>
+           <%end %>
+
+
+         </tr>
+       <% end %>
+   </tbody>
+</table>
+<div>
+            
+            
+        </div>
+</div>
+<%else %>
+<div class="col-sm-6 col-md-6">
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    ×</button>
+                <span class="fa fa-hand-right"></span> <strong>Alert..!!</strong>
+                <hr class="message-inner-separator">
+                <p>
+                    You are not authorized to view this page.</p>
+            </div>
+        </div>
+        <%end%>
+</div>
+</div>
+
+

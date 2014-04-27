@@ -22,7 +22,7 @@ class VendorsController < ApplicationController
   def index
 		@title = "All users"
 		@vendor= Vendor.all
-		@vendor = Vendor.order("name").page(params[:page]).per(5)
+		 @vendor = Vendor.order("id DESC").page(params[:page]).per(5)
   end
 
   def destroy

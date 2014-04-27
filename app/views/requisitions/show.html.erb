@@ -1,39 +1,43 @@
-  
-
-<div class = "container" >
-  <div id= "pagecontent" >
-	<p style = "color: maroon; font-size: 30pt" align = "right"><i><b>PURCHASE ORDER</b></i></p>
-	<hr size = "5" color= "maroon" align = "center" width = "100%">
-	<p align = "right" style = "font-size: 15pt; color: MidnightBlue"> 
-		<%= Time.now.strftime("%B,%d %Y") %>
-		</p>
+  <div class = "container" >
+    <div id= "pagecontent" >
+	   <p style = "color: maroon; font-size: 30pt" align = "right"><i><b>PURCHASE ORDER</b></i></p>
+	     <hr size = "5" color= "maroon" align = "center" width = "100%">
+	       <p align = "right" style = "font-size: 15pt; color: MidnightBlue"> 
+		        <%= Time.now.strftime("%B,%d %Y") %>
+		    </p>
 		
-		<table align = "left" style = "font-size:12pt">
-			<%= form_for(@po) do |f| %>
-			<tr>
+		    <table align = "left" style = "font-size:12pt">
+			       <%= form_for(@po) do |f| %>
+			   <tr>
                  
-				<td>
-					<p style = "font-size: 15pt"><b>MARCK BIOSCIENCE</b>
-					</p>
-				</td>
-			</tr>
-		    <tr>
-		    	<td>Plot no: 876,</td>
-		    </tr>
-		    <tr>
-		    	<td>N.H.no.8, Hariyala, </td>
-		    </tr>
-		    <tr>
-		    	<td>Kheda</td>
-		    </tr>
-		    <tr>
-		    	<td>Phone: +91 2694 304000<br /></td>
-		    </tr>
-		    <tr>
-				<td>Gujarat, India<br /></td></tr>
-				<tr>
-				<td>Fax: +91 2694 304050<br /></td>
-			</tr>
+				  <td>
+  					<p style = "font-size: 15pt"><b>MARCK BIOSCIENCE</b>
+					   </p>
+				  </td>
+			    
+          </tr>
+		      
+          <tr>
+  		    	<td>Plot no: 876,</td>
+		      </tr>
+		      
+          <tr>
+  		    	<td>N.H.no.8, Hariyala, </td>
+		      </tr>
+		      
+          <tr>
+  		    	<td>Kheda</td>
+		      </tr>
+		      
+          <tr>
+		    	 <td>Phone: +91 2694 304000<br /></td>
+		      </tr>
+		      
+          <tr>
+				    <td>Gujarat, India<br /></td></tr>
+				  <tr>
+    				<td>Fax: +91 2694 304050<br /></td>
+			   </tr>
 	
 		</table>
 		

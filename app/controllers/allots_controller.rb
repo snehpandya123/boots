@@ -19,6 +19,6 @@ class AllotsController < ApplicationController
   end
 
   def index
-  	@allot = Allot.all
+     @stock = Stock.joins(:allots).where('allots.stock_id IS NOT NULL')
   end
 end

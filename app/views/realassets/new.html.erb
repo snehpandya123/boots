@@ -1,12 +1,17 @@
+<% if authorize_signed_in? || hr_signed_in? || emp_signed_in? %>
 <div class = "container">
+  <div class = "well">
+    <p style = "font-size:20pt;color: MidnightBlue; align: left">
+      <i class="fa fa-plus-square-o">
+      </i>
+      <i><b>ADD ASSETS</b></i>
+    </p>
     
-      <div class = "well">
-         <p style = "font-size:20pt;color: MidnightBlue; align: left"><i class="fa fa-plus-square-o"></i><i><b>ADD ASSETS</b></i></p>
-   <hr class="colorgraph">
-        <d class ="red">
-          <%= render "error" %>
-        </d>
-      </div>
+    <hr class="colorgraph">
+      <d class ="red">
+        <%= render "error" %>
+      </d>
+    </div>
       <%= form_for(@realasset) do |f| %>
        
               <table width="700">
@@ -61,3 +66,15 @@
 <% end %>
 <hr class="colorgraph">
 </div>
+<%else %>
+<div class="col-sm-6 col-md-6">
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    ×</button>
+                <span class="fa fa-hand-right"></span> <strong>Alert..!!</strong>
+                <hr class="message-inner-separator">
+                <p>
+                    You are not authorized to view this page.</p>
+            </div>
+        </div>
+        <%end %>

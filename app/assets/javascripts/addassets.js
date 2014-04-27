@@ -71,3 +71,28 @@ $(document).ready(function(){
         }
     }
 });
+
+
+$(document).ready(function(){
+ 
+ $(".rece").click(function(e){
+     
+        localStorage.setItem("vensend" + $(this).closest("tr").index(), true);
+        $(this).css("color", "red"); // visited
+    });
+
+    for(var i = 0, len = $(".rece").length; i < len; i++){
+
+        if(localStorage.getItem("vensend" + i)){
+          
+            $(".rece:eq(" + i + ")").css("color", "blue"); 
+
+            $(".rec:eq(" + i + ")").hide(); 
+              
+            // visited
+        }else
+        {
+            $(".rece:eq(" + i + ")").css("color", "blue"); // not visited
+        }
+    }
+});

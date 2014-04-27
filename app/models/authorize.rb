@@ -9,6 +9,6 @@ class Authorize < ActiveRecord::Base
          attr_accessible :password,:password_confirmation,:remember_me, :email , :username
          validates :username,
 
-          :format => { :with => string_regex ,:message=> "must be string"},
+          :format => { :with => string_regex ,:message=> ":->must not include any blank space,numerical, Only string is valid"},
                    :uniqueness => {:case_sensitive => false}
  end
