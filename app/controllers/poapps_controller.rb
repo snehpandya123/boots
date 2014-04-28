@@ -8,10 +8,10 @@ class PoappsController < ApplicationController
 			if @poapp.save
 				
 				
-				flash[:success] = "Purchase order successfully approved"
+				flash[:success] = "Purchase order Action have been Taken"
 				redirect_to hmain_path
 			else
-				flash[:waring] = "Purchase order disapproved"
+				flash[:waring] = "Please take a needfull action for the Purchase order"
 				redirect_to hmain_path
 			end
   end

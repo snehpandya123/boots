@@ -1,18 +1,161 @@
-<!DOCTYPE html>
-<html>
+<html >
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
- </head>
- <body>
-  <h1>Dear <%= @po.vname %></h1>,
-   <p>
-   You have purchase order with invoice no <%= @po.invoiceno %>.
-   </p>
-  <p> 
-  ......
-   add your required information using  object.
-  .....
-  </p>
-  <p>Thanks !</p>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Marck Bioscience Pvt Ltd.</title>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="top" bgcolor="#726627" style="background-color:#726627;"><br>
+    <br>
+    <table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top" style="padding:5px;"></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" bgcolor="#006c00" style="background-color:#006c00; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000000;"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+          <tr>
+            
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" bgcolor="#ffffff" style="background-color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000000; padding:12px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="10" style="margin-bottom:10px;">
+            
+              
+          <tr>
+            <td>
+            <img src="http://www.marckindia.com/images/logo.jpg" width="40%" height="40%" align="left"><div style="font-size:30px; color:#006d00;" align = "right">
+                   Purchase Order</div>
+<hr size = "5" color = "maroon" width = "100%">
+<p align = "right" style = "font-size: 15pt; color: MidnightBlue"> 
+    <%= Time.now.strftime("%B,%d %Y") %>
+            </td>
+                
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#525252;">
+                    
+                </tr>
+                <tr>
+                    <td>
+              <div style="font-size:28px;"></div>
+ </td>
+          </tr>
+<tr>
+<td>
+<img src="http://www.marckindia.com/images/about_img.jpg" width="100%" height="100%" align="left" style="margin-right:20px; margin-top:20px;">
+</td>
+</tr>
+        </table>
+
+<hr size = "5" color = "maroon" width = "100%">
+<p align = "left"><b>INVOICE NO <%=@po.invoiceno%> </b></p>
+ 
+<table align = "left" style = "font-size:12pt"  width = "100%">
+<tr>
+                 
+        
+          <p style = "font-size: 15pt; color :CornflowerBlue;"><b>MARCK BIOSCIENCE</b>
+          </p>
+        <td align = "left"> TO,<br/>
+            <%= @po.vname %><br/>
+            <%= @po.vadd %><br/><br/>
+        </td>
+      </tr>
+    
+</table>
+
+ <table border = "1" style = "border-collapse:collapse;" >
+       <tr style = "background-color: lightblue;">
+        <th>P.O Date</th>
+        <th>Requisitioner</th>
+        <th>Forwarded by</th>
+        <th>Forwarded to</th>
+        <th>Terms</th>
+       </tr>
+       <tr>
+        <td><%= @po.podate %></td>
+        <td><%= @po.requisitner %></td>
+        <td><%= @po.forby %></td>
+        <td><%= @po.forto %></td>
+
+<td><%= @po.terms %></td>       </tr>
+</table>
+<br/>
+<table border = "1" style = "border-collapse:collapse;" align = "center" >
+                    <thead>
+                            <tr style = 'background-color: lightblue'>
+                                <th> <i class="fa fa-laptop"></i></i> Name </th>
+                                <th><i class="fa fa-bars"></i>  Particular</th>
+                                <th><i class="fa fa-envelope-o"></i> Unit</th>
+                                <th><i class="fa fa-plus-square-o"></i></i>Quantity</th>
+                                <th><i class="fa fa-money"></i>TOTAL</th>
+                         
+                            </tr>
+    `              </thead>
+    <tbody>
+        <tr>
+          <td><%= @po.name %></td>
+           <td><%= @po.particular %></td>
+            <td><%= @po.unit %></td>
+             <td><%= @po.quantity %></td>
+              <td><%= @po.total %></td>
+
+        </tr> 
+    </tbody>
+</table>
+        <table align = "left">
+<tr>
+<td>
+
+</td>
+</tr>
+</table>
+        <table>
+          <tr align = "left">
+            <td align = "left" valign = "top">
+               <b> </b>
+               
+            </td>
+           </tr>
+           <tr>
+            <td>
+            
+           </td>
+              
+           </tr>
+       </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="10" style="margin-bottom:10px;">
+            <tr>
+              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#525252;"><div style="font-size:14px;">
+              </div>
+                <div> <p style = "color: red;"><br>
+                  
+            </tr>
+          </table>
+          <blockquote style="text-align: center; color: #999; font-style: italic; font-variant: normal; font-weight: normal; font-size: 16px; line-height: 145%; font-family: 'Georgia', serif; margin: 0; padding: 5px 30px;" align="center"><p style="color: black; vertical-align: top; font-style: italic; font-variant: normal; font-weight: normal; font-size: 16px; line-height: 145%; font-family: 'Georgia', serif; margin: 0 0 1em;">“<b>Mission</b> is to become a transnational pharmaceutical company through the development and introduction of a wide portfolio of branded and generic products in key markets.”</p></blockquote>
+      </tr>
+     
+      <tr>
+        <td align="left" valign="top" bgcolor="#006c00" style="background-color:#006c00;"><table width="100%" border="0" cellspacing="0" cellpadding="15">
+          <tr>
+            <td align="left" valign="top" style="color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px;">Plot no: 876, N. H. no. 8, Hariyala, Kheda
+            Gujarat, India <br>
+              Kheda Branch <br>
+              Phone: +91 2694 304000 <br>
+              Fax:Fax: +91 2694 304050 <br>
+              Email: <a href="mailto: info@marckindia.com" style="color:#ffffff; text-decoration:none;"> info@marckindia.com </a><br>
+              Website: <a href="http://www.marckindia.com" target="_blank" style="color:#ffffff; text-decoration:none;">www.marckindia.com</a></td>
+          </tr>
+        </table></td>
+      </tr>
+  </table>
+    <br>
+    <br></td>
+  </tr>
+</table>
 </body>
 </html>

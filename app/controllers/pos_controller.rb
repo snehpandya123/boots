@@ -28,6 +28,6 @@ class PosController < ApplicationController
 
   def index
     @po = Po.all
-    @po = Po.order("name").page(params[:page]).per(5)
+    @po = Po.order("name").page(params[:page]).per(10)
   end
 end

@@ -9,7 +9,7 @@ class StocksController < ApplicationController
   			flash[:success] = "Asset added to stock.."
   			redirect_to sen_path
   		else
-  			flash[:warning] = "Unable to add asset"
+  			flash[:warning] = "Unable to add asset, You already have added this before"
   			redirect_to sen_path
   		end
   end
@@ -17,6 +17,7 @@ class StocksController < ApplicationController
   def index
   	@stock = Stock.all
     @allot = Allot.new
+  
   end
 
   def show

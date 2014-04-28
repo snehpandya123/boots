@@ -142,14 +142,14 @@
           </div>
           <div class="modal-body">
               <%= image_tag("approve.png", :alt => "Sample App", :class => "round" , :width => "100" ,:id=>"approve") %>
-                  <%= f.text_field :action , :id=> "action" %>
+                  <%= f.text_field :action , :id=> "action" , :readonly => :true %>
               <%= image_tag("disapprove.png", :alt => "Sample App", :class => "round" , :width => "100" , :id=>"disapprove") %>
             </div>
     
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary" id = "reset">Reset</button>
-              <%= f.submit "submit" %>
+              <%= f.submit "submit" , :class => "btn btn-success" %>
             </div>
         </div>
       </div>

@@ -1,18 +1,31 @@
-<%if authorize_signed_in? || hr_signed_in? %>
+
 <div class="container">
+    <%if authorize_signed_in? || hr_signed_in? %>
     <div class="row">
-        <div class="col-md-9">
+         <div class = "well">
+    <p style = "font-size:20pt;color: MidnightBlue; align: left">
+      <i class="fa fa-plus-square-o">
+      </i>
+      <i><b>List of all Purchase Orders</b></i>
+    </p>
+    
+    <hr class="colorgraph">
+      
+       <div class="col-md-9">
             <form class = "form-inline" action="#" method="get">
                 <div class="input-group">
-           <input type="search" id="search" value="" class="form-control" placeholder="Search using Fuzzy searching">
+                    <input type="text" class="form-control" id="system-search" placeholder="Search" name="q" required>
                     <span class="input-group-btn">
                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                     </span>
                 </div>
             </form>
              
-             <%= paginate @po%>
+             
         </div>
+             
+             <%= paginate @po%>
+        
         <div class="col-md-9">
          <table class="table table-striped table-bordered table-condensed" id="table">
                     <thead>
@@ -38,7 +51,14 @@
         <td><%= r.total %></td>
         <td><%= r.vname %></td>
        <td> <%= r.vadd %></td>
+       <% if r.poapps.empty? %>
+       <td><span class="label label-danger">Pending..</span></td>
+       <%else %>
+       <%r.poapps.each do |e| %>
+        <td><%=e.action %></td> 
+        <%end %>
        <tr>
+        <%end %>
       
         <% end %>
        
@@ -47,7 +67,7 @@
 <div>
             
             
-        </div>
+    </div>   </div>
 </div>
 </div>
 

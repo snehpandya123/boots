@@ -7,10 +7,10 @@ class SsendsController < ApplicationController
   @ssend = Ssend.new(params[:ssend])
   	if @ssend.save
   		 Pomailer.registration_confirmation(@ssend.po).deliver
-  		flash[:success] = "Send mail"
+  		flash[:success] = "E-mail was successfully sent to vendor, you can contact by phone to confirm"
   		redirect_to capax_path
   	else
-  		flash[:warning] = "mail not send"
+  		flash[:warning] = "You are unable to send mail, you already have send it before"
   		redirect_to capax_path
   end
 end

@@ -31,10 +31,10 @@ gem 'twitter-bootstrap-rails'
 # Use CoffeeScript for .js.coffee assets and views
 
 gem "devise", "~> 3.2.2"
-gem "highcharts-rails", "~> 3.0.7"
+
 gem "kaminari"
 gem 'jquery-ui-rails'
-gem 'jquery-datatables-rails' , github: 'rweng/jquery-datatables-rails'
+
 
 
 

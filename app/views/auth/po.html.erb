@@ -102,9 +102,10 @@
                           </tr>                    
                                 
                          <tbody> 
-                             <% e.requisitions.each do |requisition| %>  
+                             <% e.requisitions.each do |requisition| %> 
+                             <% requisition.pos.each do |p| %> 
                                <tr>
-                                 <% requisition.pos.each do |p| %>
+                                 
                                     <td><%= p.name %></td>
                                     <td><%= p.pono %></td>
                                     <td><%= p.podate %></td>
@@ -134,8 +135,9 @@
                                                     <%end %>
                                                   <%end %>
                                                 <% end %>
-                                              <%end %>
+                                              
                                             </tr>
+                                            <%end %>
                                         <% end %> 
                                   </tbody>
                             </table>

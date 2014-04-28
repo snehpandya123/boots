@@ -10,25 +10,26 @@
                 </div>
             </form>
         </div>
-        
+              <%= paginate @requisition %>
             <div class="col-md-9">
-        <table class="table table-striped table-bordered table-condensed">
+       
+<table class="table table-striped table-bordered table-condensed">
             <thead>
                 <tr style = 'background-color: white'>
                     <th> <i class="fa fa-male"></i> Name </th>
                     <th><i class="fa fa-bars"></i> Particular</th>
                     <th><i class="fa fa-envelope-o"></i>Unit</th>
                     <th><i class="fa fa-map-marker"></i>Quantity</th>
-                    <th><i class="fa fa-phone"></i>From</th>
-                    <th><i class="fa fa-phone"></i>Cost</th>
-                     <th><i class="fa fa-phone"></i>Total</th>
-                    <th><i class="fa fa-phone"></i>TAKE actions</th>
+                    <th><i class="fa fa-share"></i>From</th>
+                    <th><i class="fa fa-money"></i>Cost</th>
+                     <th><i class="fa fa-plus-circle"></i></i>Total</th>
+                    <th><i class="fa fa-check-circle-o"></i>TAKE actions</th>
                 </tr>
             </thead>
             <tbody>
                
              <% @requisition.each do |r| %>
-                  <tr class = "sneh">
+                  <tr> 
                     <td><%= r.name %></td>
                     <td><%= r.particular %></td>
                     <td><%= r.unit %></td>
@@ -37,17 +38,19 @@
                     <td><%= r.cost %></td>
                     <td><%= r.total %></td>
                     <td>
-                        <%= button_to "Send for approval ->", r , method: :get, :class => "po"  ,data: { confirm: "Really wants to generate Po?" } %>
-                        <%if "#{r.total}".to_i > 10000 %>
-                          <%= button_to "Generate capax", cap_path , method: :get, :class => "btn btn-info"  ,data: { confirm: "Really wants to generate capax?" } %>
-                          <% end %>
+                        <%if r.pos.empty? %>
+                        <%= button_to "Generate PO", r , method: :get, :class => "btn btn-info"  ,data: { confirm: "Really wants to generate Po?" } %>
+                        
+                          <%else%>
+                          <%= button_to "PO GENERATED" , r , :disabled => :true , :class => "btn btn-danger"%> 
+                          <%end %>
                     </td>
                  </tr>
 
             <% end %>
             </tbody>
         </table>
-            
+      
         </div>
     </div>
 </div>

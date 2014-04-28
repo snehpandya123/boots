@@ -17,4 +17,6 @@ class Realasset < ActiveRecord::Base
     		
     validates :name , :format => { :with => string_regex , :message => "should not contain special character" }
 
+    validates_uniqueness_of :name
+
 end

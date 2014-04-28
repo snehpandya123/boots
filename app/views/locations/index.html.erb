@@ -2,6 +2,14 @@
 <div class="container">
    <% if authorize_signed_in? || hr_signed_in? %>
     <div class="row">
+         <div class = "well">
+    <p style = "font-size:20pt;color: MidnightBlue; align: left">
+      <i class="fa fa-plus-square-o">
+      </i>
+      <i><b>List of all Locations</b></i>
+    </p>
+    
+    <hr class="colorgraph">
         <div class="col-md-9">
             <form class = "form-inline" action="#" method="get">
                 <div class="input-group">
@@ -20,8 +28,9 @@
 							<tr style = 'background-color: white'>
 								<th> <i class="fa fa-male"></i> Location  </th>
 								
-								<th><i class="fa fa-phone"></i>  TAKE actions</th>
-								
+								<th><i class="fa fa-phone"></i> Edit</th>
+
+                                <th><i class="fa fa-phone"></i>  Removed</th>								
 							
 							</tr>
 	</thead>
@@ -34,8 +43,13 @@
         <td><%= r.location %></td>
         
        <td>
-<table><tr><td> <%= button_to "Edit", r, method: :get, :class => "btn btn-info" ,data: { confirm: "Are you sure you want to edit?" } %></td> <td><%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %></td></tr></table>
-       
+            <%= button_to "Edit", r, method: :get, :class => "btn btn-info" ,data: { confirm: "Are you sure you want to edit?" } %>
+        </td> 
+        <td>
+            <%= button_to "Remove", r, method: :delete, :class => "btn btn-danger" ,data: { confirm: "Are you sure?" } %>
+        </td>
+
+        </tr>       
 
       
        <tr>
@@ -44,14 +58,10 @@
        
    </tbody>
 </table>
-<div><table >
-                <tr>
-                   
-                </tr>
-            </table>
+<div>
             
             
-        </div>
+     </div>   </div>
 </div>
 </div>
 <% else %>

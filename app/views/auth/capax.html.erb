@@ -1,5 +1,13 @@
 <div class="container">
     <div class="row">
+         <div class = "well">
+    <p style = "font-size:20pt;color: MidnightBlue; align: left">
+      <i class="fa fa-plus-square-o">
+      </i>
+      <i><b>List of all APPROVED PO</b></i>
+    </p>
+    
+    <hr class="colorgraph">
         <div class="col-md-9">
             <form class = "form-inline" action="#" method="get">
                 <div class="input-group">
@@ -22,12 +30,16 @@
             <tbody>
                
             <% @po.each do |p| %>
-                  <tr class = "rec">
+                  <tr>
                         <td><%= p.name %></td>
 						<td><%= p.pono %></td>
                   
                     <td>
-                        <%= button_to "Send to vendor ->", p , method: :get, :class => "rece"  ,data: { confirm: "Really wants to send to vendor?" } %>
+                        <% if p.ssends.empty? %>
+                        <%= button_to "Send to vendor", p , method: :get, :class => "btn btn-info"  ,data: { confirm: "Really wants to send to vendor?" } %>
+                        <%else %>
+                         <%= button_to "PO sent", p , :disabled => :true, :class => "btn btn-danger"  %>
+                         <% end %>
                        
                     </td>
                  </tr>
@@ -35,7 +47,7 @@
             <% end %>
             </tbody>
         </table>
-            
+            </div>
         </div>
     </div>
 </div>

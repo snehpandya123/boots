@@ -2,6 +2,7 @@ class AuthController < ApplicationController
  def main
   	
 	@requisition = Requisition.all
+   @requisition = Requisition.order("id DESC").page(params[:page]).per(8)
    
  
  end
@@ -20,7 +21,8 @@ class AuthController < ApplicationController
   end
   def sen
    @po = Po.joins(:ssends).where('ssends.po_id IS NOT NULL')
-   @stock = Stock.new
+
+   @stock = Stock.all
   end
   
   

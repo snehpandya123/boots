@@ -1,6 +1,16 @@
-<body onload="JavaScript:AutoRefresh(5000);" >
+
 <div class="container">
+   <% if authorize_signed_in? ||hr_signed_in? %>
     <div class="row">
+        <div class = "well">
+    <p style = "font-size:20pt;color: MidnightBlue; align: left">
+      <i class="fa fa-plus-square-o">
+      </i>
+      <i><b>List of all Vendors</b></i>
+    </p>
+    
+    <hr class="colorgraph">
+      
         <div class="col-md-9">
             <form class = "form-inline" action="#" method="get">
                 <div class="input-group">
@@ -23,7 +33,9 @@
 								<th><i class="fa fa-phone"></i>  Mobile_no</th>
 								<th><i class="fa fa-phone-square"></i>  Phone_no</th>
 								<th><i class="fa fa-truck"></i>  Asset_name</th>
-                                <th><i class="fa fa-truck"></i>  Take Actions</th>
+                                <th><i class="fa fa-truck"></i>  Edit</th>
+                                <th> Delete</th>                                
+
 							
 							</tr>
 	</thead>
@@ -34,18 +46,21 @@
 	
    </tbody>
 </table>
-<div><table >
-                <tr>
-                    <td>
-                        <%= button_to "ADD NEW" , vendors_new_path ,:class=>"btn btn-primary",:method => :get %>
-                    </td>
-                </tr>
-            </table>
-            
-            
+<div>
+     </div>       
         </div>
 </div>
 </div>
+<% else %>
+<div class="col-sm-6 col-md-6">
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    ×</button>
+                <span class="fa fa-hand-right"></span> <strong>Alert..!!</strong>
+                <hr class="message-inner-separator">
+                <p>
+                    You are not authorized to view this page.</p>
+            </div>
+        </div>
+        <%  end %>
 </div>
-
-</body>

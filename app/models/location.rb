@@ -6,6 +6,7 @@ class Location < ActiveRecord::Base
 	validates :location, 
 			 
 			  :format => { :with => string_regex ,:message=> "must be string"}
-			  
+	
+	validates_uniqueness_of :location 
 
 end

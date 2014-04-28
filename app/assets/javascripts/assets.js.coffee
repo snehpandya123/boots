@@ -1,31 +1,10 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-loading = ->
-  $("#submit").on "click", ->
-    $this = $(this)
-    $this.button "loading"
-    setTimeout (->
-      $this.button "reset"
-      return
-    ), 2000
-    return
-
-  return
 
 
-$(document).ready ->
-  loading()
-  return
 
 
-$(document).ready ->
-  $("#cancle").click ->
-    $("#username").val("").focus()
-    $("#password").val ""
-    return
-
-  return
 
 $(document).ready ->
   slideShow()
