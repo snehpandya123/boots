@@ -38,7 +38,7 @@
             			<td><%=s.created_at %></td>
                                    		<td>
                                             <%if s.allots.empty? %>
-                                            <%= f.submit "allot" ,:class => "btn btn-primary" %>
+                                            <%= f.submit "allot" ,:class => "btn btn-primary" , :method => :get %>
                                             <% else %>
                                             <%= button_to "alloted" , s , :disabled => :true , :class=> "btn btn-danger" %>
                                             <% end %> 
