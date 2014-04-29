@@ -22,8 +22,10 @@ def after_sign_in_path_for(resource)
         
     elsif authorize_signed_in?
         amain_path
-    else
+    elsif emp_signed_in?
        emain_path
+     else
+      gmain_path
     end
 end
 
@@ -32,8 +34,10 @@ def after_sign_out_path_for(resource)
        hlogin_path
     elsif authorize_signed_in?
         alogin_path
-    else
+    elsif emp_signed_in?
         elogin_path
+    else
+      glogin_path
     end
 end
 end

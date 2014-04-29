@@ -1,5 +1,10 @@
 Boot::Application.routes.draw do
   
+  
+  get "invards/new"
+  get "invards/create"
+  get "invards/show"
+  get "invards/index"
   get "allots/new"
   get "allots/create"
   get "allots/show"
@@ -21,6 +26,7 @@ Boot::Application.routes.draw do
   resources :ssends
   resources :stocks
   resources :allots
+  resources :invards
   
   
   
@@ -45,7 +51,12 @@ Boot::Application.routes.draw do
   get "locations/destroy"
   get "locations/create"
 
-  
+ 
+devise_for :gatekeepers
+ devise_scope :gatekeeper do
+  get '/glogin' => 'devise/sessions#new'
+  get '/glogout' => 'devise/sessions#destroy'
+end 
   devise_for :emps 
  devise_scope :emp do
   get '/elogin' => 'devise/sessions#new'
@@ -79,6 +90,7 @@ devise_for :employes
     get 'vennew' , :to => 'vendors#new'
     get 'cap', :to=> 'requisitions#cap'
     get 'sen' , :to => 'auth#sen'
+    get 'gmain',:to => 'gkpr#ghome'
  
   get "vendors/new"
   get "vendors/show"

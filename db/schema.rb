@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424190348) do
+ActiveRecord::Schema.define(version: 20140429205241) do
 
   create_table "allots", force: true do |t|
     t.datetime "created_at"
@@ -92,6 +92,32 @@ ActiveRecord::Schema.define(version: 20140424190348) do
   add_index "emps", ["email"], name: "index_emps_on_email", unique: true, using: :btree
   add_index "emps", ["reset_password_token"], name: "index_emps_on_reset_password_token", unique: true, using: :btree
 
+  create_table "gatekeepers", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "username"
+  end
+
+  add_index "gatekeepers", ["email"], name: "index_gatekeepers_on_email", unique: true, using: :btree
+  add_index "gatekeepers", ["reset_password_token"], name: "index_gatekeepers_on_reset_password_token", unique: true, using: :btree
+
   create_table "hrs", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -117,6 +143,16 @@ ActiveRecord::Schema.define(version: 20140424190348) do
 
   add_index "hrs", ["email"], name: "index_hrs_on_email", unique: true, using: :btree
   add_index "hrs", ["reset_password_token"], name: "index_hrs_on_reset_password_token", unique: true, using: :btree
+
+  create_table "invards", force: true do |t|
+    t.string   "invoice"
+    t.string   "remark"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "ssend_id"
+  end
+
+  add_index "invards", ["ssend_id"], name: "index_invards_on_ssend_id", using: :btree
 
   create_table "locations", force: true do |t|
     t.string   "location"
@@ -188,6 +224,16 @@ ActiveRecord::Schema.define(version: 20140424190348) do
   end
 
   add_index "requisitions", ["emp_id"], name: "index_requisitions_on_emp_id", using: :btree
+
+  create_table "sessions", force: true do |t|
+    t.string   "session_id", null: false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
 
   create_table "ssends", force: true do |t|
     t.datetime "created_at"

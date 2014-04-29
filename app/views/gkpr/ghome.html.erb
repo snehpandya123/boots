@@ -1,6 +1,7 @@
+
 <div class="container">
     <div class="row">
-        <% if authorize_signed_in? || hr_signed_in?%>
+        <% if gatekeeper_signed_in? %>
         <div class="col-md-9">
             <form class = "form-inline" action="#" method="get">
                 <div class="input-group">
@@ -11,17 +12,17 @@
                 </div>
             </form>
         </div>
+       
             <div class="col-md-9">
         <table class="table table-striped table-bordered table-condensed">
             <thead>
                 <tr style = 'background-color: white'>
                     <th> <i class="fa fa-male"></i> Name </th>
-                    <th><i class="fa fa-bars"></i>Invoice no</th>
+                    <th><i class="fa fa-bars"></i>Purchase order No</th>
                     
                    
-                   
+                    
                     <th><i class="fa fa-bars"></i>Send at</th>
-                    <th><i class="fa fa-bars"></i>Gate Pass</th>
                      <th><i class="fa fa-bars"></i>Received</th>
                     
                 </tr>
@@ -32,6 +33,7 @@
                         <% @po.each do |p| %>
                         
                             <tr class = "reasset">
+                            	 <%= form_for (@invard) do |f| %>
                                 <td>
                                     
                                     <%= p.name %>
@@ -39,51 +41,45 @@
                                 </td>
 					            
                                 <td>
-                                  
+                                  <%= f.text_field :invoice ,:value=> rand_value.upcase! ,:placeholder => "enter invoice", :readonly => :true %>
                                     <%= p.pono %>
                                 </td>
 					           
                                  
                                     
                   	              <% p.ssends.each do |s| %>
-                                  
+                                  <td><%= f.hidden_field :ssend_id , :value=> "#{s.id}" %>
+                                  	 <%= s.created_at.strftime("%B,%d %Y") %>
+                                  </td>
                                 <td>
-                            
-                                        <%= s.created_at.strftime("%B,%d %Y") %>
+                            			
+                                       
+                                        <%= f.text_field :remark , :placeholder => "enter remarck if any?" %>
                                 </td>
                                    
-                                   <td>
-                                        <%if s.invards.empty? %>
-                                        pending..
-                                        
-                                         <% else %>
-                                          Generated
-                                       
-                                   </td>
+                                   
                                 
                                  <td>
-                                    <% if s.stocks.empty? %>
-                                    <%= link_to "receive" , s , :class => "btn btn-info" , :data => {:confirm => "do you want to add to stock"}%>
-                                    <% else %>
-                                    <%= link_to "received",s , :class=> "btn btn-danger" , :disabled => :true %>
-                                    <% end %>
-                                        
-                                   
+                                   		<% if s.invards.empty? %>
+                                       <%= f.submit "Do invard" , :class => "btn btn-success" %>	
+                                   		<%else %>
+                                   		<%=button_to "Forwarded" , s , :class => "btn btn-danger" , :disabled => :true %>
+                                   		<% end %>
                                 </td>
-                                   <%end %>  
+
                      <% end %>
                     
- 
+     <% end %>
                  </tr>
             <% end %>
-           
+       
            
             </tbody>
             
         </table>
             
         </div>
-        <%else%>
+       <%else %>
         <div class="col-sm-6 col-md-6">
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
@@ -94,7 +90,7 @@
                     You are not authorized to view this page.</p>
             </div>
         </div>
-        <% end %>
+       <%end %>
     </div>
 </div>
 
