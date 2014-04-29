@@ -54,7 +54,11 @@
                                    
                                 
                                  <td>
-                                    <%= link_to "received" , s , :class => "rasset" , :data => {:confirm => "do you want to add to stock"}%>
+                                    <% if s.stocks.empty? %>
+                                    <%= link_to "receive" , s , :class => "btn btn-info" , :data => {:confirm => "do you want to add to stock"}%>
+                                    <% else %>
+                                    <%= link_to "received",s , :class=> "btn btn-danger" , :disabled => :true %>
+                                    <% end %>
                                         
                                    
                                 </td>

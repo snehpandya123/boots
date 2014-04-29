@@ -22,31 +22,31 @@ from being saved:</h2>
               <td>
                 <%= f.label :Full_name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
                 <h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-user fa fa-2x"></i>
-                  <%= f.text_field :name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %>
+                  <%= f.text_field :name,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" , :placeholder => "name" %>
                 </h3>
               </td>
                <td>
                 <%= f.label :address ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%><h3  style ="color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-align-justify fa fa-2x"></i> 
-                <%= f.text_area :address,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+                <%= f.text_area :address,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" , :placeholder => "minimum 10 characters" %></h3>
               </td>
             </tr>
               <tr>
                 <td>
    
                  <%= f.label :email,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-envelope fa fa-2x"></i>
-                 <%= f.text_field :email,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+                 <%= f.text_field :email,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" , :placeholder => "example@site.com" %></h3>
                </td>
                  <td>
    
                   <%= f.label :location,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3 style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-map-marker fa fa-2x"></i>
-                  <%= f.text_field :location,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %></h3>
+                  <%= f.text_field :location,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" ,:placeholder => "location of vendor" %></h3>
                 </td>
               </tr>
               <tr>
                 <td>
    
                  <%= f.label :ph_no,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" %><h3  style = "color:  #005C1F; font-size: 12pt; font-weight: bold"><i class="fa fa-phone fa fa-2x"></i>
-                 <%= f.text_field :ph_no ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;"%></h3>
+                 <%= f.text_field :ph_no ,  :style => "color:  #005C1F; font-size: 12pt; font-weight: bold;" , :placeholde => "0265-123456"%></h3>
                </td>
                  <td>
     

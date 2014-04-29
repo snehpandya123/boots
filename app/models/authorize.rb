@@ -4,7 +4,7 @@ class Authorize < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:lockable,:confirmable
          
-         attr_accessor :email
+         attr_accessor :login
           string_regex = /\A[a-z]+\z/i
          attr_accessible :password,:password_confirmation,:remember_me, :email , :username
          validates :username,

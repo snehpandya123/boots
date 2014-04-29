@@ -16,7 +16,7 @@
 			<%=f.label :particular, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;"  %>
 		</td>
 		<td>
-			<%=f.text_area :particular , :placeholder => "minimum 10 characters..." %>
+			<%=f.text_area :particular , :placeholder => "Details for the asset" %>
 		</td>	
 	</tr>
 	<tr>
@@ -29,10 +29,10 @@
 	</tr>
 	<tr>
 		<td>
-			<%=f.label :quantity, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+			<%=f.label :quantity, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;"  %>
 		</td>
 		<td>
-			<%=f.text_field :quantity ,:id =>"a1" %>
+			<%=f.text_field :quantity ,:id =>"a1" ,:placeholder => "quantity of asset.."%>
 		</td>	
 	</tr>
 	<tr>
@@ -40,7 +40,7 @@
 			<%=f.label :cost, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
 		</td>
 		<td>
-			<%=f.text_field :cost, :id => "a2" %>
+			<%=f.text_field :cost, :id => "a2" ,:placeholder => "cost of the assets.." %>
 		</td>	
 	</tr>
 	<tr>
@@ -75,7 +75,7 @@
     <tr>
     	
     </tr>
-    <tr><td> <%= f.submit "save"  , class: "btn btn-success" ,:style => "text-align: center;"%></td></tr>
+    <tr><td></td><td> <%= f.submit "Send Requisition slip"  , class: "btn btn-success" ,:style => "text-align: center;"%></td></tr>
 </table>
   
  <% end %>

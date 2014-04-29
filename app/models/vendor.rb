@@ -14,9 +14,9 @@ class Vendor < ActiveRecord::Base
 			  :format => { :with => email_regex },
 			  :uniqueness => { :case_sensitive => false }
     validates :address, :presence => true,
-			  :length => { :within => 10..60 }
+			  :length => { :within => 10..1000 }
     validates :ph_no, numericality: { only_integer: true },
-    		  :length => {:maximum => 10}
+    		  :length => {:maximum => 15}
 
     validates :mobile_no, numericality: { only_integer: true },
     		  :length => {:maximum => 12}

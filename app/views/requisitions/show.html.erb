@@ -46,15 +46,14 @@
 <hr size = "5" color= "maroon" align = "center" width = "100%" ><p>
 		<d align = "right" style = "color: MidnightBlue; font-size: 12pt"><b> INVOICE Number
     
-      <%= f.text_field :invoiceno ,:value=> rand_value , :id=> "copy", :readonly=> "true" %>
+      <%= f.text_field :invoiceno ,:value=> "Marck:/#{@requisition.unit}/#{rand_value}" , :id=> "copy", :readonly=> "true" %>
     </b></d>
     
     <%= f.hidden_field :pono , :id=> "invoice" ,:readonly=> "true" %> </d></p>
-    <%= f.hidden_field :requisition_id ,:value=> "#{@requisition.id}" %>,:readonly=> "true" %>
-<br/>
+    <%= f.hidden_field :requisition_id ,:value=> "#{@requisition.id}" %>
 <br/>
      
-     <table style="border:1px solid black;border-collapse:collapse;">
+     <table>
      	<tr>
      		<td>
      			TO,
@@ -142,7 +141,6 @@
 </table>
 </div>
 <%= f.submit "Send for approval" , :class=> "btn btn-primary" %>
-<button id= "print" type="button" class="btn btn-success" onclick="Print();">PRINT</button>
 <% end %>
 	</div>
 

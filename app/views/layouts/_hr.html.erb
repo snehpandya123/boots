@@ -2,6 +2,26 @@
 <%=link_to "Dashboard", hmain_path %>
  </li>
   <ul class="nav pull-right">
+     <li>
+                                                        <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>Add New <span class="caret"></span>
+                                                     </a>
+
+                                                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                                                <li><a tabindex="#"><%= link_to "Asset", asst_path %></a>
+                                                                </li>
+                                                                <li><a tabindex="#"> <%= link_to "Vendor", vennew_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "Employee", new_emp_registration_path %></a>
+                                                                </li>
+                                                                 <li><a tabindex="#"> <%= link_to "Location", locnnew_path %></a>
+                                                                </li>
+                                                               
+
+                                                                
+                                                            </ul>
+                                                            <br/>
+                                                        </div>
+                                                    </li>
  
 <li>
    <div class="dropdown"> <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>Views <span class="caret"></span>
@@ -18,9 +38,9 @@
                                                                 </li>
                                                                  <li><a tabindex="#"> <%= link_to "PURCHASE ORDER", pos_path %></a>
                                                                 </li>
-                                                                <li><a tabindex="#"> <%= link_to "Asset transaction", '#' %></a>
+                                                                <li><a tabindex="#"> <%= link_to "Stock", stocks_path %></a>
                                                                 </li>
-                                                                <li><a tabindex="#"> <%= link_to "Stock", '#' %></a>
+                                                                <li><a tabindex="#"> <%= link_to "Alloted", allots_path %></a>
                                                                 </li>
                                                                 
                                                             </ul>
@@ -29,10 +49,6 @@
                                                         </div>
                                                     </li>
 
-                                                     <li>
-
- <div class="dropdown"><a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-money"></i> Budget 
-  </a>
- </li>
+                                                     
  </div>
  </ul>

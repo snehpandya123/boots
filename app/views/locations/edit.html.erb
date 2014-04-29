@@ -1,5 +1,5 @@
 <div class = "container">
-<% if authorize_signed_in? %>
+<% if authorize_signed_in? || hr_signed_in? %>
 <d class = "red">
 <% if @location.errors.any? %>
 <div id="error_explanation">

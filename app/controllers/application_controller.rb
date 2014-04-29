@@ -17,7 +17,9 @@ class ApplicationController < ActionController::Base
 
 def after_sign_in_path_for(resource)
     if hr_signed_in?
-       hmain_path
+      
+        hmain_path
+        
     elsif authorize_signed_in?
         amain_path
     else

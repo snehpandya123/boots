@@ -7,7 +7,7 @@ class Requisition < ActiveRecord::Base
 	validates :name , :unit , :quantity ,:from ,:particular ,:total , :cost , presence: true
  	
 	 validates :particular, :presence => true,
-			  :length => { :within => 6..255 }
+			  :length => { :within => 1..255 }
 
 	  validates :quantity, numericality: { only_integer: true },
     		  :length => {:maximum => 4}

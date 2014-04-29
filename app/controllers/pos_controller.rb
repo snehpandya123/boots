@@ -30,4 +30,18 @@ class PosController < ApplicationController
     @po = Po.all
     @po = Po.order("name").page(params[:page]).per(10)
   end
+   def edit
+     @po = Po.find(params[:id])
+
+  end
+   def update
+    @po = Po.find(params[:id])
+      if @po.update_attributes(params[:po])
+        flash[:success] = "Asset updated Successfully...."
+        redirect_to @po
+      else
+       
+        render 'edit'
+      end
+  end
 end
