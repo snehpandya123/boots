@@ -1,0 +1,71 @@
+<div class = "container">
+<div class = "well" >
+  <h1>Details of <%= @emps.username.upcase! %></h1>
+<table class="table table-striped table-bordered table-condensed">
+
+     <thead>
+              <tr style = 'background-color: white'>
+                <th> <i class="fa fa-male"></i>Asset name</th>
+                <th><i class="fa fa-check"></i>Requested at</th>
+                <th><i class="fa fa-fighter-jet"></i>Send for approval</th>
+                <th><i class="fa fa-cogs"></i>Invoice</th>
+                <th><i class="fa fa-gavel"></i>Decision</th>
+                 <th><i class="fa fa-gavel"></i>Send to vendor</th>
+                  <th><i class="fa fa-gavel"></i>Received</th>
+                   <th><i class="fa fa-gavel"></i>Alloted on</th>
+               
+                
+              
+              </tr>
+  </thead>
+
+
+<tbody>
+
+<% @emps.requisitions.each do |x| %>
+<tr>
+  <td> <%= x.name %></td>
+   <td> <%= x.created_at %></td>
+    <% x.pos.each do |p| %>
+    <td> <%=p.podate%></td>
+       <td> <%=p.pono %></td>
+       
+         <% p.poapps.each do |r| %>
+          <td>
+            <% if "#{r.action}" == "approve" %>
+             <span class="label label-success">
+            <%= r.action %></span>
+
+            <% elsif "#{r.action}" == "disapprove" %> 
+           <span class="label label-warning">
+            <%= r.action %></span>
+            <% else %>
+             <span class="label label-warning">
+            waiting..</span>
+            <% end %>
+              
+
+          </td>
+        <%end %>
+         <% p.ssends.each do |j| %>
+                                                      <td>
+                                                        <%= j.created_at %>
+
+                                                      </td>
+                                                      <% j.stocks.each do |n| %>
+                                                      <td>
+                                                      <%= n.created_at %>
+                                                      </td>
+                                                        <% n.allots.each do |l| %>
+                                                        <td>
+                                                          <%=l.created_at %>
+                                                        </td>
+                                                        <%end %>
+                                                      <%end %>
+                                                      <% end %>
+<%end %>
+</tr>
+<% end %>
+</div></tbody>
+
+</table>

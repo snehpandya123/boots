@@ -16,12 +16,14 @@
             <thead>
                 <tr style = 'background-color: white'>
                     <th> <i class="fa fa-male"></i> Name </th>
-                    <th><i class="fa fa-bars"></i>Invoice no</th>
+                    <th><i class="fa fa-bars"></i>Purchase order No.</th>
                     
                    
                    
                     <th><i class="fa fa-bars"></i>Send at</th>
                     <th><i class="fa fa-bars"></i>Gate Pass</th>
+                         <th><i class="fa fa-bars"></i>Invoice</th>
+                         <th><i class="fa fa-bars"></i>Remark</th>
                      <th><i class="fa fa-bars"></i>Received</th>
                     
                 </tr>
@@ -54,27 +56,38 @@
                                    
                                    <td>
                                         <%if s.invards.empty? %>
-                                        pending..
+                                      <span class="label label-danger">Pending..</span>
                                         
                                          <% else %>
-                                          Generated
+                                       <span class="label label-success">Generated</span>
                                        
                                    </td>
+                                    <% s.invards.each do |x| %>
+                                    <td>
+                                            <%= x.invoice %>
+                                   </td>
+                                   <td>
+                                            <%= x.remark %>
+                                   </td>
+
                                 
                                  <td>
                                     <% if s.stocks.empty? %>
                                     <%= link_to "receive" , s , :class => "btn btn-info" , :data => {:confirm => "do you want to add to stock"}%>
                                     <% else %>
-                                    <%= link_to "received",s , :class=> "btn btn-danger" , :disabled => :true %>
+
+                                    <%= link_to "received",'#' , :class=> "btn btn-danger" , :disabled => :true %>
                                     <% end %>
                                         
                                    
                                 </td>
                                    <%end %>  
+
                      <% end %>
                     
  
                  </tr>
+                 <% end %>
             <% end %>
            
            

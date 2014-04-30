@@ -40,7 +40,7 @@
                                             <%if s.allots.empty? %>
                                             <%= f.submit "allot" ,:class => "btn btn-primary" , :method => :get %>
                                             <% else %>
-                                            <%= button_to "alloted" , s , :disabled => :true , :class=> "btn btn-danger" %>
+                                            <%= button_to "alloted" , '#' , :disabled => :true , :class=> "btn btn-danger" %>
                                             <% end %> 
                                         </td>
             		<% end %>

@@ -1,6 +1,7 @@
 Boot::Application.routes.draw do
   
   
+  get "emps/show"
   get "invards/new"
   get "invards/create"
   get "invards/show"
@@ -58,6 +59,7 @@ devise_for :gatekeepers
   get '/glogout' => 'devise/sessions#destroy'
 end 
   devise_for :emps 
+  resources :emps, :only => [:show]
  devise_scope :emp do
   get '/elogin' => 'devise/sessions#new'
   get '/elogout' => 'devise/sessions#destroy'
@@ -91,6 +93,8 @@ devise_for :employes
     get 'cap', :to=> 'requisitions#cap'
     get 'sen' , :to => 'auth#sen'
     get 'gmain',:to => 'gkpr#ghome'
+    
+    get 'emps/:id' => 'emps#show'
  
   get "vendors/new"
   get "vendors/show"
