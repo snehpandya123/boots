@@ -1,6 +1,7 @@
 <div class = "container">
+  
 <div class = "well" >
-  <h1>Details of <%= @emps.username.upcase! %></h1>
+  <h1>Details of <%= @emp.username.upcase! %></h1>
 <table class="table table-striped table-bordered table-condensed">
 
      <thead>
@@ -22,7 +23,7 @@
 
 <tbody>
 
-<% @emps.requisitions.each do |x| %>
+<% @emp.requisitions.each do |x| %>
 <tr>
   <td> <%= x.name %></td>
    <td> <%= x.created_at %></td>
@@ -69,3 +70,5 @@
 </div></tbody>
 
 </table>
+</div>
+</div>

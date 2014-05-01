@@ -60,7 +60,8 @@ devise_for :gatekeepers
 end 
   devise_for :emps 
   resources :emps, :only => [:show]
- devise_scope :emp do
+  get 'emps/:id' => 'emps#show'
+  devise_scope :emp do
   get '/elogin' => 'devise/sessions#new'
   get '/elogout' => 'devise/sessions#destroy'
 end
@@ -94,7 +95,7 @@ devise_for :employes
     get 'sen' , :to => 'auth#sen'
     get 'gmain',:to => 'gkpr#ghome'
     
-    get 'emps/:id' => 'emps#show'
+    
  
   get "vendors/new"
   get "vendors/show"

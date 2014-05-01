@@ -1,22 +1,23 @@
 
-
 <div class="container">
   <div class="row">
     <% if authorize_signed_in? || hr_signed_in? %>
      <h1> <%= @emp.count %> Employes in Marck bioscience pvt ltd</h1>
-        <% @emp.each do |e| %>
-          <div class = "well span3">
+      <% @emp.each do |e| %>
+    <div class="span4">
+      <div class="offer offer-success">
+        <div class="shape">
+          <div class="shape-text">
+            <%= e.id %>               
+          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+           <%= e.username.capitalize %> 
+          </h3>           
+          <p>
             <table>
-              <tr>
-                <td>
-                  <span class="label label-default">Name:</span>
-                </td>
-                <td>
-                    <%= e.username.capitalize %> 
-                </td>
-              </tr>
-
-              <tr>
+            <tr>
                 <td>
                   <span class="label label-default">Email</span>
                 </td>
@@ -24,17 +25,6 @@
                     <a href="#"><u><%= e.email %></u></a> 
                 </td> 
               </tr>
-
-              <tr>
-                <td>
-                   <span class="label label-default">ID</span>
-                </td>
-
-                <td>
-                    <span class="label label-success"><%= e.id %></span> 
-                </td>
-              </tr>
-
               <tr>
                 <td>
                   <span class="label label-default">Requisitions</span> 
@@ -44,11 +34,27 @@
                     
                 </td>
               </tr>
+              <tr>
+                <td>
+                     <%= link_to "More details" , e , :class => "btn btn-info" %>
+                </td> 
+              </tr>
             </table>
-            <%= link_to "More details" , e , :class => "btn btn-info" %>
-          </div>
-        <% end %>
-      </tr>
-       <% end %>
-     </div>
-   </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    
+   
+   
+   
+  </div>
+</div>
+
+
+    
+   
+       
+         

@@ -40052,3 +40052,4225 @@ Completed 200 OK in 115ms (Views: 103.1ms | ActiveRecord: 10.0ms)
 
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2014-04-30 23:50:52 +0530
+
+
+Started GET "/emps/4" for 127.0.0.1 at 2014-05-01 00:03:39 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mRequisition Load (1.0ms)[0m  SELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 20]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 14]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 14]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 17]]
+  [1m[36mAllot Load (1.0ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 13]]
+  [1m[35mPo Load (0.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 19]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 17]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 9]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 9]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 16]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 13]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 13]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 16]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 13]]
+  [1m[36mPoapp Load (0.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 6]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 6]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 12]]
+  [1m[35mPoapp Load (0.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 5]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 5]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 1]]
+  [1m[36mAllot Load (1.0ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 6]]
+  Rendered emps/show.html.erb within layouts/application (66.0ms)
+  [1m[35mAuthorize Load (1.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 150ms (Views: 123.1ms | ActiveRecord: 23.0ms)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:03:40 +0530
+
+
+Started GET "/emps/4" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mActiveRecord::SessionStore::Session Load (2.0ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mEmp Load (0.0ms)[0m  SELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mRequisition Load (1.0ms)[0m  [1mSELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 20]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 14]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 14]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 17]]
+  [1m[35mAllot Load (1.0ms)[0m  SELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1  [["stock_id", 13]]
+  [1m[36mPo Load (0.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 19]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 17]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 9]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 9]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 16]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 13]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 13]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 16]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 13]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 6]]
+  [1m[36mSsend Load (0.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 6]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 12]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 5]]
+  [1m[35mSsend Load (0.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 5]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 1]]
+  [1m[35mAllot Load (1.0ms)[0m  SELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1  [["stock_id", 6]]
+  Rendered emps/show.html.erb within layouts/application (73.0ms)
+  [1m[36mAuthorize Load (1.0ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 159ms (Views: 129.1ms | ActiveRecord: 22.0ms)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:22 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:23 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:24 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:25 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:26 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:26 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:26 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:26 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 00:04:26 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:04:26 +0530
+
+
+Started GET "/emps/4" for 127.0.0.1 at 2014-05-01 00:06:14 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mActiveRecord::SessionStore::Session Load (1.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mRequisition Load (1.0ms)[0m  SELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 20]]
+  [1m[35mPoapp Load (2.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 14]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 14]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 17]]
+  [1m[36mAllot Load (1.0ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 13]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 19]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 17]]
+  [1m[35mPoapp Load (0.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 9]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 9]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 16]]
+  [1m[36mPoapp Load (0.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 13]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 13]]
+  [1m[36mStock Load (0.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 16]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 13]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 6]]
+  [1m[35mSsend Load (0.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 6]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 12]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 5]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 5]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 1]]
+  [1m[36mAllot Load (1.0ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 6]]
+  Rendered emps/show.html.erb within layouts/application (546.4ms)
+  [1m[35mAuthorize Load (1.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (2.0ms)
+Completed 200 OK in 916ms (Views: 698.5ms | ActiveRecord: 75.0ms)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:17 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:18 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:19 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:06:20 +0530
+
+
+Started GET "/emps/4" for 127.0.0.1 at 2014-05-01 00:08:12 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mActiveRecord::SessionStore::Session Load (2.0ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mEmp Load (1.0ms)[0m  SELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mRequisition Load (1.0ms)[0m  [1mSELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 20]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 14]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 14]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 17]]
+  [1m[35mAllot Load (1.0ms)[0m  SELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1  [["stock_id", 13]]
+  [1m[36mPo Load (2.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 19]]
+  [1m[35mPo Load (0.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 17]]
+  [1m[36mPoapp Load (0.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 9]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 9]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 16]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 13]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 13]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 16]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 13]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 6]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 6]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 12]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 5]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 5]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 1]]
+  [1m[35mAllot Load (1.0ms)[0m  SELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1  [["stock_id", 6]]
+  Rendered emps/show.html.erb within layouts/application (555.4ms)
+  [1m[36mAuthorize Load (3.0ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 895ms (Views: 683.5ms | ActiveRecord: 72.0ms)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:14 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:15 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:16 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:08:17 +0530
+
+
+Started GET "/amain" for 127.0.0.1 at 2014-05-01 00:08:23 +0530
+Processing by AuthController#main as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.0ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (3.0ms)[0m  SELECT COUNT(*) FROM "requisitions"
+  [1m[36mRequisition Load (2.0ms)[0m  [1mSELECT "requisitions".* FROM "requisitions" ORDER BY id DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 20]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 19]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 18]]
+  [1m[36mPo Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 17]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 16]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 15]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 14]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 13]]
+  Rendered requisitions/_index.html.erb (76.1ms)
+  Rendered auth/main.html.erb within layouts/application (86.1ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (2.0ms)
+Completed 200 OK in 163ms (Views: 142.1ms | ActiveRecord: 15.0ms)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:08:23 +0530
+
+
+Started GET "/assets/form1.jpg" for 127.0.0.1 at 2014-05-01 00:08:23 +0530
+
+
+Started GET "/charts" for 127.0.0.1 at 2014-05-01 00:08:38 +0530
+Processing by EmployeeController#charts as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (2.0ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (5.0ms)[0m  SELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "realassets" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'
+  [1m[36m (3.0ms)[0m  [1mSELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "pos" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "vendors" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "realassets"[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36m (3.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35m (3.0ms)[0m  SELECT COUNT(*) FROM "authorizes"
+  [1m[36m (3.0ms)[0m  [1mSELECT COUNT(*) FROM "hrs"[0m
+  [1m[35m (3.0ms)[0m  SELECT COUNT(*) FROM "pos"
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "pos" INNER JOIN "poapps" ON "poapps"."po_id" = "pos"."id" WHERE (poapps.action LIKE 'approve')[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "pos" INNER JOIN "poapps" ON "poapps"."po_id" = "pos"."id" WHERE (poapps.action LIKE 'disapprove')
+  Rendered employee/charts.html.erb within layouts/application (138.1ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 221ms (Views: 153.1ms | ActiveRecord: 56.0ms)
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:08:39 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 00:11:02 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (3.0ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (1.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.0ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_aut.html.erb (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (2.0ms)
+Completed 200 OK in 106ms (Views: 93.1ms | ActiveRecord: 9.0ms)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:11:02 +0530
+
+
+Started GET "/emps/2" for 127.0.0.1 at 2014-05-01 00:11:04 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mActiveRecord::SessionStore::Session Load (3.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mRequisition Load (1.0ms)[0m  SELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 18]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 10]]
+  [1m[36mSsend Load (2.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 10]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 14]]
+  [1m[36mAllot Load (3.0ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 11]]
+  [1m[35mPo Load (2.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 15]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 8]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 8]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 12]]
+  [1m[35mAllot Load (1.0ms)[0m  SELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1  [["stock_id", 9]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 11]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 4]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 4]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 10]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 9]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 8]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 6]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 12]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 12]]
+  Rendered emps/show.html.erb within layouts/application (82.1ms)
+  [1m[35mAuthorize Load (2.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 174ms (Views: 136.1ms | ActiveRecord: 30.0ms)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:11:05 +0530
+
+
+Started GET "/amain" for 127.0.0.1 at 2014-05-01 00:11:07 +0530
+Processing by AuthController#main as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (2.0ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (2.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (3.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions"[0m
+  [1m[35mRequisition Load (1.0ms)[0m  SELECT "requisitions".* FROM "requisitions" ORDER BY id DESC LIMIT 8 OFFSET 0
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 20]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 19]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 18]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 17]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 16]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 15]]
+  [1m[36mPo Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 14]]
+  [1m[35mPo Exists (0.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 13]]
+  Rendered requisitions/_index.html.erb (63.0ms)
+  Rendered auth/main.html.erb within layouts/application (72.0ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (2.0ms)
+Completed 200 OK in 163ms (Views: 145.1ms | ActiveRecord: 14.0ms)
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 00:11:07 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 21:48:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (89.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (194.1ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (14.0ms)
+  [1m[36mAuthorize Load (153.1ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  Rendered layouts/_aut.html.erb (5.5ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_sidebar.html.erb (5.0ms)
+Completed 200 OK in 6476ms (Views: 5978.5ms | ActiveRecord: 381.3ms)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:05 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:05 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:06 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:08 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:10 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:11 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:49:12 +0530
+
+
+Started GET "/assets/marck14.png" for 127.0.0.1 at 2014-05-01 21:49:12 +0530
+
+
+Started GET "/assets/marck20.png" for 127.0.0.1 at 2014-05-01 21:49:12 +0530
+
+
+Started GET "/assets/marck17.png" for 127.0.0.1 at 2014-05-01 21:49:12 +0530
+
+
+Started GET "/assets/marck19.png" for 127.0.0.1 at 2014-05-01 21:49:12 +0530
+
+
+Started GET "/assets/marck16.png" for 127.0.0.1 at 2014-05-01 21:49:12 +0530
+
+
+Started GET "/amain" for 127.0.0.1 at 2014-05-01 21:49:30 +0530
+Processing by AuthController#main as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (1.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (132.6ms)[0m  SELECT COUNT(*) FROM "requisitions"
+  [1m[36mRequisition Load (3.0ms)[0m  [1mSELECT "requisitions".* FROM "requisitions" ORDER BY id DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mPo Exists (176.1ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 20]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 19]]
+  [1m[35mPo Exists (0.5ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 18]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 17]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 16]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 15]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 14]]
+  [1m[36mPo Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 13]]
+  Rendered requisitions/_index.html.erb (1103.2ms)
+  Rendered auth/main.html.erb within layouts/application (1142.3ms)
+  Rendered layouts/_aut.html.erb (3.5ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_sidebar.html.erb (4.5ms)
+Completed 200 OK in 1352ms (Views: 919.6ms | ActiveRecord: 334.7ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/form1.jpg" for 127.0.0.1 at 2014-05-01 21:49:31 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:49:31 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:49:32 +0530
+Processing by AuthController#po as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (97.1ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36mEmp Load (2.0ms)[0m  [1mSELECT "emps".* FROM "emps"[0m
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 7]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 5]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (267.2ms)
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 398ms (Views: 276.2ms | ActiveRecord: 115.6ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:49:33 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:49:37 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (1.5ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (1.5ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.5ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (2.5ms)
+Completed 200 OK in 99ms (Views: 85.6ms | ActiveRecord: 9.0ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:37 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:37 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:49:37 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:37 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:38 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:39 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:40 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:49:41 +0530
+
+
+Started GET "/emps/5" for 127.0.0.1 at 2014-05-01 21:49:45 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mActiveRecord::SessionStore::Session Load (1.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mEmp Load (2.5ms)[0m  [1mSELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mRequisition Load (2.0ms)[0m  SELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36mPo Load (2.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 14]]
+  [1m[35mPoapp Load (83.1ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 7]]
+  [1m[36mSsend Load (99.1ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 7]]
+  [1m[35mStock Load (82.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 2]]
+  [1m[36mAllot Load (111.1ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 7]]
+  Rendered emps/show.html.erb within layouts/application (840.1ms)
+  [1m[35mAuthorize Load (3.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 925ms (Views: 500.3ms | ActiveRecord: 414.3ms)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:49:46 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:50:17 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (2.5ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (1.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.5ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (29.5ms)
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 112ms (Views: 96.6ms | ActiveRecord: 11.0ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:50:17 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:51:02 +0530
+Processing by AuthController#po as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps"[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 7]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 5]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_aut.html.erb (2.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 100ms (Views: 86.1ms | ActiveRecord: 10.0ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:02 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:02 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:02 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:03 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:04 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:05 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:51:06 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:51:20 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (1.5ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (1.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.0ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (82.1ms)
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 213ms (Views: 201.1ms | ActiveRecord: 9.0ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:21 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:22 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:23 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:51:24 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+Processing by AuthController#po as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (1.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (2.0ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36mEmp Load (1.5ms)[0m  [1mSELECT "emps".* FROM "emps"[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 7]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 5]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (31.5ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (2.0ms)
+Completed 200 OK in 106ms (Views: 92.1ms | ActiveRecord: 10.5ms)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:24 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:25 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:26 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:55:27 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (1.0ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (45.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.0ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (78.1ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 140ms (Views: 83.1ms | ActiveRecord: 53.0ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:07 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:08 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:09 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:56:10 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:56:11 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+Processing by AuthController#po as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (1.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36mEmp Load (1.5ms)[0m  [1mSELECT "emps".* FROM "emps"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 7]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 5]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (31.5ms)
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 148ms (Views: 135.6ms | ActiveRecord: 9.0ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:23 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:24 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:25 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:26 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:27 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:57:27 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:57:27 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:58:31 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (2.0ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+ERROR: compiling _app_views_auth_po_html_erb__375415893_27029448 RAISED D:/boot/app/views/auth/po.html.erb:60: syntax error, unexpected keyword_ensure, expecting keyword_end
+D:/boot/app/views/auth/po.html.erb:62: syntax error, unexpected end-of-input, expecting keyword_end
+Function body:           def _app_views_auth_po_html_erb__375415893_27029448(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "auth/po";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='
+<div class="container">
+  <div class="row">
+';     if authorize_signed_in? || hr_signed_in? 
+@output_buffer.safe_append='     <h1> ';@output_buffer.append=( @emp.count );@output_buffer.safe_append=' Employes in Marck bioscience pvt ltd</h1>
+';       @emp.each do |e| 
+@output_buffer.safe_append='    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-success">
+        <div class="shape">
+          <div class="shape-text">
+            ';@output_buffer.append=( e.id );@output_buffer.safe_append='               
+';@output_buffer.safe_append='          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+           ';@output_buffer.append=( e.username.capitalize );@output_buffer.safe_append=' 
+';@output_buffer.safe_append='          </h3>           
+          <p>
+            <table>
+            <tr>
+                <td>
+                  <span class="label label-default">Email</span>
+                </td>
+                <td>
+                    <a href="#"><u>';@output_buffer.append=( e.email );@output_buffer.safe_append='</u></a> 
+                </td> 
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-default">Requisitions</span> 
+                </td>
+                <td>
+                  <span class="label label-info">';@output_buffer.append=( e.requisitions.count );@output_buffer.safe_append='</span> 
+                    
+                </td>
+              </tr>
+              <tr>
+                <TD>
+                     ';@output_buffer.append=( link_to "More details" , e , :class => "btn btn-info" );@output_buffer.safe_append='
+';@output_buffer.safe_append='                </TD> 
+              </tr>
+            </table>
+          </p>
+        </div>
+      </div>
+    </div>
+';     end 
+@output_buffer.safe_append='    
+   
+   
+   
+  </div>
+</div>
+
+
+    
+   
+       
+         ';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `synchronize'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:413:in `_run__288436363__process_action__callbacks'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__301965545__call__callbacks'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered auth/po.html.erb within layouts/application (51.5ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (D:/boot/app/views/auth/po.html.erb:60: syntax error, unexpected keyword_ensure, expecting keyword_end
+D:/boot/app/views/auth/po.html.erb:62: syntax error, unexpected end-of-input, expecting keyword_end):
+    57:    
+    58:        
+    59:          
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:413:in `_run__288436363__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__301965545__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  F:/RailsInstaller/Ruby2.0.0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered F:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (80.1ms)
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 21:58:44 +0530
+Processing by AuthController#po as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (1.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 7]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 5]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_aut.html.erb (2.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (2.5ms)
+Completed 200 OK in 128ms (Views: 114.1ms | ActiveRecord: 10.0ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 21:58:44 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:44 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:44 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:44 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:45 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:47 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:58:48 +0530
+
+
+Started GET "/emps/3" for 127.0.0.1 at 2014-05-01 21:58:55 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mActiveRecord::SessionStore::Session Load (1.5ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mEmp Load (1.5ms)[0m  SELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mRequisition Load (1.0ms)[0m  [1mSELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35mPo Load (1.5ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 7]]
+  [1m[36mPoapp Load (1.5ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 2]]
+  [1m[35mSsend Load (0.5ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 2]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 10]]
+  [1m[35mAllot Load (0.5ms)[0m  SELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1  [["stock_id", 8]]
+  [1m[36mPoapp Load (0.5ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 11]]
+  [1m[35mSsend Load (0.5ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 11]]
+  Rendered emps/show.html.erb within layouts/application (31.5ms)
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  Rendered layouts/_aut.html.erb (2.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 121ms (Views: 101.6ms | ActiveRecord: 11.5ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 21:58:55 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 22:00:05 +0530
+Processing by AuthController#po as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 7]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 5]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (2.0ms)
+Completed 200 OK in 99ms (Views: 86.1ms | ActiveRecord: 9.0ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:06 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:07 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:08 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:00:09 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 22:00:38 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (1.5ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (1.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.5ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (28.5ms)
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 92ms (Views: 79.6ms | ActiveRecord: 9.0ms)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:39 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:40 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:41 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:00:42 +0530
+
+
+Started GET "/emps/4" for 127.0.0.1 at 2014-05-01 22:01:15 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mRequisition Load (1.0ms)[0m  SELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 20]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 14]]
+  [1m[36mSsend Load (0.5ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 14]]
+  [1m[35mStock Load (0.5ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 17]]
+  [1m[36mAllot Load (1.0ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 13]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 19]]
+  [1m[36mPo Load (0.5ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 17]]
+  [1m[35mPoapp Load (0.5ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 9]]
+  [1m[36mSsend Load (0.5ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 9]]
+  [1m[35mPo Load (0.5ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 16]]
+  [1m[36mPoapp Load (0.5ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 13]]
+  [1m[35mSsend Load (0.5ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 13]]
+  [1m[36mStock Load (1.0ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 16]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 13]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 6]]
+  [1m[35mSsend Load (0.5ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 6]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 12]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 5]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 5]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 1]]
+  [1m[36mAllot Load (1.0ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 6]]
+  Rendered emps/show.html.erb within layouts/application (71.0ms)
+  [1m[35mAuthorize Load (1.5ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  Rendered layouts/_aut.html.erb (1.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 145ms (Views: 117.6ms | ActiveRecord: 22.0ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:01:15 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 22:01:19 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (1.0ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (1.5ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.0ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_aut.html.erb (2.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (2.5ms)
+Completed 200 OK in 102ms (Views: 90.6ms | ActiveRecord: 8.0ms)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:01:19 +0530
+
+
+Started GET "/emps/4" for 127.0.0.1 at 2014-05-01 22:02:00 +0530
+Processing by EmpsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mActiveRecord::SessionStore::Session Load (1.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps" WHERE "emps"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mRequisition Load (1.0ms)[0m  SELECT "requisitions".* FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  [1m[36mPo Load (0.5ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 20]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 14]]
+  [1m[36mSsend Load (1.0ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 14]]
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 17]]
+  [1m[36mAllot Load (0.5ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 13]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 19]]
+  [1m[36mPo Load (1.0ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 17]]
+  [1m[35mPoapp Load (1.0ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 9]]
+  [1m[36mSsend Load (0.5ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 9]]
+  [1m[35mPo Load (0.5ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 16]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 13]]
+  [1m[35mSsend Load (1.0ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 13]]
+  [1m[36mStock Load (0.5ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1[0m  [["ssend_id", 16]]
+  [1m[35mPo Load (1.0ms)[0m  SELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1  [["requisition_id", 13]]
+  [1m[36mPoapp Load (1.0ms)[0m  [1mSELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1[0m  [["po_id", 6]]
+  [1m[35mSsend Load (0.5ms)[0m  SELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1  [["po_id", 6]]
+  [1m[36mPo Load (0.5ms)[0m  [1mSELECT "pos".* FROM "pos" WHERE "pos"."requisition_id" = $1[0m  [["requisition_id", 12]]
+  [1m[35mPoapp Load (0.5ms)[0m  SELECT "poapps".* FROM "poapps" WHERE "poapps"."po_id" = $1  [["po_id", 5]]
+  [1m[36mSsend Load (0.5ms)[0m  [1mSELECT "ssends".* FROM "ssends" WHERE "ssends"."po_id" = $1[0m  [["po_id", 5]]
+  [1m[35mStock Load (0.5ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."ssend_id" = $1  [["ssend_id", 1]]
+  [1m[36mAllot Load (0.5ms)[0m  [1mSELECT "allots".* FROM "allots" WHERE "allots"."stock_id" = $1[0m  [["stock_id", 6]]
+  Rendered emps/show.html.erb within layouts/application (70.5ms)
+  [1m[35mAuthorize Load (1.5ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  Rendered layouts/_aut.html.erb (1.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 194ms (Views: 168.1ms | ActiveRecord: 20.5ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:02:00 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-01 22:02:04 +0530
+Processing by AuthController#po as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (1.5ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (2.0ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35mEmp Load (1.5ms)[0m  SELECT "emps".* FROM "emps"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 7]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 5]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 2]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (35.5ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (2.0ms)
+Completed 200 OK in 117ms (Views: 102.1ms | ActiveRecord: 10.0ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:02:04 +0530
+
+
+Started GET "/charts" for 127.0.0.1 at 2014-05-01 22:07:04 +0530
+Processing by EmployeeController#charts as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.0ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (316.7ms)[0m  SELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "realassets" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'
+  [1m[36m (2.5ms)[0m  [1mSELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "pos" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (54.5ms)[0m  SELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "vendors" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "realassets"[0m
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "requisitions"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35m (39.5ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36m (2.5ms)[0m  [1mSELECT COUNT(*) FROM "emps"[0m
+  [1m[35m (2.5ms)[0m  SELECT COUNT(*) FROM "authorizes"
+  [1m[36m (72.0ms)[0m  [1mSELECT COUNT(*) FROM "hrs"[0m
+  [1m[35m (2.5ms)[0m  SELECT COUNT(*) FROM "pos"
+  [1m[36m (15.5ms)[0m  [1mSELECT COUNT(*) FROM "pos" INNER JOIN "poapps" ON "poapps"."po_id" = "pos"."id" WHERE (poapps.action LIKE 'approve')[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "pos" INNER JOIN "poapps" ON "poapps"."po_id" = "pos"."id" WHERE (poapps.action LIKE 'disapprove')
+  Rendered employee/charts.html.erb within layouts/application (766.5ms)
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (2.5ms)
+Completed 200 OK in 945ms (Views: 387.3ms | ActiveRecord: 547.9ms)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:07:05 +0530
+
+
+Started GET "/charts" for 127.0.0.1 at 2014-05-01 22:07:06 +0530
+Processing by EmployeeController#charts as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (3.5ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorize Load (1.5ms)[0m  SELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1
+  [1m[36m (4.0ms)[0m  [1mSELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "realassets" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "pos" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'
+  [1m[36m (2.5ms)[0m  [1mSELECT COUNT(*) AS count_all, DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC' AS day FROM "vendors" GROUP BY DATE_TRUNC('day', "created_at"::timestamptz AT TIME ZONE 'Etc/UTC') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "realassets"
+  [1m[36m (2.5ms)[0m  [1mSELECT COUNT(*) FROM "requisitions"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "vendors"
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (2.5ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36m (2.5ms)[0m  [1mSELECT COUNT(*) FROM "authorizes"[0m
+  [1m[35m (3.0ms)[0m  SELECT COUNT(*) FROM "hrs"
+  [1m[36m (2.5ms)[0m  [1mSELECT COUNT(*) FROM "pos"[0m
+  [1m[35m (2.5ms)[0m  SELECT COUNT(*) FROM "pos" INNER JOIN "poapps" ON "poapps"."po_id" = "pos"."id" WHERE (poapps.action LIKE 'approve')
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "pos" INNER JOIN "poapps" ON "poapps"."po_id" = "pos"."id" WHERE (poapps.action LIKE 'disapprove')[0m
+  Rendered employee/charts.html.erb within layouts/application (137.1ms)
+  Rendered layouts/_aut.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 227ms (Views: 183.6ms | ActiveRecord: 33.5ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:07:07 +0530
+
+
+Started GET "/amain" for 127.0.0.1 at 2014-05-01 22:08:23 +0530
+Processing by AuthController#main as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (3.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (1.5ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions"
+  [1m[36mRequisition Load (1.0ms)[0m  [1mSELECT "requisitions".* FROM "requisitions" ORDER BY id DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 20]]
+  [1m[36mPo Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 19]]
+  [1m[35mPo Exists (0.5ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 18]]
+  [1m[36mPo Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 17]]
+  [1m[35mPo Exists (1.0ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 16]]
+  [1m[36mPo Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 15]]
+  [1m[35mPo Exists (0.5ms)[0m  SELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1  [["requisition_id", 14]]
+  [1m[36mPo Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "pos" WHERE "pos"."requisition_id" = $1 LIMIT 1[0m  [["requisition_id", 13]]
+  Rendered requisitions/_index.html.erb (103.1ms)
+  Rendered auth/main.html.erb within layouts/application (111.1ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.5ms)
+Completed 200 OK in 187ms (Views: 171.1ms | ActiveRecord: 12.5ms)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-01 22:08:23 +0530
+
+
+Started GET "/assets/form1.jpg" for 127.0.0.1 at 2014-05-01 22:08:23 +0530
