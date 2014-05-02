@@ -31,6 +31,13 @@
 .offer-radius{
   border-radius:7px;
 }
+.offer-success{
+border-color: #5cb85c; 
+}
+.offer-success .shape{
+  border-color: transparent #5cb85c transparent transparent;
+}
+
 
 
 .filterable .panel-heading .pull-right {
