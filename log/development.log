@@ -47231,3 +47231,260 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 23:19:08
 
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-02 23:19:08 +0530
+
+
+Started GET "/po" for 127.0.0.1 at 2014-05-02 23:24:44 +0530
+Processing by AuthController#po as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (2.0ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '128fc2b93e67c6b6876ec476a0ade638' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mAuthorize Load (2.0ms)[0m  [1mSELECT "authorizes".* FROM "authorizes" WHERE "authorizes"."id" = 3 ORDER BY "authorizes"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "emps"
+  [1m[36mEmp Load (1.0ms)[0m  [1mSELECT "emps".* FROM "emps"[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 5]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 2]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1[0m  [["emp_id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "requisitions" WHERE "requisitions"."emp_id" = $1  [["emp_id", 4]]
+  Rendered auth/po.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_aut.html.erb (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 209ms (Views: 196.1ms | ActiveRecord: 10.0ms)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/chartkick.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:45 +0530
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:46 +0530
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/allots.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/assets.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/auth.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/change.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:47 +0530
+
+
+Started GET "/assets/employee.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/emps.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/gkpr.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/hrs.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/invards.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/poapp.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/poapps.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/popup.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/pos.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/realassets.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/requisitions.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/sends.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/stocks.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-05-02 23:24:48 +0530
