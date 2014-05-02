@@ -2,6 +2,7 @@
 <div class="container">
   <div class="row">
     <% if authorize_signed_in? || hr_signed_in? %>
+    
      <h1> <%= @emp.count %> Employes in Marck bioscience pvt ltd</h1>
       <% @emp.each do |e| %>
     <div class="span4">

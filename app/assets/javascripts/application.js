@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+
 //= require jsapi
 //= require chartkick
 //= require jquery.turbolinks
-//= require jquery.ui.all
+
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
