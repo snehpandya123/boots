@@ -7,7 +7,7 @@ class Realasset < ActiveRecord::Base
 	
 
 	
-			
+		validates :name , :typ , :cost , :locat  , presence: true	
 			
 
 	string_regex = /\A[a-z]+\z/i

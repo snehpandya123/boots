@@ -34,8 +34,19 @@
                   <span class="label label-info"><%= e.requisitions.count %></span> 
                     
                 </td>
+
               </tr>
-              <tr>
+
+                 <tr>
+                <td>
+                  <span class="label label-default">Assets</span> 
+                </td>
+                <td>
+                  <span class="label label-info"><%= e.realassets.count %></span> 
+                    
+                </td>
+                
+              </tr>              <tr>
                 <td>
                      <%= link_to "More details" , e , :class => "btn btn-info" %>
                 </td> 

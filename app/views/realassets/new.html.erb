@@ -9,7 +9,23 @@
     
     <hr class="colorgraph">
       <d class ="red">
-        <%= render "error" %>
+      <% if @realasset.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@realasset.errors.count ,"error") %>
+prohibited this <%= @realasset.class.to_s.underscore.humanize.downcase %>
+from being saved:</h2>
+<p>There were problems with the following fields:</p>
+<ul>
+
+                <% @realasset.errors.full_messages.each do |msg| %>
+        <li> <%=  msg %></li>
+
+
+
+<% end %>
+</ul>
+</div>
+<% end %>
       </d>
     </div>
       <%= form_for(@realasset) do |f| %>
@@ -46,9 +62,9 @@
                 <% if emp_signed_in? %>
                 <%= f.hidden_field :emp_id , :value=> "#{current_emp.id}" %>
                 <%elsif hr_signed_in? %>
-                <%= f.hidden_field :emp_id , :value=> "#{current_hr.id}" %>
+                <%= f.hidden_field :hr_id , :value=> "#{current_hr.id}" %>
                 <%elsif authorize_signed_in? %>
-                <%= f.hidden_field :emp_id , :value=> "#{current_authorize.id}" %>
+                <%= f.hidden_field :authorize_id , :value=> "#{current_authorize.id}" %>
                 <%else%>
                 <%end %>
                   

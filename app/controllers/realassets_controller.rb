@@ -7,18 +7,44 @@ class RealassetsController < ApplicationController
     def create
       @realasset = Realasset.new(params[:realasset])
         if @realasset.save
-          AssetMailer.registration_confirmation(@realasset).deliver
-            flash[:success] = "Asset Added Successfully"
-            if emp_signed_in?
-          redirect_to emain_path
-            elsif authorize_signed_in?
-               redirect_to realassets_new_path
-            end
+             begin
+                 AssetMailer.registration_confirmation(@realasset).deliver
+                  flash[:success] = "Asset Added Successfully"
+                      if emp_signed_in?
+                          redirect_to emain_path
+                      elsif authorize_signed_in?
+                          redirect_to  asst_path              
+                      elsif hr_signed_in?
+                          redirect_to asst_path
+                      else
+                          redirect_to home_path
+                      end            
+          
+            rescue Exception => e
+          
+                      if emp_signed_in?
+                          flash[:success] = "Asset Added Successfully"
+                          flash[:warning] = "Unable to send mail to general manager"
+                          redirect_to emain_path
+                      elsif authorize_signed_in?
+                          flash[:success] = "Asset Added Successfully"
+                          flash[:warning] = "Unable to send mail to general manager"
+                          redirect_to  amain_path
+                      elsif hr_signed_in?
+                          flash[:success] = "Asset Added Successfully"
+                          flash[:warning] = "Unable to send mail to general manager"
+                          redirect_to hmain_path
+                      else
+                          redirect_to home_path
+                      end
+            end          
               
-        else
-          render 'new'
-        end
-    end
+              
+      else
+            flash[:warning] = "unable to add asset fields missing"
+            redirect_to asst_path
+      end
+end
 
     def show
      @realasset = Realasset.find(params[:id])  

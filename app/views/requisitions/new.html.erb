@@ -1,23 +1,6 @@
-
-<div class = "well">
-	<p style = "font-size:20pt;color: MidnightBlue"><i><b>Requisition Slip</b></i></p>
-	 <hr class="colorgraph">
-  	<d class ="red">
- 		<% if @requisition.errors.any? %>
-			<div id="error_explanation">
-				<h2><%= pluralize(@requisition.errors.count, "error") %>
-					prohibited this <%= @requisition.class.to_s.underscore.humanize.downcase %>
-					from being saved:</h2>
-				<p>There were problems with the following fields:</p>
-					<ul>
-						<% @requisition.errors.full_messages.each do |msg| %>
-							<li><%= msg %></li>
-						<% end %>
-					</ul>
-			</div>
-		<% end %>
-	</d>
-</div><%= form_for (@requisition) do |f| %>
+<div class = "container">
+<%= render "requisitions/error" %>
+<%= form_for (@requisition) do |f| %>
  <table align = "center">
  	<tr>
  		<td>
@@ -25,7 +8,7 @@
 		</td>
 		<td>
 			<%= f.select(:name, realasset_for_select, :prompt => 'Select') %>
-			<%= link_to "Add asset.." , realassets_new_path , :style => "color: MidnightBlue; font-size: 12pt; font-weight: bold;"%>
+			<%= link_to "Add asset.." , asst_path , :style => "color: MidnightBlue; font-size: 12pt; font-weight: bold;"%>
 	    </td>
 	</tr>
 	<tr>
@@ -33,7 +16,7 @@
 			<%=f.label :particular, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;"  %>
 		</td>
 		<td>
-			<%=f.text_area :particular %>
+			<%=f.text_area :particular , :placeholder => "Details for the asset" %>
 		</td>	
 	</tr>
 	<tr>
@@ -46,19 +29,26 @@
 	</tr>
 	<tr>
 		<td>
-			<%=f.label :quantity, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+			<%=f.label :quantity, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;"  %>
 		</td>
 		<td>
-			<%=f.text_field :quantity %>
+			<%=f.text_field :quantity ,:id =>"a1" ,:placeholder => "quantity of asset.."%>
 		</td>	
 	</tr>
 	<tr>
 		<td>
-			<%=f.label :Total, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+			<%=f.label :cost, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
 		</td>
-		
 		<td>
-	
+			<%=f.text_field :cost, :id => "a2" ,:placeholder => "cost of the assets.." %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :total, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
+		</td>
+		<td>
+			<%=f.text_field :total, :id => "a3" ,:readonly => "true" %>
 		</td>	
 	</tr>
 	<% if emp_signed_in? %>
@@ -68,6 +58,7 @@
 		</td>
 		<td>
 			<%=f.text_field :from , :value => "#{current_emp.username.capitalize}" , :readonly => :true %>
+			<%=f.hidden_field :emp_id , :value => "#{current_emp.id}" , :readonly => :true %>
 		</td>	
 	</tr>
 	<% elsif authorize_signed_in? %>
@@ -85,17 +76,20 @@
 			<%=f.label :from, :style => "color: #005C1F; font-size: 12pt; font-weight: bold;" %>
 		</td>
 		<td>
-			<%=f.text_field :from , :value => "#{current_authorize.username.capitalize}" , :readonly => :true %>
+			<%=f.text_field :from , :value => "#{current_hr.username.capitalize}" , :readonly => :true %>
 		</td>	
 	</tr>
+		
 	<% else %>
-	Unable to add requisition <% end %>
+	Unable to add requisition 
+	<% end %>
     <tr>
     	
     </tr>
-    <tr><td> <%= f.submit "save"  , class: "btn btn-success" ,:style => "text-align: center;"%></td></tr>
+    <tr><td></td><td> <%= f.submit "Send Requisition slip"  , class: "btn btn-success" ,:style => "text-align: center;"%></td></tr>
 </table>
   
  <% end %>
 <hr class="colorgraph">
+</div>
 

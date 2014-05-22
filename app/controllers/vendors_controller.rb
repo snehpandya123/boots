@@ -3,17 +3,23 @@ class VendorsController < ApplicationController
  		@vendor  =  Vendor.new
   end
  
-  def create
-		@vendor = Vendor.new(params[:vendor])
-			if @vendor.save
-				 VendorMailer.registration_confirmation(@vendor).deliver
-				flash[:success] = "Vendor Added Successfully"
-				redirect_to amain_path
-			else
-				render 'new'
-			end
+def create
+  @vendor = Vendor.new(params[:vendor])
+  if @vendor.save
+    begin
+      VendorMailer.registration_confirmation(@vendor).deliver
+      flash[:success] = "Vendor Added Successfully"
+      redirect_to amain_path
+    rescue SocketError => e
+      flash[:success] = "Vendor Added Successfully"
+       flash[:warning] = "Unable to send mail"
+      redirect_to amain_path
+    end
+  else
+    flash[:warning] = "Unable to add vendor"
+    render 'new'
   end
-  
+end
   def show
 	@vendor = Vendor.find(params[:id])
 	 redirect_to edit_vendor_path

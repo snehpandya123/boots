@@ -66,6 +66,10 @@
       <h1>Requisition by days</h1>
         <%= area_chart Requisition.group_by_day(:created_at).count %>
     </div>
+     <div class = "span10 well">
+      <h1>Requisition by days</h1>
+        <%= area_chart Invard.group_by_day(:created_at).count %>
+    </div>
     
     <div class = "span10 well">
       <h1>Pi chart of all the Datas</h1>
