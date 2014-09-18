@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.integer  "stock_id"
   end
 
-  add_index "allots", ["stock_id"], name: "index_allots_on_stock_id", using: :btree
+  add_index "allots", ["stock_id"], name: "index_allots_on_stock_id"
 
   create_table "authorizes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.string   "username"
   end
 
-  add_index "authorizes", ["email"], name: "index_authorizes_on_email", unique: true, using: :btree
-  add_index "authorizes", ["reset_password_token"], name: "index_authorizes_on_reset_password_token", unique: true, using: :btree
+  add_index "authorizes", ["email"], name: "index_authorizes_on_email", unique: true
+  add_index "authorizes", ["reset_password_token"], name: "index_authorizes_on_reset_password_token", unique: true
 
   create_table "employes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.string   "username"
   end
 
-  add_index "employes", ["email"], name: "index_employes_on_email", unique: true, using: :btree
-  add_index "employes", ["reset_password_token"], name: "index_employes_on_reset_password_token", unique: true, using: :btree
+  add_index "employes", ["email"], name: "index_employes_on_email", unique: true
+  add_index "employes", ["reset_password_token"], name: "index_employes_on_reset_password_token", unique: true
 
   create_table "emps", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -89,8 +89,8 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.string   "username"
   end
 
-  add_index "emps", ["email"], name: "index_emps_on_email", unique: true, using: :btree
-  add_index "emps", ["reset_password_token"], name: "index_emps_on_reset_password_token", unique: true, using: :btree
+  add_index "emps", ["email"], name: "index_emps_on_email", unique: true
+  add_index "emps", ["reset_password_token"], name: "index_emps_on_reset_password_token", unique: true
 
   create_table "gatekeepers", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -115,8 +115,8 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.string   "username"
   end
 
-  add_index "gatekeepers", ["email"], name: "index_gatekeepers_on_email", unique: true, using: :btree
-  add_index "gatekeepers", ["reset_password_token"], name: "index_gatekeepers_on_reset_password_token", unique: true, using: :btree
+  add_index "gatekeepers", ["email"], name: "index_gatekeepers_on_email", unique: true
+  add_index "gatekeepers", ["reset_password_token"], name: "index_gatekeepers_on_reset_password_token", unique: true
 
   create_table "hrs", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -141,8 +141,8 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.string   "username"
   end
 
-  add_index "hrs", ["email"], name: "index_hrs_on_email", unique: true, using: :btree
-  add_index "hrs", ["reset_password_token"], name: "index_hrs_on_reset_password_token", unique: true, using: :btree
+  add_index "hrs", ["email"], name: "index_hrs_on_email", unique: true
+  add_index "hrs", ["reset_password_token"], name: "index_hrs_on_reset_password_token", unique: true
 
   create_table "invards", force: true do |t|
     t.string   "invoice"
@@ -152,7 +152,7 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.integer  "ssend_id"
   end
 
-  add_index "invards", ["ssend_id"], name: "index_invards_on_ssend_id", using: :btree
+  add_index "invards", ["ssend_id"], name: "index_invards_on_ssend_id"
 
   create_table "locations", force: true do |t|
     t.string   "location"
@@ -170,7 +170,7 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.integer  "po_id"
   end
 
-  add_index "poapps", ["po_id"], name: "index_poapps_on_po_id", using: :btree
+  add_index "poapps", ["po_id"], name: "index_poapps_on_po_id"
 
   create_table "pos", force: true do |t|
     t.string   "invoiceno"
@@ -192,7 +192,7 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.integer  "requisition_id"
   end
 
-  add_index "pos", ["requisition_id"], name: "index_pos_on_requisition_id", using: :btree
+  add_index "pos", ["requisition_id"], name: "index_pos_on_requisition_id"
 
   create_table "realassets", force: true do |t|
     t.string   "name"
@@ -206,9 +206,18 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.integer  "authorize_id"
   end
 
-  add_index "realassets", ["authorize_id"], name: "index_realassets_on_authorize_id", using: :btree
-  add_index "realassets", ["emp_id"], name: "index_realassets_on_emp_id", using: :btree
-  add_index "realassets", ["hr_id"], name: "index_realassets_on_hr_id", using: :btree
+  add_index "realassets", ["authorize_id"], name: "index_realassets_on_authorize_id"
+  add_index "realassets", ["emp_id"], name: "index_realassets_on_emp_id"
+  add_index "realassets", ["hr_id"], name: "index_realassets_on_hr_id"
+
+  create_table "replications", force: true do |t|
+    t.integer  "sr_no"
+    t.string   "particular"
+    t.string   "unit"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "requisitions", force: true do |t|
     t.string   "name"
@@ -223,7 +232,7 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.integer  "emp_id"
   end
 
-  add_index "requisitions", ["emp_id"], name: "index_requisitions_on_emp_id", using: :btree
+  add_index "requisitions", ["emp_id"], name: "index_requisitions_on_emp_id"
 
   create_table "sessions", force: true do |t|
     t.string   "session_id", null: false
@@ -232,8 +241,8 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.datetime "updated_at"
   end
 
-  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
-  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
 
   create_table "ssends", force: true do |t|
     t.datetime "created_at"
@@ -241,7 +250,7 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.integer  "po_id"
   end
 
-  add_index "ssends", ["po_id"], name: "index_ssends_on_po_id", using: :btree
+  add_index "ssends", ["po_id"], name: "index_ssends_on_po_id"
 
   create_table "stocks", force: true do |t|
     t.string   "name"
@@ -250,10 +259,12 @@ ActiveRecord::Schema.define(version: 20140429205241) do
     t.string   "sendto"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "send_id"
     t.integer  "ssend_id"
   end
 
-  add_index "stocks", ["ssend_id"], name: "index_stocks_on_ssend_id", using: :btree
+  add_index "stocks", ["send_id"], name: "index_stocks_on_send_id"
+  add_index "stocks", ["ssend_id"], name: "index_stocks_on_ssend_id"
 
   create_table "vendors", force: true do |t|
     t.string   "name"
